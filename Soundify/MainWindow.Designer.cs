@@ -29,28 +29,28 @@
         private void InitializeComponent()
         {
             this.WindowSidePanel = new System.Windows.Forms.Panel();
-            this.MenuHolderPanel = new System.Windows.Forms.Panel();
-            this.SpotifyMenuBtn = new System.Windows.Forms.Button();
-            this.SoundCMenuBtn = new System.Windows.Forms.Button();
-            this.AddonsMenuBtn = new System.Windows.Forms.Button();
-            this.MediaControlsMenuBtn = new System.Windows.Forms.Button();
-            this.SettingsMenuBtn = new System.Windows.Forms.Button();
-            this.GripIconBox = new System.Windows.Forms.PictureBox();
             this.FullscreenBtn = new System.Windows.Forms.PictureBox();
             this.DiscordPicBox = new System.Windows.Forms.PictureBox();
             this.WebsitePicBox = new System.Windows.Forms.PictureBox();
             this.YoutubePicBox = new System.Windows.Forms.PictureBox();
             this.GithubPicBox = new System.Windows.Forms.PictureBox();
+            this.SettingsMenuBtn = new System.Windows.Forms.Button();
+            this.MediaControlsMenuBtn = new System.Windows.Forms.Button();
+            this.AddonsMenuBtn = new System.Windows.Forms.Button();
+            this.SoundCMenuBtn = new System.Windows.Forms.Button();
+            this.SpotifyMenuBtn = new System.Windows.Forms.Button();
             this.LogoBox = new System.Windows.Forms.PictureBox();
+            this.MenuHolderPanel = new System.Windows.Forms.Panel();
+            this.GripIconBox = new System.Windows.Forms.PictureBox();
             this.WindowSidePanel.SuspendLayout();
-            this.MenuHolderPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.GripIconBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.FullscreenBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DiscordPicBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.WebsitePicBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.YoutubePicBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GithubPicBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LogoBox)).BeginInit();
+            this.MenuHolderPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.GripIconBox)).BeginInit();
             this.SuspendLayout();
             // 
             // WindowSidePanel
@@ -72,107 +72,6 @@
             this.WindowSidePanel.Name = "WindowSidePanel";
             this.WindowSidePanel.Size = new System.Drawing.Size(176, 661);
             this.WindowSidePanel.TabIndex = 0;
-            // 
-            // MenuHolderPanel
-            // 
-            this.MenuHolderPanel.Controls.Add(this.GripIconBox);
-            this.MenuHolderPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MenuHolderPanel.Location = new System.Drawing.Point(176, 0);
-            this.MenuHolderPanel.Name = "MenuHolderPanel";
-            this.MenuHolderPanel.Size = new System.Drawing.Size(808, 661);
-            this.MenuHolderPanel.TabIndex = 1;
-            // 
-            // SpotifyMenuBtn
-            // 
-            this.SpotifyMenuBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.SpotifyMenuBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(116)))), ((int)(((byte)(209)))));
-            this.SpotifyMenuBtn.FlatAppearance.BorderSize = 0;
-            this.SpotifyMenuBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.SpotifyMenuBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.SpotifyMenuBtn.Location = new System.Drawing.Point(0, 143);
-            this.SpotifyMenuBtn.Name = "SpotifyMenuBtn";
-            this.SpotifyMenuBtn.Size = new System.Drawing.Size(176, 55);
-            this.SpotifyMenuBtn.TabIndex = 1;
-            this.SpotifyMenuBtn.Text = "Spotify";
-            this.SpotifyMenuBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.SpotifyMenuBtn.UseVisualStyleBackColor = false;
-            this.SpotifyMenuBtn.Click += new System.EventHandler(this.SpotifyMenuBtn_Click);
-            // 
-            // SoundCMenuBtn
-            // 
-            this.SoundCMenuBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.SoundCMenuBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(116)))), ((int)(((byte)(209)))));
-            this.SoundCMenuBtn.FlatAppearance.BorderSize = 0;
-            this.SoundCMenuBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.SoundCMenuBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.SoundCMenuBtn.Location = new System.Drawing.Point(0, 204);
-            this.SoundCMenuBtn.Name = "SoundCMenuBtn";
-            this.SoundCMenuBtn.Size = new System.Drawing.Size(176, 55);
-            this.SoundCMenuBtn.TabIndex = 2;
-            this.SoundCMenuBtn.Text = "SoundCloud";
-            this.SoundCMenuBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.SoundCMenuBtn.UseVisualStyleBackColor = false;
-            this.SoundCMenuBtn.Click += new System.EventHandler(this.SoundCMenuBtn_Click);
-            // 
-            // AddonsMenuBtn
-            // 
-            this.AddonsMenuBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.AddonsMenuBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(116)))), ((int)(((byte)(209)))));
-            this.AddonsMenuBtn.FlatAppearance.BorderSize = 0;
-            this.AddonsMenuBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.AddonsMenuBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.AddonsMenuBtn.Location = new System.Drawing.Point(0, 265);
-            this.AddonsMenuBtn.Name = "AddonsMenuBtn";
-            this.AddonsMenuBtn.Size = new System.Drawing.Size(176, 55);
-            this.AddonsMenuBtn.TabIndex = 3;
-            this.AddonsMenuBtn.Text = "Addons";
-            this.AddonsMenuBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.AddonsMenuBtn.UseVisualStyleBackColor = false;
-            this.AddonsMenuBtn.Click += new System.EventHandler(this.AddonsMenuBtn_Click);
-            // 
-            // MediaControlsMenuBtn
-            // 
-            this.MediaControlsMenuBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.MediaControlsMenuBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(116)))), ((int)(((byte)(209)))));
-            this.MediaControlsMenuBtn.FlatAppearance.BorderSize = 0;
-            this.MediaControlsMenuBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.MediaControlsMenuBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.MediaControlsMenuBtn.Location = new System.Drawing.Point(0, 326);
-            this.MediaControlsMenuBtn.Name = "MediaControlsMenuBtn";
-            this.MediaControlsMenuBtn.Size = new System.Drawing.Size(176, 55);
-            this.MediaControlsMenuBtn.TabIndex = 4;
-            this.MediaControlsMenuBtn.Text = "Media Controls";
-            this.MediaControlsMenuBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.MediaControlsMenuBtn.UseVisualStyleBackColor = false;
-            this.MediaControlsMenuBtn.Click += new System.EventHandler(this.MediaControlsMenuBtn_Click);
-            // 
-            // SettingsMenuBtn
-            // 
-            this.SettingsMenuBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.SettingsMenuBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(116)))), ((int)(((byte)(209)))));
-            this.SettingsMenuBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.SettingsMenuBtn.FlatAppearance.BorderSize = 0;
-            this.SettingsMenuBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.SettingsMenuBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.SettingsMenuBtn.Location = new System.Drawing.Point(0, 387);
-            this.SettingsMenuBtn.Name = "SettingsMenuBtn";
-            this.SettingsMenuBtn.Size = new System.Drawing.Size(176, 55);
-            this.SettingsMenuBtn.TabIndex = 5;
-            this.SettingsMenuBtn.Text = "Settings";
-            this.SettingsMenuBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.SettingsMenuBtn.UseVisualStyleBackColor = false;
-            this.SettingsMenuBtn.Click += new System.EventHandler(this.SettingsMenuBtn_Click);
-            // 
-            // GripIconBox
-            // 
-            this.GripIconBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.GripIconBox.Image = global::Soundify.Properties.Resources.SideGripIcon;
-            this.GripIconBox.Location = new System.Drawing.Point(795, 648);
-            this.GripIconBox.Name = "GripIconBox";
-            this.GripIconBox.Size = new System.Drawing.Size(10, 10);
-            this.GripIconBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.GripIconBox.TabIndex = 0;
-            this.GripIconBox.TabStop = false;
             // 
             // FullscreenBtn
             // 
@@ -234,6 +133,97 @@
             this.GithubPicBox.TabStop = false;
             this.GithubPicBox.Click += new System.EventHandler(this.GithubPicBox_Click);
             // 
+            // SettingsMenuBtn
+            // 
+            this.SettingsMenuBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.SettingsMenuBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.SettingsMenuBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.SettingsMenuBtn.FlatAppearance.BorderSize = 0;
+            this.SettingsMenuBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.SettingsMenuBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.SettingsMenuBtn.Location = new System.Drawing.Point(0, 387);
+            this.SettingsMenuBtn.Name = "SettingsMenuBtn";
+            this.SettingsMenuBtn.Size = new System.Drawing.Size(176, 55);
+            this.SettingsMenuBtn.TabIndex = 5;
+            this.SettingsMenuBtn.Text = "Settings";
+            this.SettingsMenuBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.SettingsMenuBtn.UseVisualStyleBackColor = false;
+            this.SettingsMenuBtn.Click += new System.EventHandler(this.SettingsMenuBtn_Click);
+            this.SettingsMenuBtn.MouseLeave += new System.EventHandler(this.SettingsMenuBtn_MouseLeave);
+            this.SettingsMenuBtn.MouseHover += new System.EventHandler(this.SettingsMenuBtn_MouseHover);
+            // 
+            // MediaControlsMenuBtn
+            // 
+            this.MediaControlsMenuBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.MediaControlsMenuBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.MediaControlsMenuBtn.FlatAppearance.BorderSize = 0;
+            this.MediaControlsMenuBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.MediaControlsMenuBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.MediaControlsMenuBtn.Location = new System.Drawing.Point(0, 326);
+            this.MediaControlsMenuBtn.Name = "MediaControlsMenuBtn";
+            this.MediaControlsMenuBtn.Size = new System.Drawing.Size(176, 55);
+            this.MediaControlsMenuBtn.TabIndex = 4;
+            this.MediaControlsMenuBtn.Text = "Media Controls";
+            this.MediaControlsMenuBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.MediaControlsMenuBtn.UseVisualStyleBackColor = false;
+            this.MediaControlsMenuBtn.Click += new System.EventHandler(this.MediaControlsMenuBtn_Click);
+            this.MediaControlsMenuBtn.MouseLeave += new System.EventHandler(this.MediaControlsMenuBtn_MouseLeave);
+            this.MediaControlsMenuBtn.MouseHover += new System.EventHandler(this.MediaControlsMenuBtn_MouseHover);
+            // 
+            // AddonsMenuBtn
+            // 
+            this.AddonsMenuBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.AddonsMenuBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.AddonsMenuBtn.FlatAppearance.BorderSize = 0;
+            this.AddonsMenuBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.AddonsMenuBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.AddonsMenuBtn.Location = new System.Drawing.Point(0, 265);
+            this.AddonsMenuBtn.Name = "AddonsMenuBtn";
+            this.AddonsMenuBtn.Size = new System.Drawing.Size(176, 55);
+            this.AddonsMenuBtn.TabIndex = 3;
+            this.AddonsMenuBtn.Text = "Addons";
+            this.AddonsMenuBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.AddonsMenuBtn.UseVisualStyleBackColor = false;
+            this.AddonsMenuBtn.Click += new System.EventHandler(this.AddonsMenuBtn_Click);
+            this.AddonsMenuBtn.MouseLeave += new System.EventHandler(this.AddonsMenuBtn_MouseLeave);
+            this.AddonsMenuBtn.MouseHover += new System.EventHandler(this.AddonsMenuBtn_MouseHover);
+            // 
+            // SoundCMenuBtn
+            // 
+            this.SoundCMenuBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.SoundCMenuBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.SoundCMenuBtn.FlatAppearance.BorderSize = 0;
+            this.SoundCMenuBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.SoundCMenuBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.SoundCMenuBtn.Location = new System.Drawing.Point(0, 204);
+            this.SoundCMenuBtn.Name = "SoundCMenuBtn";
+            this.SoundCMenuBtn.Size = new System.Drawing.Size(176, 55);
+            this.SoundCMenuBtn.TabIndex = 2;
+            this.SoundCMenuBtn.Text = "SoundCloud";
+            this.SoundCMenuBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.SoundCMenuBtn.UseVisualStyleBackColor = false;
+            this.SoundCMenuBtn.Click += new System.EventHandler(this.SoundCMenuBtn_Click);
+            this.SoundCMenuBtn.MouseLeave += new System.EventHandler(this.SoundCMenuBtn_MouseLeave);
+            this.SoundCMenuBtn.MouseHover += new System.EventHandler(this.SoundCMenuBtn_MouseHover);
+            // 
+            // SpotifyMenuBtn
+            // 
+            this.SpotifyMenuBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.SpotifyMenuBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.SpotifyMenuBtn.FlatAppearance.BorderSize = 0;
+            this.SpotifyMenuBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.SpotifyMenuBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.SpotifyMenuBtn.Location = new System.Drawing.Point(0, 143);
+            this.SpotifyMenuBtn.Name = "SpotifyMenuBtn";
+            this.SpotifyMenuBtn.Size = new System.Drawing.Size(176, 55);
+            this.SpotifyMenuBtn.TabIndex = 1;
+            this.SpotifyMenuBtn.Text = "Spotify";
+            this.SpotifyMenuBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.SpotifyMenuBtn.UseVisualStyleBackColor = false;
+            this.SpotifyMenuBtn.Click += new System.EventHandler(this.SpotifyMenuBtn_Click);
+            this.SpotifyMenuBtn.MouseLeave += new System.EventHandler(this.SpotifyMenuBtn_MouseLeave);
+            this.SpotifyMenuBtn.MouseHover += new System.EventHandler(this.SpotifyMenuBtn_MouseHover);
+            // 
             // LogoBox
             // 
             this.LogoBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -246,6 +236,28 @@
             this.LogoBox.TabIndex = 0;
             this.LogoBox.TabStop = false;
             this.LogoBox.Click += new System.EventHandler(this.LogoBox_Click);
+            // 
+            // MenuHolderPanel
+            // 
+            this.MenuHolderPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.MenuHolderPanel.Controls.Add(this.GripIconBox);
+            this.MenuHolderPanel.Location = new System.Drawing.Point(176, 0);
+            this.MenuHolderPanel.Name = "MenuHolderPanel";
+            this.MenuHolderPanel.Size = new System.Drawing.Size(808, 661);
+            this.MenuHolderPanel.TabIndex = 1;
+            // 
+            // GripIconBox
+            // 
+            this.GripIconBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.GripIconBox.Image = global::Soundify.Properties.Resources.SideGripIcon;
+            this.GripIconBox.Location = new System.Drawing.Point(795, 648);
+            this.GripIconBox.Name = "GripIconBox";
+            this.GripIconBox.Size = new System.Drawing.Size(10, 10);
+            this.GripIconBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.GripIconBox.TabIndex = 0;
+            this.GripIconBox.TabStop = false;
             // 
             // MainWindow
             // 
@@ -264,14 +276,14 @@
             this.Text = "Soundify";
             this.Load += new System.EventHandler(this.MainWindow_Load);
             this.WindowSidePanel.ResumeLayout(false);
-            this.MenuHolderPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.GripIconBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.FullscreenBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DiscordPicBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.WebsitePicBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.YoutubePicBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GithubPicBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.LogoBox)).EndInit();
+            this.MenuHolderPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.GripIconBox)).EndInit();
             this.ResumeLayout(false);
 
         }

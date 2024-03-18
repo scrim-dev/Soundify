@@ -1,4 +1,6 @@
-﻿namespace Soundify
+﻿using Soundify.Menus;
+
+namespace Soundify
 {
     public partial class MainWindow : Form
     {
@@ -67,57 +69,127 @@
 
         private void LogoBox_Click(object sender, EventArgs e)
         {
-            Process.Start("");
+            Process.Start("https://scrim.cc/software/soundify");
         }
 
         private void SpotifyMenuBtn_Click(object sender, EventArgs e)
         {
-
+            FormLoader(new SpotifyMenuFrm());
         }
 
         private void SoundCMenuBtn_Click(object sender, EventArgs e)
         {
-
+            FormLoader(new SoundcloudMenuFrm());
         }
 
         private void AddonsMenuBtn_Click(object sender, EventArgs e)
         {
-
+            FormLoader(new AddonsMenuFrm());
         }
 
         private void MediaControlsMenuBtn_Click(object sender, EventArgs e)
         {
-
+            FormLoader(new MediaControlsMenuFrm());
         }
 
         private void SettingsMenuBtn_Click(object sender, EventArgs e)
         {
-
+            FormLoader(new SettingsMenuFrm());
         }
 
         private void GithubPicBox_Click(object sender, EventArgs e)
         {
-            Process.Start("");
+            Process.Start("https://github.com/scrim-dev");
         }
 
         private void YoutubePicBox_Click(object sender, EventArgs e)
         {
-            Process.Start("");
+            Process.Start("https://www.youtube.com/channel/UC47ldRzs1HoJiib7oPew8JQ");
         }
 
         private void WebsitePicBox_Click(object sender, EventArgs e)
         {
-            Process.Start("");
+            Process.Start("https://scrim.cc/");
         }
 
         private void DiscordPicBox_Click(object sender, EventArgs e)
         {
-            Process.Start("");
+            Process.Start("https://discord.gg/ZkkjHYmRGE");
         }
 
         private void FullscreenBtn_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Maximized;
+        }
+
+        //Load forms onto panel
+        private static Form FormWindow { get; set; } = null;
+        private void FormLoader(Form NewForm)
+        {
+            FormWindow?.Close();
+            FormWindow = NewForm;
+            NewForm.TopLevel = false;
+            NewForm.FormBorderStyle = FormBorderStyle.None;
+            NewForm.Dock = DockStyle.Fill;
+            MenuHolderPanel.Controls.Add(NewForm);
+            MenuHolderPanel.Tag = NewForm;
+            NewForm.Visible = true;
+            NewForm.BringToFront();
+            NewForm.Focus();
+            NewForm.Show();
+        }
+
+        //Color 153, 116, 209
+        //Hex #9974d1
+        //Hover Effect
+        private void SpotifyMenuBtn_MouseHover(object sender, EventArgs e)
+        {
+            SpotifyMenuBtn.BackColor = Color.FromArgb(153, 116, 209);
+        }
+
+        private void SpotifyMenuBtn_MouseLeave(object sender, EventArgs e)
+        {
+            SpotifyMenuBtn.BackColor = Color.FromArgb(33, 33, 33);
+        }
+
+        private void SoundCMenuBtn_MouseHover(object sender, EventArgs e)
+        {
+            SoundCMenuBtn.BackColor = Color.FromArgb(153, 116, 209);
+        }
+
+        private void SoundCMenuBtn_MouseLeave(object sender, EventArgs e)
+        {
+            SoundCMenuBtn.BackColor = Color.FromArgb(33, 33, 33);
+        }
+
+        private void AddonsMenuBtn_MouseHover(object sender, EventArgs e)
+        {
+            AddonsMenuBtn.BackColor = Color.FromArgb(153, 116, 209);
+        }
+
+        private void AddonsMenuBtn_MouseLeave(object sender, EventArgs e)
+        {
+            AddonsMenuBtn.BackColor = Color.FromArgb(33, 33, 33);
+        }
+
+        private void MediaControlsMenuBtn_MouseHover(object sender, EventArgs e)
+        {
+            MediaControlsMenuBtn.BackColor = Color.FromArgb(153, 116, 209);
+        }
+
+        private void MediaControlsMenuBtn_MouseLeave(object sender, EventArgs e)
+        {
+            MediaControlsMenuBtn.BackColor = Color.FromArgb(33, 33, 33);
+        }
+
+        private void SettingsMenuBtn_MouseHover(object sender, EventArgs e)
+        {
+            SettingsMenuBtn.BackColor = Color.FromArgb(153, 116, 209);
+        }
+
+        private void SettingsMenuBtn_MouseLeave(object sender, EventArgs e)
+        {
+            SettingsMenuBtn.BackColor = Color.FromArgb(33, 33, 33);
         }
     }
 }
