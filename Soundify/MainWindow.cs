@@ -43,6 +43,7 @@
 
         //Default 1000, 700 (300)
         //600, 300
+        //900, 558
         private void Setup()
         {
             FormBorderStyle = FormBorderStyle.Sizable;
@@ -53,13 +54,70 @@
             BackColor = Color.FromArgb(32, 32, 32);
             UseImmersiveDarkMode(Handle, true);
             TopMost = false;
-            MinimumSize = new(600, 300);
+            MinimumSize = new(900, 558);
             MaximumSize = new(int.MaxValue, int.MaxValue);
+
+            //Image setups
+            SpotifyMenuBtn.Image = new Bitmap(Resources.spotify, new Size(30, 30));
+            SoundCMenuBtn.Image = new Bitmap(Resources.soundcloud, new Size(30, 30));
+            AddonsMenuBtn.Image = new Bitmap(Resources.puzzle_piece_solid, new Size(30, 30));
+            MediaControlsMenuBtn.Image = new Bitmap(Resources.music_solid, new Size(30, 30));
+            SettingsMenuBtn.Image = new Bitmap(Resources.gear_solid, new Size(30, 30));
         }
 
         private void LogoBox_Click(object sender, EventArgs e)
         {
-            //Process.Start(""); Open website
+            Process.Start("");
+        }
+
+        private void SpotifyMenuBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SoundCMenuBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AddonsMenuBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MediaControlsMenuBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SettingsMenuBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void GithubPicBox_Click(object sender, EventArgs e)
+        {
+            Process.Start("");
+        }
+
+        private void YoutubePicBox_Click(object sender, EventArgs e)
+        {
+            Process.Start("");
+        }
+
+        private void WebsitePicBox_Click(object sender, EventArgs e)
+        {
+            Process.Start("");
+        }
+
+        private void DiscordPicBox_Click(object sender, EventArgs e)
+        {
+            Process.Start("");
+        }
+
+        private void FullscreenBtn_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Maximized;
         }
     }
 }
