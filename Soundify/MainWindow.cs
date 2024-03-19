@@ -53,6 +53,8 @@
 
             MainFormTimer.Enabled = true;
             MainFormTimer.Interval = 1100;
+            AppUpdateCheck.Enabled = true;
+            AppUpdateCheck.Interval = 19900;
 
             DRPC.Init();
             MediaController.Init();
@@ -60,7 +62,7 @@
 
             SoundCloudWView.Source = new("https://soundcloud.com/discover");
             SpotifyWView.Source = new("https://open.spotify.com/");
-            VisualizerWebView.Source = new("file://SoundifyVisuals/index.html");
+            VisualizerWebView.Source = new($"file://{Directory.GetCurrentDirectory()}\\SoundifyVisuals\\index.html");
 
             VersionLabel.Text = Info.AppVersion;
 
@@ -78,6 +80,7 @@
             Configs.Save();
             DRPC.End();
             MainFormTimer.Dispose();
+            AppUpdateCheck.Dispose();
         }
 
         private void JonasCredit_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -149,6 +152,11 @@
         private void StopBtn_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void AppUpdateCheck_Tick(object sender, EventArgs e)
+        {
+            UpdateChecker.Check();
         }
     }
 }

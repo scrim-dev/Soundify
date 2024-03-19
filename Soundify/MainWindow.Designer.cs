@@ -70,6 +70,7 @@
             this.DiscordRPCPanel = new ReaLTaiizor.Controls.LostBorderPanel();
             this.AppConfigsPanel = new ReaLTaiizor.Controls.LostBorderPanel();
             this.AppSetsPanel = new ReaLTaiizor.Controls.LostBorderPanel();
+            this.AppUpdateCheck = new System.Windows.Forms.Timer(this.components);
             this.FormTabPages.SuspendLayout();
             this.SpotifyTabPage.SuspendLayout();
             this.SoundCldTabPage.SuspendLayout();
@@ -656,6 +657,12 @@
             this.AppSetsPanel.TabIndex = 4;
             this.AppSetsPanel.Text = "App";
             // 
+            // AppUpdateCheck
+            // 
+            this.AppUpdateCheck.Enabled = true;
+            this.AppUpdateCheck.Interval = 19900;
+            this.AppUpdateCheck.Tick += new System.EventHandler(this.AppUpdateCheck_Tick);
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -741,6 +748,7 @@
         private ReaLTaiizor.Controls.LostBorderPanel DiscordRPCPanel;
         private ReaLTaiizor.Controls.LostBorderPanel AppConfigsPanel;
         private ReaLTaiizor.Controls.LostBorderPanel AppSetsPanel;
+        internal System.Windows.Forms.Timer AppUpdateCheck;
     }
 }
 

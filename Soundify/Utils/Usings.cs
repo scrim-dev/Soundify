@@ -17,3 +17,4 @@ global using DiscordRPC;
 global using DiscordRPC.Logging;
 global using WindowsMediaController;
 global using Soundify.App;
+global using System.IO;
