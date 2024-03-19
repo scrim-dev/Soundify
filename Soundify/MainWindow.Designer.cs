@@ -63,10 +63,19 @@
             this.NextBtn = new ReaLTaiizor.Controls.ForeverButton();
             this.StopBtn = new ReaLTaiizor.Controls.ForeverButton();
             this.PausePlayBtn = new ReaLTaiizor.Controls.ForeverButton();
+            this.VisualizerWebView = new Microsoft.Web.WebView2.WinForms.WebView2();
+            this.ConsolePanel = new ReaLTaiizor.Controls.LostBorderPanel();
+            this.RTBConsole = new System.Windows.Forms.RichTextBox();
+            this.VRCOscPanel = new ReaLTaiizor.Controls.LostBorderPanel();
+            this.DiscordRPCPanel = new ReaLTaiizor.Controls.LostBorderPanel();
+            this.AppConfigsPanel = new ReaLTaiizor.Controls.LostBorderPanel();
+            this.AppSetsPanel = new ReaLTaiizor.Controls.LostBorderPanel();
             this.FormTabPages.SuspendLayout();
             this.SpotifyTabPage.SuspendLayout();
             this.SoundCldTabPage.SuspendLayout();
             this.MediaControlsTabPage.SuspendLayout();
+            this.AddonsTabPage.SuspendLayout();
+            this.SettingsTabPage.SuspendLayout();
             this.CreditsTabPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SpotifyWView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SoundCloudWView)).BeginInit();
@@ -80,6 +89,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.YTPicBoxBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GhPicBoxBtn)).BeginInit();
             this.MediaControlsPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.VisualizerWebView)).BeginInit();
+            this.ConsolePanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // MainFormTimer
@@ -154,6 +165,7 @@
             // MediaControlsTabPage
             // 
             this.MediaControlsTabPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
+            this.MediaControlsTabPage.Controls.Add(this.ConsolePanel);
             this.MediaControlsTabPage.Controls.Add(this.MediaControlsPanel);
             this.MediaControlsTabPage.Location = new System.Drawing.Point(139, 4);
             this.MediaControlsTabPage.Name = "MediaControlsTabPage";
@@ -165,6 +177,8 @@
             // AddonsTabPage
             // 
             this.AddonsTabPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
+            this.AddonsTabPage.Controls.Add(this.DiscordRPCPanel);
+            this.AddonsTabPage.Controls.Add(this.VRCOscPanel);
             this.AddonsTabPage.Location = new System.Drawing.Point(139, 4);
             this.AddonsTabPage.Name = "AddonsTabPage";
             this.AddonsTabPage.Padding = new System.Windows.Forms.Padding(3);
@@ -175,6 +189,8 @@
             // SettingsTabPage
             // 
             this.SettingsTabPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
+            this.SettingsTabPage.Controls.Add(this.AppSetsPanel);
+            this.SettingsTabPage.Controls.Add(this.AppConfigsPanel);
             this.SettingsTabPage.Location = new System.Drawing.Point(139, 4);
             this.SettingsTabPage.Name = "SettingsTabPage";
             this.SettingsTabPage.Padding = new System.Windows.Forms.Padding(3);
@@ -460,6 +476,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.MediaControlsPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.MediaControlsPanel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(116)))), ((int)(((byte)(209)))));
+            this.MediaControlsPanel.Controls.Add(this.VisualizerWebView);
             this.MediaControlsPanel.Controls.Add(this.PausePlayBtn);
             this.MediaControlsPanel.Controls.Add(this.StopBtn);
             this.MediaControlsPanel.Controls.Add(this.NextBtn);
@@ -538,6 +555,107 @@
             this.PausePlayBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.PausePlayBtn.Click += new System.EventHandler(this.PausePlayBtn_Click);
             // 
+            // VisualizerWebView
+            // 
+            this.VisualizerWebView.AllowExternalDrop = true;
+            this.VisualizerWebView.CreationProperties = null;
+            this.VisualizerWebView.DefaultBackgroundColor = System.Drawing.Color.White;
+            this.VisualizerWebView.Location = new System.Drawing.Point(4, 25);
+            this.VisualizerWebView.Name = "VisualizerWebView";
+            this.VisualizerWebView.Size = new System.Drawing.Size(822, 236);
+            this.VisualizerWebView.TabIndex = 4;
+            this.VisualizerWebView.ZoomFactor = 1D;
+            // 
+            // ConsolePanel
+            // 
+            this.ConsolePanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ConsolePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.ConsolePanel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(116)))), ((int)(((byte)(209)))));
+            this.ConsolePanel.Controls.Add(this.RTBConsole);
+            this.ConsolePanel.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.ConsolePanel.ForeColor = System.Drawing.Color.White;
+            this.ConsolePanel.Location = new System.Drawing.Point(6, 319);
+            this.ConsolePanel.Name = "ConsolePanel";
+            this.ConsolePanel.Padding = new System.Windows.Forms.Padding(5);
+            this.ConsolePanel.ShowText = true;
+            this.ConsolePanel.Size = new System.Drawing.Size(826, 326);
+            this.ConsolePanel.TabIndex = 6;
+            this.ConsolePanel.Text = "Console";
+            // 
+            // RTBConsole
+            // 
+            this.RTBConsole.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.RTBConsole.BackColor = System.Drawing.Color.Black;
+            this.RTBConsole.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.RTBConsole.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.RTBConsole.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RTBConsole.ForeColor = System.Drawing.Color.Cyan;
+            this.RTBConsole.Location = new System.Drawing.Point(4, 25);
+            this.RTBConsole.Name = "RTBConsole";
+            this.RTBConsole.Size = new System.Drawing.Size(819, 298);
+            this.RTBConsole.TabIndex = 0;
+            this.RTBConsole.Text = "";
+            // 
+            // VRCOscPanel
+            // 
+            this.VRCOscPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.VRCOscPanel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(116)))), ((int)(((byte)(209)))));
+            this.VRCOscPanel.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.VRCOscPanel.ForeColor = System.Drawing.Color.White;
+            this.VRCOscPanel.Location = new System.Drawing.Point(6, 3);
+            this.VRCOscPanel.Name = "VRCOscPanel";
+            this.VRCOscPanel.Padding = new System.Windows.Forms.Padding(5);
+            this.VRCOscPanel.ShowText = true;
+            this.VRCOscPanel.Size = new System.Drawing.Size(280, 310);
+            this.VRCOscPanel.TabIndex = 2;
+            this.VRCOscPanel.Text = "VRChat OSC";
+            // 
+            // DiscordRPCPanel
+            // 
+            this.DiscordRPCPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.DiscordRPCPanel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(116)))), ((int)(((byte)(209)))));
+            this.DiscordRPCPanel.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.DiscordRPCPanel.ForeColor = System.Drawing.Color.White;
+            this.DiscordRPCPanel.Location = new System.Drawing.Point(292, 3);
+            this.DiscordRPCPanel.Name = "DiscordRPCPanel";
+            this.DiscordRPCPanel.Padding = new System.Windows.Forms.Padding(5);
+            this.DiscordRPCPanel.ShowText = true;
+            this.DiscordRPCPanel.Size = new System.Drawing.Size(280, 310);
+            this.DiscordRPCPanel.TabIndex = 3;
+            this.DiscordRPCPanel.Text = "Discord RPC";
+            // 
+            // AppConfigsPanel
+            // 
+            this.AppConfigsPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.AppConfigsPanel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(116)))), ((int)(((byte)(209)))));
+            this.AppConfigsPanel.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.AppConfigsPanel.ForeColor = System.Drawing.Color.White;
+            this.AppConfigsPanel.Location = new System.Drawing.Point(6, 3);
+            this.AppConfigsPanel.Name = "AppConfigsPanel";
+            this.AppConfigsPanel.Padding = new System.Windows.Forms.Padding(5);
+            this.AppConfigsPanel.ShowText = true;
+            this.AppConfigsPanel.Size = new System.Drawing.Size(280, 310);
+            this.AppConfigsPanel.TabIndex = 3;
+            this.AppConfigsPanel.Text = "Config";
+            // 
+            // AppSetsPanel
+            // 
+            this.AppSetsPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.AppSetsPanel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(116)))), ((int)(((byte)(209)))));
+            this.AppSetsPanel.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.AppSetsPanel.ForeColor = System.Drawing.Color.White;
+            this.AppSetsPanel.Location = new System.Drawing.Point(292, 3);
+            this.AppSetsPanel.Name = "AppSetsPanel";
+            this.AppSetsPanel.Padding = new System.Windows.Forms.Padding(5);
+            this.AppSetsPanel.ShowText = true;
+            this.AppSetsPanel.Size = new System.Drawing.Size(280, 310);
+            this.AppSetsPanel.TabIndex = 4;
+            this.AppSetsPanel.Text = "App";
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -558,6 +676,8 @@
             this.SpotifyTabPage.ResumeLayout(false);
             this.SoundCldTabPage.ResumeLayout(false);
             this.MediaControlsTabPage.ResumeLayout(false);
+            this.AddonsTabPage.ResumeLayout(false);
+            this.SettingsTabPage.ResumeLayout(false);
             this.CreditsTabPage.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.SpotifyWView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SoundCloudWView)).EndInit();
@@ -573,6 +693,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.YTPicBoxBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GhPicBoxBtn)).EndInit();
             this.MediaControlsPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.VisualizerWebView)).EndInit();
+            this.ConsolePanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -612,6 +734,13 @@
         private ReaLTaiizor.Controls.ForeverButton NextBtn;
         private ReaLTaiizor.Controls.ForeverButton StopBtn;
         private ReaLTaiizor.Controls.ForeverButton PausePlayBtn;
+        private Microsoft.Web.WebView2.WinForms.WebView2 VisualizerWebView;
+        private ReaLTaiizor.Controls.LostBorderPanel ConsolePanel;
+        private RichTextBox RTBConsole;
+        private ReaLTaiizor.Controls.LostBorderPanel VRCOscPanel;
+        private ReaLTaiizor.Controls.LostBorderPanel DiscordRPCPanel;
+        private ReaLTaiizor.Controls.LostBorderPanel AppConfigsPanel;
+        private ReaLTaiizor.Controls.LostBorderPanel AppSetsPanel;
     }
 }
 

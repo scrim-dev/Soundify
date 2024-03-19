@@ -60,8 +60,11 @@
 
             SoundCloudWView.Source = new("https://soundcloud.com/discover");
             SpotifyWView.Source = new("https://open.spotify.com/");
+            VisualizerWebView.Source = new("SoundifyVisuals\\index.html");
 
             VersionLabel.Text = Info.AppVersion;
+
+            UpdateChecker.Check();
         }
 
         //Main timer for everything
