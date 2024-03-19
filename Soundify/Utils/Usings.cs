@@ -13,3 +13,5 @@ global using System.Diagnostics;
 global using System.Runtime.InteropServices;
 global using Soundify.Properties;
 global using Soundify.Menus;
+global using Soundify.Utils;
+global using DiscordRPC;

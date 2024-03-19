@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.WindowSidePanel = new System.Windows.Forms.Panel();
             this.FullscreenBtn = new System.Windows.Forms.PictureBox();
             this.DiscordPicBox = new System.Windows.Forms.PictureBox();
@@ -42,6 +43,7 @@
             this.LogoBox = new System.Windows.Forms.PictureBox();
             this.MenuHolderPanel = new System.Windows.Forms.Panel();
             this.GripIconBox = new System.Windows.Forms.PictureBox();
+            this.MainFormTimer = new System.Windows.Forms.Timer(this.components);
             this.WindowSidePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.FullscreenBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DiscordPicBox)).BeginInit();
@@ -149,8 +151,6 @@
             this.SettingsMenuBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.SettingsMenuBtn.UseVisualStyleBackColor = false;
             this.SettingsMenuBtn.Click += new System.EventHandler(this.SettingsMenuBtn_Click);
-            //this.SettingsMenuBtn.MouseLeave += new System.EventHandler(this.SettingsMenuBtn_MouseLeave);
-            //this.SettingsMenuBtn.MouseHover += new System.EventHandler(this.SettingsMenuBtn_MouseHover);
             // 
             // MediaControlsMenuBtn
             // 
@@ -167,8 +167,6 @@
             this.MediaControlsMenuBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.MediaControlsMenuBtn.UseVisualStyleBackColor = false;
             this.MediaControlsMenuBtn.Click += new System.EventHandler(this.MediaControlsMenuBtn_Click);
-            //this.MediaControlsMenuBtn.MouseLeave += new System.EventHandler(this.MediaControlsMenuBtn_MouseLeave);
-            //this.MediaControlsMenuBtn.MouseHover += new System.EventHandler(this.MediaControlsMenuBtn_MouseHover);
             // 
             // AddonsMenuBtn
             // 
@@ -185,8 +183,6 @@
             this.AddonsMenuBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.AddonsMenuBtn.UseVisualStyleBackColor = false;
             this.AddonsMenuBtn.Click += new System.EventHandler(this.AddonsMenuBtn_Click);
-            //this.AddonsMenuBtn.MouseLeave += new System.EventHandler(this.AddonsMenuBtn_MouseLeave);
-            //this.AddonsMenuBtn.MouseHover += new System.EventHandler(this.AddonsMenuBtn_MouseHover);
             // 
             // SoundCMenuBtn
             // 
@@ -203,8 +199,6 @@
             this.SoundCMenuBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.SoundCMenuBtn.UseVisualStyleBackColor = false;
             this.SoundCMenuBtn.Click += new System.EventHandler(this.SoundCMenuBtn_Click);
-            //this.SoundCMenuBtn.MouseLeave += new System.EventHandler(this.SoundCMenuBtn_MouseLeave);
-            //this.SoundCMenuBtn.MouseHover += new System.EventHandler(this.SoundCMenuBtn_MouseHover);
             // 
             // SpotifyMenuBtn
             // 
@@ -221,8 +215,6 @@
             this.SpotifyMenuBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.SpotifyMenuBtn.UseVisualStyleBackColor = false;
             this.SpotifyMenuBtn.Click += new System.EventHandler(this.SpotifyMenuBtn_Click);
-            //this.SpotifyMenuBtn.MouseLeave += new System.EventHandler(this.SpotifyMenuBtn_MouseLeave);
-            //this.SpotifyMenuBtn.MouseHover += new System.EventHandler(this.SpotifyMenuBtn_MouseHover);
             // 
             // LogoBox
             // 
@@ -259,6 +251,12 @@
             this.GripIconBox.TabIndex = 0;
             this.GripIconBox.TabStop = false;
             // 
+            // MainFormTimer
+            // 
+            this.MainFormTimer.Enabled = true;
+            this.MainFormTimer.Interval = 1100;
+            this.MainFormTimer.Tick += new System.EventHandler(this.MainFormTimer_Tick);
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -274,6 +272,7 @@
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Soundify";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainWindow_FormClosing);
             this.Load += new System.EventHandler(this.MainWindow_Load);
             this.WindowSidePanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.FullscreenBtn)).EndInit();
@@ -294,16 +293,17 @@
         private PictureBox LogoBox;
         private Panel MenuHolderPanel;
         private PictureBox GripIconBox;
-        private Button SpotifyMenuBtn;
-        private Button SettingsMenuBtn;
-        private Button MediaControlsMenuBtn;
-        private Button AddonsMenuBtn;
-        private Button SoundCMenuBtn;
+        private System.Windows.Forms.Button SpotifyMenuBtn;
+        private System.Windows.Forms.Button SettingsMenuBtn;
+        private System.Windows.Forms.Button MediaControlsMenuBtn;
+        private System.Windows.Forms.Button AddonsMenuBtn;
+        private System.Windows.Forms.Button SoundCMenuBtn;
         private PictureBox WebsitePicBox;
         private PictureBox YoutubePicBox;
         private PictureBox GithubPicBox;
         private PictureBox DiscordPicBox;
         private PictureBox FullscreenBtn;
+        internal System.Windows.Forms.Timer MainFormTimer;
     }
 }
 

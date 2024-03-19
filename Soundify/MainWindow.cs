@@ -1,6 +1,4 @@
-﻿using Soundify.Utils;
-
-namespace Soundify
+﻿namespace Soundify
 {
     public partial class MainWindow : Form
     {
@@ -36,15 +34,9 @@ namespace Soundify
             return Environment.OSVersion.Version.Major >= 10 && Environment.OSVersion.Version.Build >= build;
         }
 
-        public MainWindow()
-        {
-            InitializeComponent();
-        }
+        public MainWindow() { InitializeComponent(); }
 
-        private void MainWindow_Load(object sender, EventArgs e)
-        {
-            Setup();
-        }
+        private void MainWindow_Load(object sender, EventArgs e) { Setup(); }
 
         //Default 1000, 700 (300)
         //600, 300
@@ -73,7 +65,11 @@ namespace Soundify
             Sptfy = new("https://open.spotify.com/");
             Sndcld = new("https://soundcloud.com/discover");
 
-            MsgBox.Msg("Loaded!");
+            //MsgBox.Msg("Loaded!");
+            MainFormTimer.Enabled = true;
+            MainFormTimer.Interval = 1100;
+
+            DRPC.Init();
         }
 
         private void LogoBox_Click(object sender, EventArgs e)
@@ -146,6 +142,19 @@ namespace Soundify
             NewForm.BringToFront();
             NewForm.Focus();
             NewForm.Show();
+        }
+
+        //Main timer for everything :P
+        private void MainFormTimer_Tick(object sender, EventArgs e)
+        {
+            //Console.WriteLine("Called");
+            DRPC.Update();
+        }
+
+        private void MainWindow_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DRPC.End();
+            //Configs.Save();
         }
 
         //Color 153, 116, 209
