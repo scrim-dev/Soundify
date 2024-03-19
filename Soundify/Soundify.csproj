@@ -57,64 +57,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App\Configs.cs" />
     <Compile Include="MainWindow.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MainWindow.Designer.cs">
       <DependentUpon>MainWindow.cs</DependentUpon>
     </Compile>
-    <Compile Include="Menus\AddonsMenuFrm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Menus\AddonsMenuFrm.Designer.cs">
-      <DependentUpon>AddonsMenuFrm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Menus\MediaControlsMenuFrm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Menus\MediaControlsMenuFrm.Designer.cs">
-      <DependentUpon>MediaControlsMenuFrm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Menus\SettingsMenuFrm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Menus\SettingsMenuFrm.Designer.cs">
-      <DependentUpon>SettingsMenuFrm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Menus\SoundcloudMenuFrm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Menus\SoundcloudMenuFrm.Designer.cs">
-      <DependentUpon>SoundcloudMenuFrm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Menus\SpotifyMenuFrm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Menus\SpotifyMenuFrm.Designer.cs">
-      <DependentUpon>SpotifyMenuFrm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utils\DRPC.cs" />
+    <Compile Include="Utils\MediaController.cs" />
     <Compile Include="Utils\MsgBox.cs" />
+    <Compile Include="Utils\OSCManager.cs" />
     <Compile Include="Utils\Usings.cs" />
     <EmbeddedResource Include="MainWindow.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Menus\AddonsMenuFrm.resx">
-      <DependentUpon>AddonsMenuFrm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Menus\MediaControlsMenuFrm.resx">
-      <DependentUpon>MediaControlsMenuFrm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Menus\SettingsMenuFrm.resx">
-      <DependentUpon>SettingsMenuFrm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Menus\SoundcloudMenuFrm.resx">
-      <DependentUpon>SoundcloudMenuFrm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Menus\SpotifyMenuFrm.resx">
-      <DependentUpon>SpotifyMenuFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -201,6 +159,9 @@
     <PackageReference Include="Newtonsoft.Json">
       <Version>13.0.3</Version>
     </PackageReference>
+    <PackageReference Include="ReaLTaiizor">
+      <Version>3.8.0.2</Version>
+    </PackageReference>
     <PackageReference Include="System.Collections.Immutable">
       <Version>8.0.0</Version>
     </PackageReference>
@@ -222,6 +183,15 @@
     <PackageReference Include="VRCOscLib">
       <Version>1.4.3</Version>
     </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Terkoshi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\ScrimGear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\ScrimGearGrad2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

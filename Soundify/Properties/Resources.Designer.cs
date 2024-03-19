@@ -153,6 +153,26 @@ namespace Soundify.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ScrimGear {
+            get {
+                object obj = ResourceManager.GetObject("ScrimGear", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ScrimGearGrad2 {
+            get {
+                object obj = ResourceManager.GetObject("ScrimGearGrad2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap SideGripIcon {
             get {
                 object obj = ResourceManager.GetObject("SideGripIcon", resourceCulture);
@@ -176,6 +196,16 @@ namespace Soundify.Properties {
         internal static System.Drawing.Bitmap spotify {
             get {
                 object obj = ResourceManager.GetObject("spotify", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Terkoshi {
+            get {
+                object obj = ResourceManager.GetObject("Terkoshi", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -1,4 +1,4 @@
-﻿using DiscordRPC.Logging;
+﻿
 using System.Security.Policy;
 using Windows.Media.Protection.PlayReady;
 
@@ -7,10 +7,6 @@ namespace Soundify.Utils
     internal class DRPC
     {
         private static DiscordRpcClient DClient { get; set; }
-        private static DiscordRPC.Button SoundifyWebsiteBtn { get; set; }
-        private static DiscordRPC.Button ListenAlongBtn { get; set; }
-
-        public static bool ListeningToMusic { get; set; } = false;
 
         public static void Init()
         {
@@ -19,7 +15,7 @@ namespace Soundify.Utils
                 Logger = new ConsoleLogger() { Level = LogLevel.Warning }
             };
 
-            DClient.OnReady += (sender, e) =>
+            /*DClient.OnReady += (sender, e) =>
             {
                 Console.WriteLine("Received Ready from user {0}", e.User.Username);
             };
@@ -27,7 +23,7 @@ namespace Soundify.Utils
             DClient.OnPresenceUpdate += (sender, e) =>
             {
                 Console.WriteLine("Received Update! {0}", e.Presence);
-            };
+            }; */
 
             DClient.Initialize();
 
@@ -40,7 +36,11 @@ namespace Soundify.Utils
 
         public static void SetPresence(string Details, string State)
         {
-            SetPresButtons();
+            DiscordRPC.Button SoundifyWebsiteBtn = new()
+            {
+                Label = "Download Soundify",
+                Url = "https://scrim.cc/software/soundify"
+            };
 
             DClient.SetPresence(new RichPresence()
             {
@@ -54,26 +54,8 @@ namespace Soundify.Utils
                     SmallImageText = "v" + Info.AppVersion
                 },
 
-                Buttons = [SoundifyWebsiteBtn, ListenAlongBtn]
+                Buttons = [SoundifyWebsiteBtn]
             });
-        }
-
-        public static void SetPresButtons()
-        {
-            SoundifyWebsiteBtn = new()
-            {
-                Label = "Download Soundify",
-                Url = "https://scrim.cc/software/soundify"
-            };
-
-            if(ListeningToMusic)
-            {
-                ListenAlongBtn = new()
-                {
-                    Label = "Listen Along",
-                    Url = "https://placehold.co/600x400?text=Hello+World" //Will work on later
-                };
-            }
         }
     }
 }
