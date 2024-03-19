@@ -60,7 +60,7 @@
 
             SoundCloudWView.Source = new("https://soundcloud.com/discover");
             SpotifyWView.Source = new("https://open.spotify.com/");
-            VisualizerWebView.Source = new("SoundifyVisuals\\index.html");
+            VisualizerWebView.Source = new("file://SoundifyVisuals/index.html");
 
             VersionLabel.Text = Info.AppVersion;
 

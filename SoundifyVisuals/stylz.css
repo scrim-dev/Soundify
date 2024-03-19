@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Pixelify Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 0;
+    font-style: normal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #1f1f1f;
+    margin-top: -60px;
+}
+
+.gangsta {
+    animation: zooming 1s infinite alternate;
+}
+
+@keyframes zooming {
+    0% {
+        transform: scale(100%);
+    }
+    100% {
+        transform: scale(111%);
+    }
+}
+
+header {
+    text-align: center;
+    animation: flash 1s infinite alternate;
+}
+
+@keyframes flash {
+    0% {
+        color: rgb(204, 117, 245);
+    }
+    100% {
+        color: white;
+    }
+}
+
+img {
+    width: 300px;
+    height: 300px;
+    margin-bottom: -150px;
+}
