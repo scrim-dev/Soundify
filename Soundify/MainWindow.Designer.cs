@@ -55,9 +55,18 @@
             this.TaiizorCredit = new System.Windows.Forms.LinkLabel();
             this.ChanyaCredit = new System.Windows.Forms.LinkLabel();
             this.WebsiteLinksPanel = new ReaLTaiizor.Controls.LostBorderPanel();
+            this.WebsitePicBoxBtn = new System.Windows.Forms.PictureBox();
+            this.YTPicBoxBtn = new System.Windows.Forms.PictureBox();
+            this.GhPicBoxBtn = new System.Windows.Forms.PictureBox();
+            this.MediaControlsPanel = new ReaLTaiizor.Controls.LostBorderPanel();
+            this.PreviousBtn = new ReaLTaiizor.Controls.ForeverButton();
+            this.NextBtn = new ReaLTaiizor.Controls.ForeverButton();
+            this.StopBtn = new ReaLTaiizor.Controls.ForeverButton();
+            this.PausePlayBtn = new ReaLTaiizor.Controls.ForeverButton();
             this.FormTabPages.SuspendLayout();
             this.SpotifyTabPage.SuspendLayout();
             this.SoundCldTabPage.SuspendLayout();
+            this.MediaControlsTabPage.SuspendLayout();
             this.CreditsTabPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SpotifyWView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SoundCloudWView)).BeginInit();
@@ -66,6 +75,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.LogoPicBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TkPicBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ScrimPicBox)).BeginInit();
+            this.WebsiteLinksPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.WebsitePicBoxBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.YTPicBoxBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GhPicBoxBtn)).BeginInit();
+            this.MediaControlsPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // MainFormTimer
@@ -140,6 +154,7 @@
             // MediaControlsTabPage
             // 
             this.MediaControlsTabPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
+            this.MediaControlsTabPage.Controls.Add(this.MediaControlsPanel);
             this.MediaControlsTabPage.Location = new System.Drawing.Point(139, 4);
             this.MediaControlsTabPage.Name = "MediaControlsTabPage";
             this.MediaControlsTabPage.Padding = new System.Windows.Forms.Padding(3);
@@ -390,15 +405,138 @@
             // 
             this.WebsiteLinksPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.WebsiteLinksPanel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(116)))), ((int)(((byte)(209)))));
+            this.WebsiteLinksPanel.Controls.Add(this.GhPicBoxBtn);
+            this.WebsiteLinksPanel.Controls.Add(this.YTPicBoxBtn);
+            this.WebsiteLinksPanel.Controls.Add(this.WebsitePicBoxBtn);
             this.WebsiteLinksPanel.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.WebsiteLinksPanel.ForeColor = System.Drawing.Color.White;
             this.WebsiteLinksPanel.Location = new System.Drawing.Point(6, 319);
             this.WebsiteLinksPanel.Name = "WebsiteLinksPanel";
             this.WebsiteLinksPanel.Padding = new System.Windows.Forms.Padding(5);
             this.WebsiteLinksPanel.ShowText = true;
-            this.WebsiteLinksPanel.Size = new System.Drawing.Size(566, 141);
+            this.WebsiteLinksPanel.Size = new System.Drawing.Size(280, 67);
             this.WebsiteLinksPanel.TabIndex = 5;
             this.WebsiteLinksPanel.Text = "Links";
+            // 
+            // WebsitePicBoxBtn
+            // 
+            this.WebsitePicBoxBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.WebsitePicBoxBtn.Image = global::Soundify.Properties.Resources.globe_solid;
+            this.WebsitePicBoxBtn.Location = new System.Drawing.Point(4, 25);
+            this.WebsitePicBoxBtn.Name = "WebsitePicBoxBtn";
+            this.WebsitePicBoxBtn.Size = new System.Drawing.Size(35, 35);
+            this.WebsitePicBoxBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.WebsitePicBoxBtn.TabIndex = 8;
+            this.WebsitePicBoxBtn.TabStop = false;
+            this.WebsitePicBoxBtn.Click += new System.EventHandler(this.WebsitePicBoxBtn_Click);
+            // 
+            // YTPicBoxBtn
+            // 
+            this.YTPicBoxBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.YTPicBoxBtn.Image = global::Soundify.Properties.Resources.youtube;
+            this.YTPicBoxBtn.Location = new System.Drawing.Point(45, 25);
+            this.YTPicBoxBtn.Name = "YTPicBoxBtn";
+            this.YTPicBoxBtn.Size = new System.Drawing.Size(35, 35);
+            this.YTPicBoxBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.YTPicBoxBtn.TabIndex = 9;
+            this.YTPicBoxBtn.TabStop = false;
+            this.YTPicBoxBtn.Click += new System.EventHandler(this.YTPicBoxBtn_Click);
+            // 
+            // GhPicBoxBtn
+            // 
+            this.GhPicBoxBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.GhPicBoxBtn.Image = global::Soundify.Properties.Resources.github;
+            this.GhPicBoxBtn.Location = new System.Drawing.Point(86, 25);
+            this.GhPicBoxBtn.Name = "GhPicBoxBtn";
+            this.GhPicBoxBtn.Size = new System.Drawing.Size(35, 35);
+            this.GhPicBoxBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.GhPicBoxBtn.TabIndex = 10;
+            this.GhPicBoxBtn.TabStop = false;
+            this.GhPicBoxBtn.Click += new System.EventHandler(this.GhPicBoxBtn_Click);
+            // 
+            // MediaControlsPanel
+            // 
+            this.MediaControlsPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.MediaControlsPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.MediaControlsPanel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(116)))), ((int)(((byte)(209)))));
+            this.MediaControlsPanel.Controls.Add(this.PausePlayBtn);
+            this.MediaControlsPanel.Controls.Add(this.StopBtn);
+            this.MediaControlsPanel.Controls.Add(this.NextBtn);
+            this.MediaControlsPanel.Controls.Add(this.PreviousBtn);
+            this.MediaControlsPanel.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.MediaControlsPanel.ForeColor = System.Drawing.Color.White;
+            this.MediaControlsPanel.Location = new System.Drawing.Point(6, 3);
+            this.MediaControlsPanel.Name = "MediaControlsPanel";
+            this.MediaControlsPanel.Padding = new System.Windows.Forms.Padding(5);
+            this.MediaControlsPanel.ShowText = true;
+            this.MediaControlsPanel.Size = new System.Drawing.Size(829, 310);
+            this.MediaControlsPanel.TabIndex = 2;
+            this.MediaControlsPanel.Text = "Controls";
+            // 
+            // PreviousBtn
+            // 
+            this.PreviousBtn.BackColor = System.Drawing.Color.Transparent;
+            this.PreviousBtn.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(116)))), ((int)(((byte)(209)))));
+            this.PreviousBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PreviousBtn.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.PreviousBtn.Location = new System.Drawing.Point(3, 267);
+            this.PreviousBtn.Name = "PreviousBtn";
+            this.PreviousBtn.Rounded = false;
+            this.PreviousBtn.Size = new System.Drawing.Size(100, 40);
+            this.PreviousBtn.TabIndex = 0;
+            this.PreviousBtn.Text = "<=";
+            this.PreviousBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.PreviousBtn.Click += new System.EventHandler(this.PreviousBtn_Click);
+            // 
+            // NextBtn
+            // 
+            this.NextBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.NextBtn.BackColor = System.Drawing.Color.Transparent;
+            this.NextBtn.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(116)))), ((int)(((byte)(209)))));
+            this.NextBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.NextBtn.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.NextBtn.Location = new System.Drawing.Point(726, 267);
+            this.NextBtn.Name = "NextBtn";
+            this.NextBtn.Rounded = false;
+            this.NextBtn.Size = new System.Drawing.Size(100, 40);
+            this.NextBtn.TabIndex = 1;
+            this.NextBtn.Text = "=>";
+            this.NextBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.NextBtn.Click += new System.EventHandler(this.NextBtn_Click);
+            // 
+            // StopBtn
+            // 
+            this.StopBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.StopBtn.BackColor = System.Drawing.Color.Transparent;
+            this.StopBtn.BaseColor = System.Drawing.Color.Firebrick;
+            this.StopBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.StopBtn.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.StopBtn.Location = new System.Drawing.Point(558, 267);
+            this.StopBtn.Name = "StopBtn";
+            this.StopBtn.Rounded = false;
+            this.StopBtn.Size = new System.Drawing.Size(162, 40);
+            this.StopBtn.TabIndex = 2;
+            this.StopBtn.Text = "Stop";
+            this.StopBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.StopBtn.Click += new System.EventHandler(this.StopBtn_Click);
+            // 
+            // PausePlayBtn
+            // 
+            this.PausePlayBtn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.PausePlayBtn.BackColor = System.Drawing.Color.Transparent;
+            this.PausePlayBtn.BaseColor = System.Drawing.Color.LimeGreen;
+            this.PausePlayBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PausePlayBtn.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.PausePlayBtn.Location = new System.Drawing.Point(109, 267);
+            this.PausePlayBtn.Name = "PausePlayBtn";
+            this.PausePlayBtn.Rounded = false;
+            this.PausePlayBtn.Size = new System.Drawing.Size(443, 40);
+            this.PausePlayBtn.TabIndex = 3;
+            this.PausePlayBtn.Text = "Play/Pause";
+            this.PausePlayBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.PausePlayBtn.Click += new System.EventHandler(this.PausePlayBtn_Click);
             // 
             // MainWindow
             // 
@@ -419,6 +557,7 @@
             this.FormTabPages.ResumeLayout(false);
             this.SpotifyTabPage.ResumeLayout(false);
             this.SoundCldTabPage.ResumeLayout(false);
+            this.MediaControlsTabPage.ResumeLayout(false);
             this.CreditsTabPage.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.SpotifyWView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SoundCloudWView)).EndInit();
@@ -429,6 +568,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.LogoPicBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TkPicBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ScrimPicBox)).EndInit();
+            this.WebsiteLinksPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.WebsitePicBoxBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.YTPicBoxBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GhPicBoxBtn)).EndInit();
+            this.MediaControlsPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -460,6 +604,14 @@
         private LinkLabel DubyaCredit;
         private LinkLabel ChanyaCredit;
         private ReaLTaiizor.Controls.LostBorderPanel WebsiteLinksPanel;
+        private PictureBox GhPicBoxBtn;
+        private PictureBox YTPicBoxBtn;
+        private PictureBox WebsitePicBoxBtn;
+        private ReaLTaiizor.Controls.LostBorderPanel MediaControlsPanel;
+        private ReaLTaiizor.Controls.ForeverButton PreviousBtn;
+        private ReaLTaiizor.Controls.ForeverButton NextBtn;
+        private ReaLTaiizor.Controls.ForeverButton StopBtn;
+        private ReaLTaiizor.Controls.ForeverButton PausePlayBtn;
     }
 }
 

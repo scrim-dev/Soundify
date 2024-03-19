@@ -111,5 +111,41 @@
         {
             Process.Start("https://github.com/terkoshi");
         }
+
+        private void WebsitePicBoxBtn_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://scrim.cc/software/soundify");
+        }
+
+        private void YTPicBoxBtn_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://www.youtube.com/channel/UC47ldRzs1HoJiib7oPew8JQ");
+        }
+
+        private void GhPicBoxBtn_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://github.com/terkoshi");
+            Process.Start("https://github.com/scrim-dev");
+        }
+
+        private void NextBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PreviousBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PausePlayBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void StopBtn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
