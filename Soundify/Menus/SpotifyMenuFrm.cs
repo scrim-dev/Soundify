@@ -1,14 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-namespace Soundify.Menus
+﻿namespace Soundify.Menus
 {
     public partial class SpotifyMenuFrm : Form
     {
@@ -19,7 +9,12 @@ namespace Soundify.Menus
 
         private void SpotifyMenuFrm_Load(object sender, EventArgs e)
         {
-
+            Size = new(808, 661);
+            BackColor = Color.FromArgb(32, 32, 32);
+            FormBorderStyle = FormBorderStyle.None;
+            SpotifyWebView.Source = MainWindow.Sptfy;
         }
+
+        private void SpotifyWebView_Click(object sender, EventArgs e) { }
     }
 }

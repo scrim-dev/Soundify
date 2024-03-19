@@ -1,9 +1,12 @@
-﻿using Soundify.Menus;
+﻿using Soundify.Utils;
 
 namespace Soundify
 {
     public partial class MainWindow : Form
     {
+        public static Uri Sptfy { get; set; } = null;
+        public static Uri Sndcld { get; set; } = null;
+
         //Dark window title by Jonas Kohl - https://jonaskohl.de/ | https://github.com/jonaskohl
         [DllImport("dwmapi.dll")]
         private static extern int DwmSetWindowAttribute(IntPtr hwnd, int attr, ref int attrValue, int attrSize);
@@ -65,6 +68,12 @@ namespace Soundify
             AddonsMenuBtn.Image = new Bitmap(Resources.puzzle_piece_solid, new Size(30, 30));
             MediaControlsMenuBtn.Image = new Bitmap(Resources.music_solid, new Size(30, 30));
             SettingsMenuBtn.Image = new Bitmap(Resources.gear_solid, new Size(30, 30));
+
+            //Webview
+            Sptfy = new("https://open.spotify.com/");
+            Sndcld = new("https://soundcloud.com/discover");
+
+            MsgBox.Msg("Loaded!");
         }
 
         private void LogoBox_Click(object sender, EventArgs e)
@@ -142,7 +151,7 @@ namespace Soundify
         //Color 153, 116, 209
         //Hex #9974d1
         //Hover Effect
-        private void SpotifyMenuBtn_MouseHover(object sender, EventArgs e)
+        /*private void SpotifyMenuBtn_MouseHover(object sender, EventArgs e)
         {
             SpotifyMenuBtn.BackColor = Color.FromArgb(153, 116, 209);
         }
@@ -190,6 +199,6 @@ namespace Soundify
         private void SettingsMenuBtn_MouseLeave(object sender, EventArgs e)
         {
             SettingsMenuBtn.BackColor = Color.FromArgb(33, 33, 33);
-        }
+        }*/
     }
 }

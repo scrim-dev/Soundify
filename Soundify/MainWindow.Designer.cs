@@ -149,8 +149,8 @@
             this.SettingsMenuBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.SettingsMenuBtn.UseVisualStyleBackColor = false;
             this.SettingsMenuBtn.Click += new System.EventHandler(this.SettingsMenuBtn_Click);
-            this.SettingsMenuBtn.MouseLeave += new System.EventHandler(this.SettingsMenuBtn_MouseLeave);
-            this.SettingsMenuBtn.MouseHover += new System.EventHandler(this.SettingsMenuBtn_MouseHover);
+            //this.SettingsMenuBtn.MouseLeave += new System.EventHandler(this.SettingsMenuBtn_MouseLeave);
+            //this.SettingsMenuBtn.MouseHover += new System.EventHandler(this.SettingsMenuBtn_MouseHover);
             // 
             // MediaControlsMenuBtn
             // 
@@ -167,8 +167,8 @@
             this.MediaControlsMenuBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.MediaControlsMenuBtn.UseVisualStyleBackColor = false;
             this.MediaControlsMenuBtn.Click += new System.EventHandler(this.MediaControlsMenuBtn_Click);
-            this.MediaControlsMenuBtn.MouseLeave += new System.EventHandler(this.MediaControlsMenuBtn_MouseLeave);
-            this.MediaControlsMenuBtn.MouseHover += new System.EventHandler(this.MediaControlsMenuBtn_MouseHover);
+            //this.MediaControlsMenuBtn.MouseLeave += new System.EventHandler(this.MediaControlsMenuBtn_MouseLeave);
+            //this.MediaControlsMenuBtn.MouseHover += new System.EventHandler(this.MediaControlsMenuBtn_MouseHover);
             // 
             // AddonsMenuBtn
             // 
@@ -185,8 +185,8 @@
             this.AddonsMenuBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.AddonsMenuBtn.UseVisualStyleBackColor = false;
             this.AddonsMenuBtn.Click += new System.EventHandler(this.AddonsMenuBtn_Click);
-            this.AddonsMenuBtn.MouseLeave += new System.EventHandler(this.AddonsMenuBtn_MouseLeave);
-            this.AddonsMenuBtn.MouseHover += new System.EventHandler(this.AddonsMenuBtn_MouseHover);
+            //this.AddonsMenuBtn.MouseLeave += new System.EventHandler(this.AddonsMenuBtn_MouseLeave);
+            //this.AddonsMenuBtn.MouseHover += new System.EventHandler(this.AddonsMenuBtn_MouseHover);
             // 
             // SoundCMenuBtn
             // 
@@ -203,8 +203,8 @@
             this.SoundCMenuBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.SoundCMenuBtn.UseVisualStyleBackColor = false;
             this.SoundCMenuBtn.Click += new System.EventHandler(this.SoundCMenuBtn_Click);
-            this.SoundCMenuBtn.MouseLeave += new System.EventHandler(this.SoundCMenuBtn_MouseLeave);
-            this.SoundCMenuBtn.MouseHover += new System.EventHandler(this.SoundCMenuBtn_MouseHover);
+            //this.SoundCMenuBtn.MouseLeave += new System.EventHandler(this.SoundCMenuBtn_MouseLeave);
+            //this.SoundCMenuBtn.MouseHover += new System.EventHandler(this.SoundCMenuBtn_MouseHover);
             // 
             // SpotifyMenuBtn
             // 
@@ -221,8 +221,8 @@
             this.SpotifyMenuBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.SpotifyMenuBtn.UseVisualStyleBackColor = false;
             this.SpotifyMenuBtn.Click += new System.EventHandler(this.SpotifyMenuBtn_Click);
-            this.SpotifyMenuBtn.MouseLeave += new System.EventHandler(this.SpotifyMenuBtn_MouseLeave);
-            this.SpotifyMenuBtn.MouseHover += new System.EventHandler(this.SpotifyMenuBtn_MouseHover);
+            //this.SpotifyMenuBtn.MouseLeave += new System.EventHandler(this.SpotifyMenuBtn_MouseLeave);
+            //this.SpotifyMenuBtn.MouseHover += new System.EventHandler(this.SpotifyMenuBtn_MouseHover);
             // 
             // LogoBox
             // 
