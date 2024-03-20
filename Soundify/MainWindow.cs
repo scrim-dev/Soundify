@@ -150,37 +150,43 @@ namespace Soundify
         }
 
         private void NextBtn_Click(object sender, EventArgs e)
-        {
-            var sesh = MediaController.mediaManager.WindowsSessionManager.GetCurrentSession();
-            _ = sesh.TrySkipNextAsync();
+        {           
+            try
+            {
+                var sesh = MediaController.mediaManager.WindowsSessionManager.GetCurrentSession();
+                _ = sesh.TrySkipNextAsync();
+            }
+            catch { }
         }
 
         private void PreviousBtn_Click(object sender, EventArgs e)
-        {
-            var sesh = MediaController.mediaManager.WindowsSessionManager.GetCurrentSession();
-            _ = sesh.TrySkipPreviousAsync();
+        {           
+            try
+            {
+                var sesh = MediaController.mediaManager.WindowsSessionManager.GetCurrentSession();
+                _ = sesh.TrySkipPreviousAsync();
+            }
+            catch { }
         }
 
-        private static bool PauseOrPlay = false;
         private void PausePlayBtn_Click(object sender, EventArgs e)
         {
-            PauseOrPlay = !PauseOrPlay;
-            if(PauseOrPlay)
+            try
             {
                 var sesh = MediaController.mediaManager.WindowsSessionManager.GetCurrentSession();
-                _ = sesh.TryPauseAsync();
+                _ = sesh.TryTogglePlayPauseAsync();
             }
-            else
-            {
-                var sesh = MediaController.mediaManager.WindowsSessionManager.GetCurrentSession();
-                _ = sesh.TryPlayAsync();
-            }
+            catch { FormConsole.Error("Failed to play/pause. Are you even listening to music right now?"); }
         }
 
         private void StopBtn_Click(object sender, EventArgs e)
-        {
-            var sesh = MediaController.mediaManager.WindowsSessionManager.GetCurrentSession();
-            _ = sesh.TryStopAsync();
+        {       
+            try
+            {
+                var sesh = MediaController.mediaManager.WindowsSessionManager.GetCurrentSession();
+                _ = sesh.TryStopAsync();
+            }
+            catch (Exception ex) { FormConsole.Error($"Failed to stop the music ({ex})"); }
         }
 
         private void AppUpdateCheck_Tick(object sender, EventArgs e)
@@ -271,7 +277,7 @@ namespace Soundify
                 Application.Exit();
             }, delegate
             {
-                Alerts.ErrorTone();
+                /* bruh sound effect */
             });
         }
 
