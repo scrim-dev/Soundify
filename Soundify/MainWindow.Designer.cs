@@ -52,9 +52,6 @@
             this.AppConfigsPanel = new ReaLTaiizor.Controls.LostBorderPanel();
             this.CreditsTabPage = new System.Windows.Forms.TabPage();
             this.WebsiteLinksPanel = new ReaLTaiizor.Controls.LostBorderPanel();
-            this.GhPicBoxBtn = new System.Windows.Forms.PictureBox();
-            this.YTPicBoxBtn = new System.Windows.Forms.PictureBox();
-            this.WebsitePicBoxBtn = new System.Windows.Forms.PictureBox();
             this.OtherCredsPanel = new ReaLTaiizor.Controls.LostBorderPanel();
             this.ChanyaCredit = new System.Windows.Forms.LinkLabel();
             this.TaiizorCredit = new System.Windows.Forms.LinkLabel();
@@ -66,11 +63,14 @@
             this.VersionLabel = new System.Windows.Forms.Label();
             this.TkLabel = new System.Windows.Forms.Label();
             this.ScrimLabel = new System.Windows.Forms.Label();
+            this.DevelopTitleLabel = new System.Windows.Forms.Label();
+            this.AppUpdateCheck = new System.Windows.Forms.Timer(this.components);
+            this.GhPicBoxBtn = new System.Windows.Forms.PictureBox();
+            this.YTPicBoxBtn = new System.Windows.Forms.PictureBox();
+            this.WebsitePicBoxBtn = new System.Windows.Forms.PictureBox();
             this.ScrimPicBox = new System.Windows.Forms.PictureBox();
             this.TkPicBox = new System.Windows.Forms.PictureBox();
-            this.DevelopTitleLabel = new System.Windows.Forms.Label();
             this.LogoPicBox = new System.Windows.Forms.PictureBox();
-            this.AppUpdateCheck = new System.Windows.Forms.Timer(this.components);
             this.FormTabPages.SuspendLayout();
             this.SpotifyTabPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SpotifyWView)).BeginInit();
@@ -84,11 +84,11 @@
             this.SettingsTabPage.SuspendLayout();
             this.CreditsTabPage.SuspendLayout();
             this.WebsiteLinksPanel.SuspendLayout();
+            this.OtherCredsPanel.SuspendLayout();
+            this.MainCredsPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GhPicBoxBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.YTPicBoxBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.WebsitePicBoxBtn)).BeginInit();
-            this.OtherCredsPanel.SuspendLayout();
-            this.MainCredsPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ScrimPicBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TkPicBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LogoPicBox)).BeginInit();
@@ -443,42 +443,6 @@
             this.WebsiteLinksPanel.TabIndex = 5;
             this.WebsiteLinksPanel.Text = "Links";
             // 
-            // GhPicBoxBtn
-            // 
-            this.GhPicBoxBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.GhPicBoxBtn.Image = global::Soundify.Properties.Resources.github;
-            this.GhPicBoxBtn.Location = new System.Drawing.Point(86, 25);
-            this.GhPicBoxBtn.Name = "GhPicBoxBtn";
-            this.GhPicBoxBtn.Size = new System.Drawing.Size(35, 35);
-            this.GhPicBoxBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.GhPicBoxBtn.TabIndex = 10;
-            this.GhPicBoxBtn.TabStop = false;
-            this.GhPicBoxBtn.Click += new System.EventHandler(this.GhPicBoxBtn_Click);
-            // 
-            // YTPicBoxBtn
-            // 
-            this.YTPicBoxBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.YTPicBoxBtn.Image = global::Soundify.Properties.Resources.youtube;
-            this.YTPicBoxBtn.Location = new System.Drawing.Point(45, 25);
-            this.YTPicBoxBtn.Name = "YTPicBoxBtn";
-            this.YTPicBoxBtn.Size = new System.Drawing.Size(35, 35);
-            this.YTPicBoxBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.YTPicBoxBtn.TabIndex = 9;
-            this.YTPicBoxBtn.TabStop = false;
-            this.YTPicBoxBtn.Click += new System.EventHandler(this.YTPicBoxBtn_Click);
-            // 
-            // WebsitePicBoxBtn
-            // 
-            this.WebsitePicBoxBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.WebsitePicBoxBtn.Image = global::Soundify.Properties.Resources.globe_solid;
-            this.WebsitePicBoxBtn.Location = new System.Drawing.Point(4, 25);
-            this.WebsitePicBoxBtn.Name = "WebsitePicBoxBtn";
-            this.WebsitePicBoxBtn.Size = new System.Drawing.Size(35, 35);
-            this.WebsitePicBoxBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.WebsitePicBoxBtn.TabIndex = 8;
-            this.WebsitePicBoxBtn.TabStop = false;
-            this.WebsitePicBoxBtn.Click += new System.EventHandler(this.WebsitePicBoxBtn_Click);
-            // 
             // OtherCredsPanel
             // 
             this.OtherCredsPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
@@ -618,6 +582,57 @@
             this.ScrimLabel.TabIndex = 4;
             this.ScrimLabel.Text = "Scrimmane";
             // 
+            // DevelopTitleLabel
+            // 
+            this.DevelopTitleLabel.AutoSize = true;
+            this.DevelopTitleLabel.Location = new System.Drawing.Point(3, 164);
+            this.DevelopTitleLabel.Name = "DevelopTitleLabel";
+            this.DevelopTitleLabel.Size = new System.Drawing.Size(163, 21);
+            this.DevelopTitleLabel.TabIndex = 1;
+            this.DevelopTitleLabel.Text = "Developed with <3 By";
+            // 
+            // AppUpdateCheck
+            // 
+            this.AppUpdateCheck.Enabled = true;
+            this.AppUpdateCheck.Interval = 19900;
+            this.AppUpdateCheck.Tick += new System.EventHandler(this.AppUpdateCheck_Tick);
+            // 
+            // GhPicBoxBtn
+            // 
+            this.GhPicBoxBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.GhPicBoxBtn.Image = global::Soundify.Properties.Resources.github;
+            this.GhPicBoxBtn.Location = new System.Drawing.Point(86, 25);
+            this.GhPicBoxBtn.Name = "GhPicBoxBtn";
+            this.GhPicBoxBtn.Size = new System.Drawing.Size(35, 35);
+            this.GhPicBoxBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.GhPicBoxBtn.TabIndex = 10;
+            this.GhPicBoxBtn.TabStop = false;
+            this.GhPicBoxBtn.Click += new System.EventHandler(this.GhPicBoxBtn_Click);
+            // 
+            // YTPicBoxBtn
+            // 
+            this.YTPicBoxBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.YTPicBoxBtn.Image = global::Soundify.Properties.Resources.youtube;
+            this.YTPicBoxBtn.Location = new System.Drawing.Point(45, 25);
+            this.YTPicBoxBtn.Name = "YTPicBoxBtn";
+            this.YTPicBoxBtn.Size = new System.Drawing.Size(35, 35);
+            this.YTPicBoxBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.YTPicBoxBtn.TabIndex = 9;
+            this.YTPicBoxBtn.TabStop = false;
+            this.YTPicBoxBtn.Click += new System.EventHandler(this.YTPicBoxBtn_Click);
+            // 
+            // WebsitePicBoxBtn
+            // 
+            this.WebsitePicBoxBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.WebsitePicBoxBtn.Image = global::Soundify.Properties.Resources.globe_solid;
+            this.WebsitePicBoxBtn.Location = new System.Drawing.Point(4, 25);
+            this.WebsitePicBoxBtn.Name = "WebsitePicBoxBtn";
+            this.WebsitePicBoxBtn.Size = new System.Drawing.Size(35, 35);
+            this.WebsitePicBoxBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.WebsitePicBoxBtn.TabIndex = 8;
+            this.WebsitePicBoxBtn.TabStop = false;
+            this.WebsitePicBoxBtn.Click += new System.EventHandler(this.WebsitePicBoxBtn_Click);
+            // 
             // ScrimPicBox
             // 
             this.ScrimPicBox.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -642,15 +657,6 @@
             this.TkPicBox.TabStop = false;
             this.TkPicBox.Click += new System.EventHandler(this.TkPicBox_Click);
             // 
-            // DevelopTitleLabel
-            // 
-            this.DevelopTitleLabel.AutoSize = true;
-            this.DevelopTitleLabel.Location = new System.Drawing.Point(3, 164);
-            this.DevelopTitleLabel.Name = "DevelopTitleLabel";
-            this.DevelopTitleLabel.Size = new System.Drawing.Size(163, 21);
-            this.DevelopTitleLabel.TabIndex = 1;
-            this.DevelopTitleLabel.Text = "Developed with <3 By";
-            // 
             // LogoPicBox
             // 
             this.LogoPicBox.Image = global::Soundify.Properties.Resources.Purple_Trans;
@@ -660,12 +666,6 @@
             this.LogoPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.LogoPicBox.TabIndex = 0;
             this.LogoPicBox.TabStop = false;
-            // 
-            // AppUpdateCheck
-            // 
-            this.AppUpdateCheck.Enabled = true;
-            this.AppUpdateCheck.Interval = 19900;
-            this.AppUpdateCheck.Tick += new System.EventHandler(this.AppUpdateCheck_Tick);
             // 
             // MainWindow
             // 
@@ -696,13 +696,13 @@
             this.SettingsTabPage.ResumeLayout(false);
             this.CreditsTabPage.ResumeLayout(false);
             this.WebsiteLinksPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.GhPicBoxBtn)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.YTPicBoxBtn)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.WebsitePicBoxBtn)).EndInit();
             this.OtherCredsPanel.ResumeLayout(false);
             this.OtherCredsPanel.PerformLayout();
             this.MainCredsPanel.ResumeLayout(false);
             this.MainCredsPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.GhPicBoxBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.YTPicBoxBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.WebsitePicBoxBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ScrimPicBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TkPicBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.LogoPicBox)).EndInit();

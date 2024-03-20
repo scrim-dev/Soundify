@@ -74,6 +74,7 @@ namespace Soundify
             VersionLabel.Text = Info.AppVersion;
 
             UpdateChecker.Check();
+            FormConsole.Log("Application loaded!");
         }
 
         //Main timer for everything
@@ -81,9 +82,9 @@ namespace Soundify
         {
             DRPC.Update();
 
-            FormConsole.Log("Normal log test");
+            /*FormConsole.Log("Normal log test");
             FormConsole.Warn("Normal warning test");
-            FormConsole.Error("Normal error test");
+            FormConsole.Error("Normal error test");*/
         }
 
         private void MainWindow_FormClosing(object sender, FormClosingEventArgs e)

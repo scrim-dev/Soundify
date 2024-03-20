@@ -23,7 +23,7 @@ namespace Soundify.Utils
         {
             if (session != null) 
             {
-
+                FormConsole.Log($"Sessioned opened => {session.Id}");
             }
         }
 
@@ -31,7 +31,7 @@ namespace Soundify.Utils
         {
             if (session != null)
             {
-
+                FormConsole.Log($"Sessioned closed => {session.Id}");
             }
         }
 
@@ -39,7 +39,7 @@ namespace Soundify.Utils
         {
             if (session != null)
             {
-
+                
             }
         }
 
@@ -48,7 +48,7 @@ namespace Soundify.Utils
         {
             if (sender != null || args != null) 
             {
-
+                
             }
         }
     }
