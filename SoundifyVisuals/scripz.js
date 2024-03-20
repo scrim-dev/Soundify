@@ -8,3 +8,9 @@ function handleKeyDown(event) {
     }
 }
 document.addEventListener("keydown", handleKeyDown);
+
+window.addEventListener('wheel', function(e) {
+    if (e.ctrlKey) {
+        e.preventDefault();
+    }
+});
