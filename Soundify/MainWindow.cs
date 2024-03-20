@@ -2,6 +2,7 @@
 
 namespace Soundify
 {
+    //Fartify
     public partial class MainWindow : Form
     {
         //Dark window title by Jonas Kohl - https://jonaskohl.de/ | https://github.com/jonaskohl
@@ -169,6 +170,93 @@ namespace Soundify
         private void AppUpdateCheck_Tick(object sender, EventArgs e)
         {
             UpdateChecker.Check();
+        }
+
+        //Addons stuff
+        private void EnableOSCBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void OscAnimBtnOn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DisableOscBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void OscAnimBtnOff_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PrintSongOnlyBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DefaultPrintBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void EnableDRPCBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DisableDRPCBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ShowSongBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void HideSongBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ResetRPCBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        //Settings stuff
+        private void SaveConfigBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DeleteConfigBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void OpenConfigBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CheckForUpdatesBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ForceCloseAppBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RestartAppBtn_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

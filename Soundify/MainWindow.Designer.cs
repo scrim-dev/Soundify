@@ -52,6 +52,9 @@
             this.AppConfigsPanel = new ReaLTaiizor.Controls.LostBorderPanel();
             this.CreditsTabPage = new System.Windows.Forms.TabPage();
             this.WebsiteLinksPanel = new ReaLTaiizor.Controls.LostBorderPanel();
+            this.GhPicBoxBtn = new System.Windows.Forms.PictureBox();
+            this.YTPicBoxBtn = new System.Windows.Forms.PictureBox();
+            this.WebsitePicBoxBtn = new System.Windows.Forms.PictureBox();
             this.OtherCredsPanel = new ReaLTaiizor.Controls.LostBorderPanel();
             this.ChanyaCredit = new System.Windows.Forms.LinkLabel();
             this.TaiizorCredit = new System.Windows.Forms.LinkLabel();
@@ -63,14 +66,29 @@
             this.VersionLabel = new System.Windows.Forms.Label();
             this.TkLabel = new System.Windows.Forms.Label();
             this.ScrimLabel = new System.Windows.Forms.Label();
-            this.DevelopTitleLabel = new System.Windows.Forms.Label();
-            this.AppUpdateCheck = new System.Windows.Forms.Timer(this.components);
-            this.GhPicBoxBtn = new System.Windows.Forms.PictureBox();
-            this.YTPicBoxBtn = new System.Windows.Forms.PictureBox();
-            this.WebsitePicBoxBtn = new System.Windows.Forms.PictureBox();
             this.ScrimPicBox = new System.Windows.Forms.PictureBox();
             this.TkPicBox = new System.Windows.Forms.PictureBox();
+            this.DevelopTitleLabel = new System.Windows.Forms.Label();
             this.LogoPicBox = new System.Windows.Forms.PictureBox();
+            this.AppUpdateCheck = new System.Windows.Forms.Timer(this.components);
+            this.EnableOSCBtn = new ReaLTaiizor.Controls.ForeverButton();
+            this.DisableOscBtn = new ReaLTaiizor.Controls.ForeverButton();
+            this.PrintSongOnlyBtn = new ReaLTaiizor.Controls.ForeverButton();
+            this.DefaultPrintBtn = new ReaLTaiizor.Controls.ForeverButton();
+            this.ShowDefaultInfoLabel = new System.Windows.Forms.Label();
+            this.OscAnimBtnOn = new ReaLTaiizor.Controls.ForeverButton();
+            this.OscAnimBtnOff = new ReaLTaiizor.Controls.ForeverButton();
+            this.EnableDRPCBtn = new ReaLTaiizor.Controls.ForeverButton();
+            this.DisableDRPCBtn = new ReaLTaiizor.Controls.ForeverButton();
+            this.ShowSongBtn = new ReaLTaiizor.Controls.ForeverButton();
+            this.HideSongBtn = new ReaLTaiizor.Controls.ForeverButton();
+            this.ResetRPCBtn = new ReaLTaiizor.Controls.ForeverButton();
+            this.CheckForUpdatesBtn = new ReaLTaiizor.Controls.ForeverButton();
+            this.ForceCloseAppBtn = new ReaLTaiizor.Controls.ForeverButton();
+            this.RestartAppBtn = new ReaLTaiizor.Controls.ForeverButton();
+            this.SaveConfigBtn = new ReaLTaiizor.Controls.ForeverButton();
+            this.DeleteConfigBtn = new ReaLTaiizor.Controls.ForeverButton();
+            this.OpenConfigBtn = new ReaLTaiizor.Controls.ForeverButton();
             this.FormTabPages.SuspendLayout();
             this.SpotifyTabPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SpotifyWView)).BeginInit();
@@ -81,14 +99,18 @@
             this.MediaControlsPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.VisualizerWebView)).BeginInit();
             this.AddonsTabPage.SuspendLayout();
+            this.DiscordRPCPanel.SuspendLayout();
+            this.VRCOscPanel.SuspendLayout();
             this.SettingsTabPage.SuspendLayout();
+            this.AppSetsPanel.SuspendLayout();
+            this.AppConfigsPanel.SuspendLayout();
             this.CreditsTabPage.SuspendLayout();
             this.WebsiteLinksPanel.SuspendLayout();
-            this.OtherCredsPanel.SuspendLayout();
-            this.MainCredsPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GhPicBoxBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.YTPicBoxBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.WebsitePicBoxBtn)).BeginInit();
+            this.OtherCredsPanel.SuspendLayout();
+            this.MainCredsPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ScrimPicBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TkPicBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LogoPicBox)).BeginInit();
@@ -349,6 +371,11 @@
             // 
             this.DiscordRPCPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.DiscordRPCPanel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(116)))), ((int)(((byte)(209)))));
+            this.DiscordRPCPanel.Controls.Add(this.ResetRPCBtn);
+            this.DiscordRPCPanel.Controls.Add(this.HideSongBtn);
+            this.DiscordRPCPanel.Controls.Add(this.ShowSongBtn);
+            this.DiscordRPCPanel.Controls.Add(this.DisableDRPCBtn);
+            this.DiscordRPCPanel.Controls.Add(this.EnableDRPCBtn);
             this.DiscordRPCPanel.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.DiscordRPCPanel.ForeColor = System.Drawing.Color.White;
             this.DiscordRPCPanel.Location = new System.Drawing.Point(292, 3);
@@ -363,6 +390,13 @@
             // 
             this.VRCOscPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.VRCOscPanel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(116)))), ((int)(((byte)(209)))));
+            this.VRCOscPanel.Controls.Add(this.OscAnimBtnOff);
+            this.VRCOscPanel.Controls.Add(this.OscAnimBtnOn);
+            this.VRCOscPanel.Controls.Add(this.ShowDefaultInfoLabel);
+            this.VRCOscPanel.Controls.Add(this.DefaultPrintBtn);
+            this.VRCOscPanel.Controls.Add(this.PrintSongOnlyBtn);
+            this.VRCOscPanel.Controls.Add(this.DisableOscBtn);
+            this.VRCOscPanel.Controls.Add(this.EnableOSCBtn);
             this.VRCOscPanel.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.VRCOscPanel.ForeColor = System.Drawing.Color.White;
             this.VRCOscPanel.Location = new System.Drawing.Point(6, 3);
@@ -389,6 +423,9 @@
             // 
             this.AppSetsPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.AppSetsPanel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(116)))), ((int)(((byte)(209)))));
+            this.AppSetsPanel.Controls.Add(this.RestartAppBtn);
+            this.AppSetsPanel.Controls.Add(this.ForceCloseAppBtn);
+            this.AppSetsPanel.Controls.Add(this.CheckForUpdatesBtn);
             this.AppSetsPanel.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.AppSetsPanel.ForeColor = System.Drawing.Color.White;
             this.AppSetsPanel.Location = new System.Drawing.Point(292, 3);
@@ -403,6 +440,9 @@
             // 
             this.AppConfigsPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.AppConfigsPanel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(116)))), ((int)(((byte)(209)))));
+            this.AppConfigsPanel.Controls.Add(this.OpenConfigBtn);
+            this.AppConfigsPanel.Controls.Add(this.DeleteConfigBtn);
+            this.AppConfigsPanel.Controls.Add(this.SaveConfigBtn);
             this.AppConfigsPanel.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.AppConfigsPanel.ForeColor = System.Drawing.Color.White;
             this.AppConfigsPanel.Location = new System.Drawing.Point(6, 3);
@@ -442,6 +482,42 @@
             this.WebsiteLinksPanel.Size = new System.Drawing.Size(280, 67);
             this.WebsiteLinksPanel.TabIndex = 5;
             this.WebsiteLinksPanel.Text = "Links";
+            // 
+            // GhPicBoxBtn
+            // 
+            this.GhPicBoxBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.GhPicBoxBtn.Image = global::Soundify.Properties.Resources.github;
+            this.GhPicBoxBtn.Location = new System.Drawing.Point(86, 25);
+            this.GhPicBoxBtn.Name = "GhPicBoxBtn";
+            this.GhPicBoxBtn.Size = new System.Drawing.Size(35, 35);
+            this.GhPicBoxBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.GhPicBoxBtn.TabIndex = 10;
+            this.GhPicBoxBtn.TabStop = false;
+            this.GhPicBoxBtn.Click += new System.EventHandler(this.GhPicBoxBtn_Click);
+            // 
+            // YTPicBoxBtn
+            // 
+            this.YTPicBoxBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.YTPicBoxBtn.Image = global::Soundify.Properties.Resources.youtube;
+            this.YTPicBoxBtn.Location = new System.Drawing.Point(45, 25);
+            this.YTPicBoxBtn.Name = "YTPicBoxBtn";
+            this.YTPicBoxBtn.Size = new System.Drawing.Size(35, 35);
+            this.YTPicBoxBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.YTPicBoxBtn.TabIndex = 9;
+            this.YTPicBoxBtn.TabStop = false;
+            this.YTPicBoxBtn.Click += new System.EventHandler(this.YTPicBoxBtn_Click);
+            // 
+            // WebsitePicBoxBtn
+            // 
+            this.WebsitePicBoxBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.WebsitePicBoxBtn.Image = global::Soundify.Properties.Resources.globe_solid;
+            this.WebsitePicBoxBtn.Location = new System.Drawing.Point(4, 25);
+            this.WebsitePicBoxBtn.Name = "WebsitePicBoxBtn";
+            this.WebsitePicBoxBtn.Size = new System.Drawing.Size(35, 35);
+            this.WebsitePicBoxBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.WebsitePicBoxBtn.TabIndex = 8;
+            this.WebsitePicBoxBtn.TabStop = false;
+            this.WebsitePicBoxBtn.Click += new System.EventHandler(this.WebsitePicBoxBtn_Click);
             // 
             // OtherCredsPanel
             // 
@@ -582,57 +658,6 @@
             this.ScrimLabel.TabIndex = 4;
             this.ScrimLabel.Text = "Scrimmane";
             // 
-            // DevelopTitleLabel
-            // 
-            this.DevelopTitleLabel.AutoSize = true;
-            this.DevelopTitleLabel.Location = new System.Drawing.Point(3, 164);
-            this.DevelopTitleLabel.Name = "DevelopTitleLabel";
-            this.DevelopTitleLabel.Size = new System.Drawing.Size(163, 21);
-            this.DevelopTitleLabel.TabIndex = 1;
-            this.DevelopTitleLabel.Text = "Developed with <3 By";
-            // 
-            // AppUpdateCheck
-            // 
-            this.AppUpdateCheck.Enabled = true;
-            this.AppUpdateCheck.Interval = 19900;
-            this.AppUpdateCheck.Tick += new System.EventHandler(this.AppUpdateCheck_Tick);
-            // 
-            // GhPicBoxBtn
-            // 
-            this.GhPicBoxBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.GhPicBoxBtn.Image = global::Soundify.Properties.Resources.github;
-            this.GhPicBoxBtn.Location = new System.Drawing.Point(86, 25);
-            this.GhPicBoxBtn.Name = "GhPicBoxBtn";
-            this.GhPicBoxBtn.Size = new System.Drawing.Size(35, 35);
-            this.GhPicBoxBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.GhPicBoxBtn.TabIndex = 10;
-            this.GhPicBoxBtn.TabStop = false;
-            this.GhPicBoxBtn.Click += new System.EventHandler(this.GhPicBoxBtn_Click);
-            // 
-            // YTPicBoxBtn
-            // 
-            this.YTPicBoxBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.YTPicBoxBtn.Image = global::Soundify.Properties.Resources.youtube;
-            this.YTPicBoxBtn.Location = new System.Drawing.Point(45, 25);
-            this.YTPicBoxBtn.Name = "YTPicBoxBtn";
-            this.YTPicBoxBtn.Size = new System.Drawing.Size(35, 35);
-            this.YTPicBoxBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.YTPicBoxBtn.TabIndex = 9;
-            this.YTPicBoxBtn.TabStop = false;
-            this.YTPicBoxBtn.Click += new System.EventHandler(this.YTPicBoxBtn_Click);
-            // 
-            // WebsitePicBoxBtn
-            // 
-            this.WebsitePicBoxBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.WebsitePicBoxBtn.Image = global::Soundify.Properties.Resources.globe_solid;
-            this.WebsitePicBoxBtn.Location = new System.Drawing.Point(4, 25);
-            this.WebsitePicBoxBtn.Name = "WebsitePicBoxBtn";
-            this.WebsitePicBoxBtn.Size = new System.Drawing.Size(35, 35);
-            this.WebsitePicBoxBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.WebsitePicBoxBtn.TabIndex = 8;
-            this.WebsitePicBoxBtn.TabStop = false;
-            this.WebsitePicBoxBtn.Click += new System.EventHandler(this.WebsitePicBoxBtn_Click);
-            // 
             // ScrimPicBox
             // 
             this.ScrimPicBox.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -657,6 +682,15 @@
             this.TkPicBox.TabStop = false;
             this.TkPicBox.Click += new System.EventHandler(this.TkPicBox_Click);
             // 
+            // DevelopTitleLabel
+            // 
+            this.DevelopTitleLabel.AutoSize = true;
+            this.DevelopTitleLabel.Location = new System.Drawing.Point(3, 164);
+            this.DevelopTitleLabel.Name = "DevelopTitleLabel";
+            this.DevelopTitleLabel.Size = new System.Drawing.Size(163, 21);
+            this.DevelopTitleLabel.TabIndex = 1;
+            this.DevelopTitleLabel.Text = "Developed with <3 By";
+            // 
             // LogoPicBox
             // 
             this.LogoPicBox.Image = global::Soundify.Properties.Resources.Purple_Trans;
@@ -666,6 +700,276 @@
             this.LogoPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.LogoPicBox.TabIndex = 0;
             this.LogoPicBox.TabStop = false;
+            // 
+            // AppUpdateCheck
+            // 
+            this.AppUpdateCheck.Enabled = true;
+            this.AppUpdateCheck.Interval = 19900;
+            this.AppUpdateCheck.Tick += new System.EventHandler(this.AppUpdateCheck_Tick);
+            // 
+            // EnableOSCBtn
+            // 
+            this.EnableOSCBtn.BackColor = System.Drawing.Color.Transparent;
+            this.EnableOSCBtn.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(116)))), ((int)(((byte)(209)))));
+            this.EnableOSCBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.EnableOSCBtn.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.EnableOSCBtn.Location = new System.Drawing.Point(3, 25);
+            this.EnableOSCBtn.Name = "EnableOSCBtn";
+            this.EnableOSCBtn.Rounded = false;
+            this.EnableOSCBtn.Size = new System.Drawing.Size(138, 33);
+            this.EnableOSCBtn.TabIndex = 0;
+            this.EnableOSCBtn.Text = "Turn ON Osc";
+            this.EnableOSCBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.EnableOSCBtn.Click += new System.EventHandler(this.EnableOSCBtn_Click);
+            // 
+            // DisableOscBtn
+            // 
+            this.DisableOscBtn.BackColor = System.Drawing.Color.Transparent;
+            this.DisableOscBtn.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(116)))), ((int)(((byte)(209)))));
+            this.DisableOscBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.DisableOscBtn.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.DisableOscBtn.Location = new System.Drawing.Point(147, 25);
+            this.DisableOscBtn.Name = "DisableOscBtn";
+            this.DisableOscBtn.Rounded = false;
+            this.DisableOscBtn.Size = new System.Drawing.Size(130, 33);
+            this.DisableOscBtn.TabIndex = 1;
+            this.DisableOscBtn.Text = "Turn OFF Osc";
+            this.DisableOscBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.DisableOscBtn.Click += new System.EventHandler(this.DisableOscBtn_Click);
+            // 
+            // PrintSongOnlyBtn
+            // 
+            this.PrintSongOnlyBtn.BackColor = System.Drawing.Color.Transparent;
+            this.PrintSongOnlyBtn.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(116)))), ((int)(((byte)(209)))));
+            this.PrintSongOnlyBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PrintSongOnlyBtn.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.PrintSongOnlyBtn.Location = new System.Drawing.Point(3, 104);
+            this.PrintSongOnlyBtn.Name = "PrintSongOnlyBtn";
+            this.PrintSongOnlyBtn.Rounded = false;
+            this.PrintSongOnlyBtn.Size = new System.Drawing.Size(274, 33);
+            this.PrintSongOnlyBtn.TabIndex = 2;
+            this.PrintSongOnlyBtn.Text = "Show Song Only";
+            this.PrintSongOnlyBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.PrintSongOnlyBtn.Click += new System.EventHandler(this.PrintSongOnlyBtn_Click);
+            // 
+            // DefaultPrintBtn
+            // 
+            this.DefaultPrintBtn.BackColor = System.Drawing.Color.Transparent;
+            this.DefaultPrintBtn.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(116)))), ((int)(((byte)(209)))));
+            this.DefaultPrintBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.DefaultPrintBtn.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.DefaultPrintBtn.Location = new System.Drawing.Point(3, 143);
+            this.DefaultPrintBtn.Name = "DefaultPrintBtn";
+            this.DefaultPrintBtn.Rounded = false;
+            this.DefaultPrintBtn.Size = new System.Drawing.Size(274, 34);
+            this.DefaultPrintBtn.TabIndex = 3;
+            this.DefaultPrintBtn.Text = "Show Default *";
+            this.DefaultPrintBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.DefaultPrintBtn.Click += new System.EventHandler(this.DefaultPrintBtn_Click);
+            // 
+            // ShowDefaultInfoLabel
+            // 
+            this.ShowDefaultInfoLabel.AutoSize = true;
+            this.ShowDefaultInfoLabel.Location = new System.Drawing.Point(3, 180);
+            this.ShowDefaultInfoLabel.Name = "ShowDefaultInfoLabel";
+            this.ShowDefaultInfoLabel.Size = new System.Drawing.Size(240, 21);
+            this.ShowDefaultInfoLabel.TabIndex = 4;
+            this.ShowDefaultInfoLabel.Text = "* Shows Soundify\'s name + song";
+            // 
+            // OscAnimBtnOn
+            // 
+            this.OscAnimBtnOn.BackColor = System.Drawing.Color.Transparent;
+            this.OscAnimBtnOn.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(116)))), ((int)(((byte)(209)))));
+            this.OscAnimBtnOn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.OscAnimBtnOn.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.OscAnimBtnOn.Location = new System.Drawing.Point(3, 64);
+            this.OscAnimBtnOn.Name = "OscAnimBtnOn";
+            this.OscAnimBtnOn.Rounded = false;
+            this.OscAnimBtnOn.Size = new System.Drawing.Size(138, 33);
+            this.OscAnimBtnOn.TabIndex = 5;
+            this.OscAnimBtnOn.Text = "Turn ON Anim";
+            this.OscAnimBtnOn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.OscAnimBtnOn.Click += new System.EventHandler(this.OscAnimBtnOn_Click);
+            // 
+            // OscAnimBtnOff
+            // 
+            this.OscAnimBtnOff.BackColor = System.Drawing.Color.Transparent;
+            this.OscAnimBtnOff.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(116)))), ((int)(((byte)(209)))));
+            this.OscAnimBtnOff.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.OscAnimBtnOff.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.OscAnimBtnOff.Location = new System.Drawing.Point(147, 65);
+            this.OscAnimBtnOff.Name = "OscAnimBtnOff";
+            this.OscAnimBtnOff.Rounded = false;
+            this.OscAnimBtnOff.Size = new System.Drawing.Size(130, 33);
+            this.OscAnimBtnOff.TabIndex = 6;
+            this.OscAnimBtnOff.Text = "Turn OFF Anim";
+            this.OscAnimBtnOff.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.OscAnimBtnOff.Click += new System.EventHandler(this.OscAnimBtnOff_Click);
+            // 
+            // EnableDRPCBtn
+            // 
+            this.EnableDRPCBtn.BackColor = System.Drawing.Color.Transparent;
+            this.EnableDRPCBtn.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(116)))), ((int)(((byte)(209)))));
+            this.EnableDRPCBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.EnableDRPCBtn.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.EnableDRPCBtn.Location = new System.Drawing.Point(6, 25);
+            this.EnableDRPCBtn.Name = "EnableDRPCBtn";
+            this.EnableDRPCBtn.Rounded = false;
+            this.EnableDRPCBtn.Size = new System.Drawing.Size(151, 33);
+            this.EnableDRPCBtn.TabIndex = 7;
+            this.EnableDRPCBtn.Text = "Turn ON";
+            this.EnableDRPCBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.EnableDRPCBtn.Click += new System.EventHandler(this.EnableDRPCBtn_Click);
+            // 
+            // DisableDRPCBtn
+            // 
+            this.DisableDRPCBtn.BackColor = System.Drawing.Color.Transparent;
+            this.DisableDRPCBtn.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(116)))), ((int)(((byte)(209)))));
+            this.DisableDRPCBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.DisableDRPCBtn.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.DisableDRPCBtn.Location = new System.Drawing.Point(6, 65);
+            this.DisableDRPCBtn.Name = "DisableDRPCBtn";
+            this.DisableDRPCBtn.Rounded = false;
+            this.DisableDRPCBtn.Size = new System.Drawing.Size(151, 33);
+            this.DisableDRPCBtn.TabIndex = 8;
+            this.DisableDRPCBtn.Text = "Turn OFF";
+            this.DisableDRPCBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.DisableDRPCBtn.Click += new System.EventHandler(this.DisableDRPCBtn_Click);
+            // 
+            // ShowSongBtn
+            // 
+            this.ShowSongBtn.BackColor = System.Drawing.Color.Transparent;
+            this.ShowSongBtn.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(116)))), ((int)(((byte)(209)))));
+            this.ShowSongBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ShowSongBtn.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.ShowSongBtn.Location = new System.Drawing.Point(6, 104);
+            this.ShowSongBtn.Name = "ShowSongBtn";
+            this.ShowSongBtn.Rounded = false;
+            this.ShowSongBtn.Size = new System.Drawing.Size(151, 33);
+            this.ShowSongBtn.TabIndex = 9;
+            this.ShowSongBtn.Text = "Show Song";
+            this.ShowSongBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.ShowSongBtn.Click += new System.EventHandler(this.ShowSongBtn_Click);
+            // 
+            // HideSongBtn
+            // 
+            this.HideSongBtn.BackColor = System.Drawing.Color.Transparent;
+            this.HideSongBtn.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(116)))), ((int)(((byte)(209)))));
+            this.HideSongBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.HideSongBtn.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.HideSongBtn.Location = new System.Drawing.Point(6, 143);
+            this.HideSongBtn.Name = "HideSongBtn";
+            this.HideSongBtn.Rounded = false;
+            this.HideSongBtn.Size = new System.Drawing.Size(151, 33);
+            this.HideSongBtn.TabIndex = 10;
+            this.HideSongBtn.Text = "Hide Song";
+            this.HideSongBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.HideSongBtn.Click += new System.EventHandler(this.HideSongBtn_Click);
+            // 
+            // ResetRPCBtn
+            // 
+            this.ResetRPCBtn.BackColor = System.Drawing.Color.Transparent;
+            this.ResetRPCBtn.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(116)))), ((int)(((byte)(209)))));
+            this.ResetRPCBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ResetRPCBtn.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.ResetRPCBtn.Location = new System.Drawing.Point(163, 25);
+            this.ResetRPCBtn.Name = "ResetRPCBtn";
+            this.ResetRPCBtn.Rounded = false;
+            this.ResetRPCBtn.Size = new System.Drawing.Size(114, 152);
+            this.ResetRPCBtn.TabIndex = 11;
+            this.ResetRPCBtn.Text = "Reset";
+            this.ResetRPCBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.ResetRPCBtn.Click += new System.EventHandler(this.ResetRPCBtn_Click);
+            // 
+            // CheckForUpdatesBtn
+            // 
+            this.CheckForUpdatesBtn.BackColor = System.Drawing.Color.Transparent;
+            this.CheckForUpdatesBtn.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(116)))), ((int)(((byte)(209)))));
+            this.CheckForUpdatesBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CheckForUpdatesBtn.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.CheckForUpdatesBtn.Location = new System.Drawing.Point(3, 27);
+            this.CheckForUpdatesBtn.Name = "CheckForUpdatesBtn";
+            this.CheckForUpdatesBtn.Rounded = false;
+            this.CheckForUpdatesBtn.Size = new System.Drawing.Size(274, 33);
+            this.CheckForUpdatesBtn.TabIndex = 1;
+            this.CheckForUpdatesBtn.Text = "Check for Updates";
+            this.CheckForUpdatesBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.CheckForUpdatesBtn.Click += new System.EventHandler(this.CheckForUpdatesBtn_Click);
+            // 
+            // ForceCloseAppBtn
+            // 
+            this.ForceCloseAppBtn.BackColor = System.Drawing.Color.Transparent;
+            this.ForceCloseAppBtn.BaseColor = System.Drawing.Color.Maroon;
+            this.ForceCloseAppBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ForceCloseAppBtn.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.ForceCloseAppBtn.Location = new System.Drawing.Point(3, 66);
+            this.ForceCloseAppBtn.Name = "ForceCloseAppBtn";
+            this.ForceCloseAppBtn.Rounded = false;
+            this.ForceCloseAppBtn.Size = new System.Drawing.Size(274, 33);
+            this.ForceCloseAppBtn.TabIndex = 2;
+            this.ForceCloseAppBtn.Text = "Force Close (Kill)";
+            this.ForceCloseAppBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.ForceCloseAppBtn.Click += new System.EventHandler(this.ForceCloseAppBtn_Click);
+            // 
+            // RestartAppBtn
+            // 
+            this.RestartAppBtn.BackColor = System.Drawing.Color.Transparent;
+            this.RestartAppBtn.BaseColor = System.Drawing.Color.Goldenrod;
+            this.RestartAppBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.RestartAppBtn.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.RestartAppBtn.Location = new System.Drawing.Point(3, 105);
+            this.RestartAppBtn.Name = "RestartAppBtn";
+            this.RestartAppBtn.Rounded = false;
+            this.RestartAppBtn.Size = new System.Drawing.Size(274, 33);
+            this.RestartAppBtn.TabIndex = 3;
+            this.RestartAppBtn.Text = "Restart";
+            this.RestartAppBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.RestartAppBtn.Click += new System.EventHandler(this.RestartAppBtn_Click);
+            // 
+            // SaveConfigBtn
+            // 
+            this.SaveConfigBtn.BackColor = System.Drawing.Color.Transparent;
+            this.SaveConfigBtn.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(116)))), ((int)(((byte)(209)))));
+            this.SaveConfigBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.SaveConfigBtn.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.SaveConfigBtn.Location = new System.Drawing.Point(3, 27);
+            this.SaveConfigBtn.Name = "SaveConfigBtn";
+            this.SaveConfigBtn.Rounded = false;
+            this.SaveConfigBtn.Size = new System.Drawing.Size(145, 33);
+            this.SaveConfigBtn.TabIndex = 2;
+            this.SaveConfigBtn.Text = "Save Config";
+            this.SaveConfigBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.SaveConfigBtn.Click += new System.EventHandler(this.SaveConfigBtn_Click);
+            // 
+            // DeleteConfigBtn
+            // 
+            this.DeleteConfigBtn.BackColor = System.Drawing.Color.Transparent;
+            this.DeleteConfigBtn.BaseColor = System.Drawing.Color.Maroon;
+            this.DeleteConfigBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.DeleteConfigBtn.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.DeleteConfigBtn.Location = new System.Drawing.Point(3, 66);
+            this.DeleteConfigBtn.Name = "DeleteConfigBtn";
+            this.DeleteConfigBtn.Rounded = false;
+            this.DeleteConfigBtn.Size = new System.Drawing.Size(145, 33);
+            this.DeleteConfigBtn.TabIndex = 3;
+            this.DeleteConfigBtn.Text = "Delete Config";
+            this.DeleteConfigBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.DeleteConfigBtn.Click += new System.EventHandler(this.DeleteConfigBtn_Click);
+            // 
+            // OpenConfigBtn
+            // 
+            this.OpenConfigBtn.BackColor = System.Drawing.Color.Transparent;
+            this.OpenConfigBtn.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(116)))), ((int)(((byte)(209)))));
+            this.OpenConfigBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.OpenConfigBtn.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.OpenConfigBtn.Location = new System.Drawing.Point(154, 27);
+            this.OpenConfigBtn.Name = "OpenConfigBtn";
+            this.OpenConfigBtn.Rounded = false;
+            this.OpenConfigBtn.Size = new System.Drawing.Size(123, 72);
+            this.OpenConfigBtn.TabIndex = 4;
+            this.OpenConfigBtn.Text = "Open Cfg";
+            this.OpenConfigBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.OpenConfigBtn.Click += new System.EventHandler(this.OpenConfigBtn_Click);
             // 
             // MainWindow
             // 
@@ -693,16 +997,21 @@
             this.MediaControlsPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.VisualizerWebView)).EndInit();
             this.AddonsTabPage.ResumeLayout(false);
+            this.DiscordRPCPanel.ResumeLayout(false);
+            this.VRCOscPanel.ResumeLayout(false);
+            this.VRCOscPanel.PerformLayout();
             this.SettingsTabPage.ResumeLayout(false);
+            this.AppSetsPanel.ResumeLayout(false);
+            this.AppConfigsPanel.ResumeLayout(false);
             this.CreditsTabPage.ResumeLayout(false);
             this.WebsiteLinksPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.GhPicBoxBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.YTPicBoxBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.WebsitePicBoxBtn)).EndInit();
             this.OtherCredsPanel.ResumeLayout(false);
             this.OtherCredsPanel.PerformLayout();
             this.MainCredsPanel.ResumeLayout(false);
             this.MainCredsPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.GhPicBoxBtn)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.YTPicBoxBtn)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.WebsitePicBoxBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ScrimPicBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TkPicBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.LogoPicBox)).EndInit();
@@ -753,6 +1062,24 @@
         private ReaLTaiizor.Controls.LostBorderPanel AppConfigsPanel;
         private ReaLTaiizor.Controls.LostBorderPanel AppSetsPanel;
         internal System.Windows.Forms.Timer AppUpdateCheck;
+        private ReaLTaiizor.Controls.ForeverButton EnableOSCBtn;
+        private ReaLTaiizor.Controls.ForeverButton DisableOscBtn;
+        private ReaLTaiizor.Controls.ForeverButton PrintSongOnlyBtn;
+        private ReaLTaiizor.Controls.ForeverButton DefaultPrintBtn;
+        private Label ShowDefaultInfoLabel;
+        private ReaLTaiizor.Controls.ForeverButton OscAnimBtnOn;
+        private ReaLTaiizor.Controls.ForeverButton OscAnimBtnOff;
+        private ReaLTaiizor.Controls.ForeverButton EnableDRPCBtn;
+        private ReaLTaiizor.Controls.ForeverButton DisableDRPCBtn;
+        private ReaLTaiizor.Controls.ForeverButton ShowSongBtn;
+        private ReaLTaiizor.Controls.ForeverButton HideSongBtn;
+        private ReaLTaiizor.Controls.ForeverButton ResetRPCBtn;
+        private ReaLTaiizor.Controls.ForeverButton CheckForUpdatesBtn;
+        private ReaLTaiizor.Controls.ForeverButton ForceCloseAppBtn;
+        private ReaLTaiizor.Controls.ForeverButton RestartAppBtn;
+        private ReaLTaiizor.Controls.ForeverButton SaveConfigBtn;
+        private ReaLTaiizor.Controls.ForeverButton DeleteConfigBtn;
+        private ReaLTaiizor.Controls.ForeverButton OpenConfigBtn;
     }
 }
 
