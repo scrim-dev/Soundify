@@ -12,8 +12,20 @@ body {
     align-items: center;
     height: 100vh;
     background-color: #1f1f1f;
-    margin-top: -60px;
     overflow: hidden;
+}
+
+.spinner {
+    animation: Rota 10s infinite linear;
+}
+
+@keyframes Rota {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 .gangsta {
@@ -46,5 +58,4 @@ header {
 img {
     width: 300px;
     height: 300px;
-    margin-bottom: -150px;
 }
