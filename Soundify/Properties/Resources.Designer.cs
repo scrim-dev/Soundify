@@ -81,6 +81,15 @@ namespace Soundify.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Failure {
+            get {
+                return ResourceManager.GetStream("Failure", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap gear_solid {
@@ -197,6 +206,15 @@ namespace Soundify.Properties {
             get {
                 object obj = ResourceManager.GetObject("spotify", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Success {
+            get {
+                return ResourceManager.GetStream("Success", resourceCulture);
             }
         }
         

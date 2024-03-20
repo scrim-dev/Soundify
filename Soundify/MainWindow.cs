@@ -1,4 +1,6 @@
-﻿namespace Soundify
+﻿using System.Windows.Forms;
+
+namespace Soundify
 {
     public partial class MainWindow : Form
     {
@@ -51,6 +53,10 @@
             MinimumSize = new(900, 558);
             MaximumSize = new(int.MaxValue, int.MaxValue);
 
+            RTBConsole.Multiline = true;
+            RTBConsole.ReadOnly = true;
+            RTBConsole.ScrollBars = RichTextBoxScrollBars.ForcedVertical;
+
             MainFormTimer.Enabled = true;
             MainFormTimer.Interval = 1100;
             AppUpdateCheck.Enabled = true;
@@ -59,6 +65,7 @@
             DRPC.Init();
             MediaController.Init();
             Configs.Load();
+            FormConsole.RTB = RTBConsole;
 
             SoundCloudWView.Source = new("https://soundcloud.com/discover");
             SpotifyWView.Source = new("https://open.spotify.com/");
@@ -73,6 +80,10 @@
         private void MainFormTimer_Tick(object sender, EventArgs e)
         {
             DRPC.Update();
+
+            FormConsole.Log("Normal log test");
+            FormConsole.Warn("Normal warning test");
+            FormConsole.Error("Normal error test");
         }
 
         private void MainWindow_FormClosing(object sender, FormClosingEventArgs e)
