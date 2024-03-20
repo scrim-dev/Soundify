@@ -1,10 +1,12 @@
 ﻿using System.Windows.Forms;
+using WindowsMediaController;
 
 namespace Soundify
 {
     //Fartify
     public partial class MainWindow : Form
     {
+        public static string UpdaterName { get; } = "SoundifyUpdater";
         //Dark window title by Jonas Kohl - https://jonaskohl.de/ | https://github.com/jonaskohl
         [DllImport("dwmapi.dll")]
         private static extern int DwmSetWindowAttribute(IntPtr hwnd, int attr, ref int attrValue, int attrSize);
@@ -149,22 +151,36 @@ namespace Soundify
 
         private void NextBtn_Click(object sender, EventArgs e)
         {
-
+            var sesh = MediaController.mediaManager.WindowsSessionManager.GetCurrentSession();
+            _ = sesh.TrySkipNextAsync();
         }
 
         private void PreviousBtn_Click(object sender, EventArgs e)
         {
-
+            var sesh = MediaController.mediaManager.WindowsSessionManager.GetCurrentSession();
+            _ = sesh.TrySkipPreviousAsync();
         }
 
+        private static bool PauseOrPlay = false;
         private void PausePlayBtn_Click(object sender, EventArgs e)
         {
-
+            PauseOrPlay = !PauseOrPlay;
+            if(PauseOrPlay)
+            {
+                var sesh = MediaController.mediaManager.WindowsSessionManager.GetCurrentSession();
+                _ = sesh.TryPauseAsync();
+            }
+            else
+            {
+                var sesh = MediaController.mediaManager.WindowsSessionManager.GetCurrentSession();
+                _ = sesh.TryPlayAsync();
+            }
         }
 
         private void StopBtn_Click(object sender, EventArgs e)
         {
-
+            var sesh = MediaController.mediaManager.WindowsSessionManager.GetCurrentSession();
+            _ = sesh.TryStopAsync();
         }
 
         private void AppUpdateCheck_Tick(object sender, EventArgs e)
@@ -205,12 +221,12 @@ namespace Soundify
 
         private void EnableDRPCBtn_Click(object sender, EventArgs e)
         {
-
+            try { DRPC.Init(); } catch { }
         }
 
         private void DisableDRPCBtn_Click(object sender, EventArgs e)
         {
-
+            try { DRPC.End(); } catch { }
         }
 
         private void ShowSongBtn_Click(object sender, EventArgs e)
@@ -225,7 +241,7 @@ namespace Soundify
 
         private void ResetRPCBtn_Click(object sender, EventArgs e)
         {
-
+            try { DRPC.End(); DRPC.Init(); DRPC.Update(); } catch { }
         }
 
         //Settings stuff
@@ -246,22 +262,42 @@ namespace Soundify
 
         private void CheckForUpdatesBtn_Click(object sender, EventArgs e)
         {
-
+            MsgBox.Question("This will close the app and run the Updater. Would you like to continue?", delegate
+            {
+                Alerts.SuccessTone();
+                Thread.Sleep(1000);
+                try { Process.Start($"{UpdaterName}.exe"); } 
+                catch (Exception ex) { MsgBox.Error($"Failed to open updater\n\n{ex}"); }
+                Application.Exit();
+            }, delegate
+            {
+                Alerts.ErrorTone();
+            });
         }
 
         private void ForceCloseAppBtn_Click(object sender, EventArgs e)
         {
-
+            Process.GetCurrentProcess().Kill();
         }
 
         private void RestartAppBtn_Click(object sender, EventArgs e)
         {
-
+            Application.Restart();
         }
 
         private void DiscordPicBox_Click(object sender, EventArgs e)
         {
             Process.Start("https://discord.com/invite/ZkkjHYmRGE");
+        }
+
+        private void VersionLabel_Click(object sender, EventArgs e)
+        {
+            MsgBox.Msg($"Current application version is {Info.AppVersion}");
+        }
+
+        private void VisualizerWebView_Click(object sender, EventArgs e)
+        {
+            Process.Start($"{Directory.GetCurrentDirectory()}\\SoundifyVisuals\\index.html");
         }
     }
 }

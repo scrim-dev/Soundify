@@ -22,7 +22,11 @@ namespace SoundifyUpdater
         {
             while (true)
             {
-                Console.Title = $"Soundify Updater | {WorkingOn}";
+                if(string.IsNullOrEmpty(WorkingOn) || WorkingOn == "")
+                {
+                    Console.Title = $"Soundify Updater";
+                }
+                else { Console.Title = $"Soundify Updater | {WorkingOn}"; }
                 Thread.Sleep(1000);
             }
         }

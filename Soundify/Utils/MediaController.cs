@@ -38,10 +38,10 @@ namespace Soundify.Utils
 
         public static void OnFocusedSessionChanged(MediaSession session)
         {
-            string seshinfo = session.ControlSession.GetPlaybackInfo().ToString();
+            string seshinfo = "[Hidden]"; //Doing this for now until I finish getting the music name and stuff lol
             if (session != null)
             {
-                DRPC.SetPresence("Testing", seshinfo);
+                DRPC.SetPresence("Listening to Music!", seshinfo);
             }
         }
 

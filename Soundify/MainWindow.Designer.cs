@@ -71,6 +71,7 @@
             this.SaveConfigBtn = new ReaLTaiizor.Controls.ForeverButton();
             this.CreditsTabPage = new System.Windows.Forms.TabPage();
             this.WebsiteLinksPanel = new ReaLTaiizor.Controls.LostBorderPanel();
+            this.DiscordPicBox = new System.Windows.Forms.PictureBox();
             this.GhPicBoxBtn = new System.Windows.Forms.PictureBox();
             this.YTPicBoxBtn = new System.Windows.Forms.PictureBox();
             this.WebsitePicBoxBtn = new System.Windows.Forms.PictureBox();
@@ -90,7 +91,6 @@
             this.DevelopTitleLabel = new System.Windows.Forms.Label();
             this.LogoPicBox = new System.Windows.Forms.PictureBox();
             this.AppUpdateCheck = new System.Windows.Forms.Timer(this.components);
-            this.DiscordPicBox = new System.Windows.Forms.PictureBox();
             this.FormTabPages.SuspendLayout();
             this.SpotifyTabPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SpotifyWView)).BeginInit();
@@ -108,6 +108,7 @@
             this.AppConfigsPanel.SuspendLayout();
             this.CreditsTabPage.SuspendLayout();
             this.WebsiteLinksPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DiscordPicBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GhPicBoxBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.YTPicBoxBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.WebsitePicBoxBtn)).BeginInit();
@@ -116,7 +117,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.ScrimPicBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TkPicBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LogoPicBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DiscordPicBox)).BeginInit();
             this.SuspendLayout();
             // 
             // MainFormTimer
@@ -293,6 +293,7 @@
             this.VisualizerWebView.Size = new System.Drawing.Size(822, 236);
             this.VisualizerWebView.TabIndex = 4;
             this.VisualizerWebView.ZoomFactor = 1D;
+            this.VisualizerWebView.Click += new System.EventHandler(this.VisualizerWebView_Click);
             // 
             // PausePlayBtn
             // 
@@ -751,6 +752,18 @@
             this.WebsiteLinksPanel.TabIndex = 5;
             this.WebsiteLinksPanel.Text = "Links";
             // 
+            // DiscordPicBox
+            // 
+            this.DiscordPicBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.DiscordPicBox.Image = global::Soundify.Properties.Resources.discord;
+            this.DiscordPicBox.Location = new System.Drawing.Point(127, 25);
+            this.DiscordPicBox.Name = "DiscordPicBox";
+            this.DiscordPicBox.Size = new System.Drawing.Size(35, 35);
+            this.DiscordPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.DiscordPicBox.TabIndex = 11;
+            this.DiscordPicBox.TabStop = false;
+            this.DiscordPicBox.Click += new System.EventHandler(this.DiscordPicBox_Click);
+            // 
             // GhPicBoxBtn
             // 
             this.GhPicBoxBtn.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -901,12 +914,14 @@
             // VersionLabel
             // 
             this.VersionLabel.AutoSize = true;
+            this.VersionLabel.Cursor = System.Windows.Forms.Cursors.Help;
             this.VersionLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(116)))), ((int)(((byte)(209)))));
             this.VersionLabel.Location = new System.Drawing.Point(241, 284);
             this.VersionLabel.Name = "VersionLabel";
             this.VersionLabel.Size = new System.Drawing.Size(36, 21);
             this.VersionLabel.TabIndex = 6;
             this.VersionLabel.Text = "null";
+            this.VersionLabel.Click += new System.EventHandler(this.VersionLabel_Click);
             // 
             // TkLabel
             // 
@@ -975,18 +990,6 @@
             this.AppUpdateCheck.Interval = 19900;
             this.AppUpdateCheck.Tick += new System.EventHandler(this.AppUpdateCheck_Tick);
             // 
-            // DiscordPicBox
-            // 
-            this.DiscordPicBox.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.DiscordPicBox.Image = global::Soundify.Properties.Resources.discord;
-            this.DiscordPicBox.Location = new System.Drawing.Point(127, 25);
-            this.DiscordPicBox.Name = "DiscordPicBox";
-            this.DiscordPicBox.Size = new System.Drawing.Size(35, 35);
-            this.DiscordPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.DiscordPicBox.TabIndex = 11;
-            this.DiscordPicBox.TabStop = false;
-            this.DiscordPicBox.Click += new System.EventHandler(this.DiscordPicBox_Click);
-            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -1022,6 +1025,7 @@
             this.AppConfigsPanel.ResumeLayout(false);
             this.CreditsTabPage.ResumeLayout(false);
             this.WebsiteLinksPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.DiscordPicBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GhPicBoxBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.YTPicBoxBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.WebsitePicBoxBtn)).EndInit();
@@ -1032,7 +1036,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.ScrimPicBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TkPicBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.LogoPicBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DiscordPicBox)).EndInit();
             this.ResumeLayout(false);
 
         }
