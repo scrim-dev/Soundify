@@ -13,6 +13,7 @@ body {
     height: 100vh;
     background-color: #1f1f1f;
     margin-top: -60px;
+    overflow: hidden;
 }
 
 .gangsta {
