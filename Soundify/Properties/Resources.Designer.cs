@@ -73,6 +73,16 @@ namespace Soundify.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap DropshadowSoundifyLogo {
+            get {
+                object obj = ResourceManager.GetObject("DropshadowSoundifyLogo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap expand_solid {
             get {
                 object obj = ResourceManager.GetObject("expand_solid", resourceCulture);
@@ -195,6 +205,26 @@ namespace Soundify.Properties {
         internal static System.Drawing.Bitmap soundcloud {
             get {
                 object obj = ResourceManager.GetObject("soundcloud", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap SoundifyNewS {
+            get {
+                object obj = ResourceManager.GetObject("SoundifyNewS", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap SoundifyNewSBlank {
+            get {
+                object obj = ResourceManager.GetObject("SoundifyNewSBlank", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

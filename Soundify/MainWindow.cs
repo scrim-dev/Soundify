@@ -258,5 +258,10 @@ namespace Soundify
         {
 
         }
+
+        private void DiscordPicBox_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://discord.com/invite/ZkkjHYmRGE");
+        }
     }
 }

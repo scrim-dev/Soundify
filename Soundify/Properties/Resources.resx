@@ -121,6 +121,9 @@
   <data name="discord" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\discord.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="DropshadowSoundifyLogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DropshadowSoundifyLogo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="expand_solid" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\expand-solid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -159,6 +162,12 @@
   </data>
   <data name="soundcloud" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\soundcloud.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SoundifyNewS" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SoundifyNewS.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SoundifyNewSBlank" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SoundifyNewSBlank.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="spotify" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\spotify.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

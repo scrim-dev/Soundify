@@ -27,12 +27,14 @@ namespace Soundify.Utils
 
             DClient.Initialize();
 
-            SetPresence("In menu", "Not blasting music rn :(");
+            SetPresence("In menu", "Not blasting music right now.");
         }
 
         public static void Update() { DClient.Invoke(); }
 
         public static void End() { DClient.Dispose(); }
+
+        public static void ResetPres() { SetPresence("In menu", "Not blasting music right now."); }
 
         public static void SetPresence(string Details, string State)
         {
@@ -48,9 +50,9 @@ namespace Soundify.Utils
                 State = State,
                 Assets = new Assets()
                 {
-                    LargeImageKey = "purplesy",
+                    LargeImageKey = "soundifys_logo",
                     LargeImageText = Info.Name,
-                    SmallImageKey = "moosicnote",
+                    SmallImageKey = "searching",
                     SmallImageText = "v" + Info.AppVersion
                 },
 

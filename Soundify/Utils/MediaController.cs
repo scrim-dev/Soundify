@@ -32,14 +32,16 @@ namespace Soundify.Utils
             if (session != null)
             {
                 FormConsole.Log($"Sessioned closed => {session.Id}");
+                DRPC.ResetPres();
             }
         }
 
         public static void OnFocusedSessionChanged(MediaSession session)
         {
+            string seshinfo = session.ControlSession.GetPlaybackInfo().ToString();
             if (session != null)
             {
-                
+                DRPC.SetPresence("Testing", seshinfo);
             }
         }
 
