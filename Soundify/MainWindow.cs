@@ -68,6 +68,7 @@ namespace Soundify
             DRPC.Init();
             MediaController.Init();
             FormConsole.RTB = RTBConsole;
+            Themer.TP = FormTabPages;
 
             SoundCloudWView.Source = new("https://soundcloud.com/discover");
             SpotifyWView.Source = new("https://open.spotify.com/");
@@ -81,29 +82,72 @@ namespace Soundify
 
             FormConsole.Log("Application loaded!");
             //Testing OSC
-            OSCManager.SendChatbox("Soundify application launched!\n(https://scrim.cc/software/soundify)");
-
-            try
-            {
-                string betapass = File.ReadAllText("beta.txt");
-                BetaTester.Allow(betapass);
-            }
-            catch { }
+            //OSCManager.SendChatbox("Soundify application launched!\n(https://scrim.cc/software/soundify)");
+            Themer.Rainbow(true);
         }
 
         //Main timer for everything
+        private static string[] AnimBar =
+        [
+            "",
+            "<>",
+            "<=>",
+            "<==>",
+            "<===>",
+            "<====>",
+            "<=====>",
+            "<======>",
+            "<=====>",
+            "<====>",
+            "<===>",
+            "<==>",
+            "<=>",
+            "<>",
+            ""
+        ];
+        private static readonly Thread Animthrd = new(new ThreadStart(OscAnimation));
+
+        private static void OscAnimation()
+        {
+            while (true)
+            {
+                foreach (var s in AnimBar)
+                {
+                    OSCManager.SendChatbox($"(song)\n{s}");
+                    Thread.Sleep(1100);
+                }
+            }
+        }
+
         private void MainFormTimer_Tick(object sender, EventArgs e)
         {
             DRPC.Update();
 
-            if (Toggles.OscTog) { }
-            if (Toggles.OscSongShowTog) { }
-            if (Toggles.OscAnimTog) { }
-            if (Toggles.ShowSongRPC) { }
+            if (Toggles.OscTog) 
+            {
+                OSCManager.SendMusic("Test", "Test Artist");
+            }
 
-            /*FormConsole.Log("Normal log test");
-            FormConsole.Warn("Normal warning test");
-            FormConsole.Error("Normal error test");*/
+            if (Toggles.OscSongShowTog) 
+            {
+                OSCManager.SendChatbox("Test");
+            }
+
+            if (Toggles.OscAnimTog) 
+            {
+                Animthrd.Start();
+            }
+            else
+            {
+                Animthrd.Abort();
+            }
+
+            //if (Toggles.ShowSongRPC) { }
+
+            if (Toggles.OscSendTime)
+            {
+                OSCManager.SendTime();
+            }
         }
 
         private void MainWindow_FormClosing(object sender, FormClosingEventArgs e)
@@ -114,6 +158,7 @@ namespace Soundify
             AppUpdateCheck.Dispose();
             SaveLogs.Save();
             MediaController.mediaManager.Dispose();
+            Themer.Rainbow(false);
         }
 
         private void JonasCredit_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -276,12 +321,19 @@ namespace Soundify
 
         private void DeleteConfigBtn_Click(object sender, EventArgs e)
         {
+            try { Directory.Delete(AppDirs.ConfigFolder, true); } catch { }
 
+            if (!Directory.Exists(AppDirs.ConfigFolder))
+            {
+                MsgBox.Msg("Config deleted!");
+            }
+
+            try { Directory.CreateDirectory(AppDirs.ConfigFolder); } catch { }
         }
 
         private void OpenConfigBtn_Click(object sender, EventArgs e)
         {
-
+            try { Process.Start(AppDirs.ConfigFolder); } catch { }
         }
 
         private void CheckForUpdatesBtn_Click(object sender, EventArgs e)
@@ -322,6 +374,21 @@ namespace Soundify
         private void VisualizerWebView_Click(object sender, EventArgs e)
         {
             Process.Start($"{Directory.GetCurrentDirectory()}\\SoundifyVisuals\\index.html");
+        }
+
+        private void DefThemeBtn_Click(object sender, EventArgs e)
+        {
+            Themer.DefColor();
+        }
+
+        private void Purp2Btn_Click(object sender, EventArgs e)
+        {
+            Themer.Purple2();
+        }
+
+        private void DarkerDBtn_Click(object sender, EventArgs e)
+        {
+            Themer.DarkerDark();
         }
     }
 }

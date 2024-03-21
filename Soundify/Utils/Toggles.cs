@@ -12,6 +12,7 @@ namespace Soundify.Utils
         public static bool OscTog {  get; set; } = false;
         public static bool OscAnimTog { get; set; } = false;
         public static bool OscSongShowTog { get; set; } = false;
+        public static bool OscSendTime { get; set; } = false;
 
         //RPC
         public static bool ShowSongRPC { get; set; } = false;

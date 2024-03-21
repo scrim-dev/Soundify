@@ -61,6 +61,9 @@
             this.DisableOscBtn = new ReaLTaiizor.Controls.ForeverButton();
             this.EnableOSCBtn = new ReaLTaiizor.Controls.ForeverButton();
             this.SettingsTabPage = new System.Windows.Forms.TabPage();
+            this.ThemesBorderPanel = new ReaLTaiizor.Controls.LostBorderPanel();
+            this.PurpleV2ThemeBtn = new ReaLTaiizor.Controls.ForeverButton();
+            this.DefThemeBtn = new ReaLTaiizor.Controls.ForeverButton();
             this.AppSetsPanel = new ReaLTaiizor.Controls.LostBorderPanel();
             this.RestartAppBtn = new ReaLTaiizor.Controls.ForeverButton();
             this.ForceCloseAppBtn = new ReaLTaiizor.Controls.ForeverButton();
@@ -91,6 +94,7 @@
             this.DevelopTitleLabel = new System.Windows.Forms.Label();
             this.LogoPicBox = new System.Windows.Forms.PictureBox();
             this.AppUpdateCheck = new System.Windows.Forms.Timer(this.components);
+            this.DarkerDBtn = new ReaLTaiizor.Controls.ForeverButton();
             this.FormTabPages.SuspendLayout();
             this.SpotifyTabPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SpotifyWView)).BeginInit();
@@ -104,6 +108,7 @@
             this.DiscordRPCPanel.SuspendLayout();
             this.VRCOscPanel.SuspendLayout();
             this.SettingsTabPage.SuspendLayout();
+            this.ThemesBorderPanel.SuspendLayout();
             this.AppSetsPanel.SuspendLayout();
             this.AppConfigsPanel.SuspendLayout();
             this.CreditsTabPage.SuspendLayout();
@@ -588,6 +593,7 @@
             // SettingsTabPage
             // 
             this.SettingsTabPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
+            this.SettingsTabPage.Controls.Add(this.ThemesBorderPanel);
             this.SettingsTabPage.Controls.Add(this.AppSetsPanel);
             this.SettingsTabPage.Controls.Add(this.AppConfigsPanel);
             this.SettingsTabPage.Location = new System.Drawing.Point(139, 4);
@@ -596,6 +602,55 @@
             this.SettingsTabPage.Size = new System.Drawing.Size(841, 653);
             this.SettingsTabPage.TabIndex = 4;
             this.SettingsTabPage.Text = "Settings";
+            // 
+            // ThemesBorderPanel
+            // 
+            this.ThemesBorderPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.ThemesBorderPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.ThemesBorderPanel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(116)))), ((int)(((byte)(209)))));
+            this.ThemesBorderPanel.Controls.Add(this.DarkerDBtn);
+            this.ThemesBorderPanel.Controls.Add(this.PurpleV2ThemeBtn);
+            this.ThemesBorderPanel.Controls.Add(this.DefThemeBtn);
+            this.ThemesBorderPanel.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.ThemesBorderPanel.ForeColor = System.Drawing.Color.White;
+            this.ThemesBorderPanel.Location = new System.Drawing.Point(6, 319);
+            this.ThemesBorderPanel.Name = "ThemesBorderPanel";
+            this.ThemesBorderPanel.Padding = new System.Windows.Forms.Padding(5);
+            this.ThemesBorderPanel.ShowText = true;
+            this.ThemesBorderPanel.Size = new System.Drawing.Size(566, 310);
+            this.ThemesBorderPanel.TabIndex = 5;
+            this.ThemesBorderPanel.Text = "Themes (W.I.P)";
+            // 
+            // PurpleV2ThemeBtn
+            // 
+            this.PurpleV2ThemeBtn.BackColor = System.Drawing.Color.Transparent;
+            this.PurpleV2ThemeBtn.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(116)))), ((int)(((byte)(209)))));
+            this.PurpleV2ThemeBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PurpleV2ThemeBtn.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.PurpleV2ThemeBtn.Location = new System.Drawing.Point(3, 67);
+            this.PurpleV2ThemeBtn.Name = "PurpleV2ThemeBtn";
+            this.PurpleV2ThemeBtn.Rounded = false;
+            this.PurpleV2ThemeBtn.Size = new System.Drawing.Size(145, 33);
+            this.PurpleV2ThemeBtn.TabIndex = 4;
+            this.PurpleV2ThemeBtn.Text = "Purple V2";
+            this.PurpleV2ThemeBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.PurpleV2ThemeBtn.Click += new System.EventHandler(this.Purp2Btn_Click);
+            // 
+            // DefThemeBtn
+            // 
+            this.DefThemeBtn.BackColor = System.Drawing.Color.Transparent;
+            this.DefThemeBtn.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(116)))), ((int)(((byte)(209)))));
+            this.DefThemeBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.DefThemeBtn.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.DefThemeBtn.Location = new System.Drawing.Point(3, 28);
+            this.DefThemeBtn.Name = "DefThemeBtn";
+            this.DefThemeBtn.Rounded = false;
+            this.DefThemeBtn.Size = new System.Drawing.Size(145, 33);
+            this.DefThemeBtn.TabIndex = 3;
+            this.DefThemeBtn.Text = "Default";
+            this.DefThemeBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.DefThemeBtn.Click += new System.EventHandler(this.DefThemeBtn_Click);
             // 
             // AppSetsPanel
             // 
@@ -748,7 +803,7 @@
             this.WebsiteLinksPanel.Name = "WebsiteLinksPanel";
             this.WebsiteLinksPanel.Padding = new System.Windows.Forms.Padding(5);
             this.WebsiteLinksPanel.ShowText = true;
-            this.WebsiteLinksPanel.Size = new System.Drawing.Size(280, 67);
+            this.WebsiteLinksPanel.Size = new System.Drawing.Size(566, 67);
             this.WebsiteLinksPanel.TabIndex = 5;
             this.WebsiteLinksPanel.Text = "Links";
             // 
@@ -990,6 +1045,21 @@
             this.AppUpdateCheck.Interval = 19900;
             this.AppUpdateCheck.Tick += new System.EventHandler(this.AppUpdateCheck_Tick);
             // 
+            // DarkerDBtn
+            // 
+            this.DarkerDBtn.BackColor = System.Drawing.Color.Transparent;
+            this.DarkerDBtn.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(116)))), ((int)(((byte)(209)))));
+            this.DarkerDBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.DarkerDBtn.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.DarkerDBtn.Location = new System.Drawing.Point(3, 106);
+            this.DarkerDBtn.Name = "DarkerDBtn";
+            this.DarkerDBtn.Rounded = false;
+            this.DarkerDBtn.Size = new System.Drawing.Size(145, 33);
+            this.DarkerDBtn.TabIndex = 5;
+            this.DarkerDBtn.Text = "Darker Dark";
+            this.DarkerDBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.DarkerDBtn.Click += new System.EventHandler(this.DarkerDBtn_Click);
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -1021,6 +1091,7 @@
             this.VRCOscPanel.ResumeLayout(false);
             this.VRCOscPanel.PerformLayout();
             this.SettingsTabPage.ResumeLayout(false);
+            this.ThemesBorderPanel.ResumeLayout(false);
             this.AppSetsPanel.ResumeLayout(false);
             this.AppConfigsPanel.ResumeLayout(false);
             this.CreditsTabPage.ResumeLayout(false);
@@ -1102,6 +1173,10 @@
         private ReaLTaiizor.Controls.ForeverButton DeleteConfigBtn;
         private ReaLTaiizor.Controls.ForeverButton OpenConfigBtn;
         private PictureBox DiscordPicBox;
+        private ReaLTaiizor.Controls.LostBorderPanel ThemesBorderPanel;
+        private ReaLTaiizor.Controls.ForeverButton DefThemeBtn;
+        private ReaLTaiizor.Controls.ForeverButton PurpleV2ThemeBtn;
+        private ReaLTaiizor.Controls.ForeverButton DarkerDBtn;
     }
 }
 

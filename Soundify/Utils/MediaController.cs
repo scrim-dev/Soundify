@@ -41,7 +41,14 @@ namespace Soundify.Utils
             string seshinfo = "[Hidden]"; //Doing this for now until I finish getting the music name and stuff lol
             if (session != null)
             {
-                DRPC.SetPresence("Listening to Music!", seshinfo);
+                if (Toggles.ShowSongRPC)
+                {
+                    DRPC.SetPresence("Listening to Music!", seshinfo);
+                }
+                else
+                {
+                    DRPC.SetPresence("Listening to Music!", "[Hidden]");
+                }
             }
         }
 
