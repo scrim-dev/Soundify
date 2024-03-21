@@ -128,7 +128,7 @@
             // MainFormTimer
             // 
             this.MainFormTimer.Enabled = true;
-            this.MainFormTimer.Interval = 1100;
+            this.MainFormTimer.Interval = 1200;
             this.MainFormTimer.Tick += new System.EventHandler(this.MainFormTimer_Tick);
             // 
             // FormTabPages

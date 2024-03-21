@@ -9,11 +9,15 @@
             {
                 MsgBox.Question("Soundify has a new update or the current version your on is outdated! Would you like to update now?", delegate
                 {
-
+                    RunUpdater();
                 }, delegate
                 {
-
+                    /* Fortnite */
                 });
+            }
+            else if(string.IsNullOrEmpty(GetVersionFromHost()))
+            {
+                MsgBox.Error("Uhh this should not have happened. Whoops, contact Scrim");
             }
         }
 

@@ -15,6 +15,6 @@ namespace Soundify.Utils
         public static bool OscSendTime { get; set; } = false;
 
         //RPC
-        public static bool ShowSongRPC { get; set; } = false;
+        public static bool ShowSongRPC { get; set; } = true;
     }
 }

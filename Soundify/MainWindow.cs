@@ -56,7 +56,7 @@
             RTBConsole.ScrollBars = RichTextBoxScrollBars.ForcedVertical;
 
             MainFormTimer.Enabled = true;
-            MainFormTimer.Interval = 1100;
+            MainFormTimer.Interval = 1200;
             AppUpdateCheck.Enabled = true;
             AppUpdateCheck.Interval = 19900;
 
@@ -111,8 +111,8 @@
             {
                 foreach (var s in AnimBar)
                 {
-                    OSCManager.SendChatbox($"(song)\n{s}");
-                    Thread.Sleep(1100);
+                    OSCManager.SendChatbox($"Listening to: {MediaController.CurrentPlayingArtist} - {MediaController.CurrentPlayingTitle}\n{s}");
+                    Thread.Sleep(1200);
                 }
             }
         }
@@ -123,12 +123,14 @@
 
             if (Toggles.OscTog) 
             {
-                OSCManager.SendMusic("Test", "Test Artist");
+                OSCManager.SendMusic(MediaController.CurrentPlayingTitle, MediaController.CurrentPlayingArtist + 
+                    $"\n{MediaController.ActiveTime}");
             }
 
             if (Toggles.OscSongShowTog)
             {
-                OSCManager.SendChatbox("Test");
+                OSCManager.SendChatbox($"{MediaController.CurrentPlayingTitle} by {MediaController.CurrentPlayingArtist}\n" +
+                    $"{MediaController.ActiveTime}");
             }
 
             if (Toggles.OscAnimTog) 
@@ -259,30 +261,48 @@
         private void EnableOSCBtn_Click(object sender, EventArgs e)
         {
             Toggles.OscTog = true;
+            Toggles.OscAnimTog = false;
+            Toggles.OscSendTime = false;
+            Toggles.OscSongShowTog = false;
         }
 
         private void OscAnimBtnOn_Click(object sender, EventArgs e)
         {
             Toggles.OscAnimTog = true;
+            Toggles.OscTog = false;
+            Toggles.OscSendTime = false;
+            Toggles.OscSongShowTog = false;
         }
 
         private void DisableOscBtn_Click(object sender, EventArgs e)
         {
             Toggles.OscTog = false;
+            Toggles.OscAnimTog = false;
+            Toggles.OscSendTime = false;
+            Toggles.OscSongShowTog = false;
         }
 
         private void OscAnimBtnOff_Click(object sender, EventArgs e)
         {
             Toggles.OscAnimTog = false;
+            Toggles.OscTog = false;
+            Toggles.OscSendTime = false;
+            Toggles.OscSongShowTog = false;
         }
 
         private void PrintSongOnlyBtn_Click(object sender, EventArgs e)
         {
             Toggles.OscSongShowTog = true;
+            Toggles.OscTog = false;
+            Toggles.OscAnimTog = false;
+            Toggles.OscSendTime = false;
         }
 
         private void DefaultPrintBtn_Click(object sender, EventArgs e)
         {
+            Toggles.OscTog = true;
+            Toggles.OscAnimTog = false;
+            Toggles.OscSendTime = false;
             Toggles.OscSongShowTog = false;
         }
 

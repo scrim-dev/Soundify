@@ -6,7 +6,9 @@ namespace Soundify.Utils
     internal class MediaController
     {
         public static MediaManager mediaManager;
-
+        public static string CurrentPlayingArtist { get; set; } = null;
+        public static string CurrentPlayingTitle { get; set; } = null;
+        public static string ActiveTime { get; set; } = null;
         public static void Init()
         {
             mediaManager = new MediaManager();
@@ -15,6 +17,7 @@ namespace Soundify.Utils
             mediaManager.OnAnySessionClosed += OnAnySessionClosed;
             mediaManager.OnFocusedSessionChanged += OnFocusedSessionChanged;
             mediaManager.OnAnyMediaPropertyChanged += OnAnyMediaPropertyChanged;
+            mediaManager.OnAnyTimelinePropertyChanged += OnAnyTimelinePropertyChanged;
 
             mediaManager.Start();
         }
@@ -38,7 +41,7 @@ namespace Soundify.Utils
 
         public static void OnFocusedSessionChanged(MediaSession session)
         {
-            string seshinfo = "[Hidden]"; //Doing this for now until I finish getting the music name and stuff lol
+            string seshinfo = CurrentPlayingArtist + "-" + CurrentPlayingTitle;
             if (session != null)
             {
                 if (Toggles.ShowSongRPC)
@@ -57,7 +60,19 @@ namespace Soundify.Utils
         {
             if (sender != null || args != null) 
             {
-                
+                FormConsole.Log($"Playing from {sender.Id}: {args.Title} by {args.Artist}");
+                CurrentPlayingArtist = args.Artist;
+                CurrentPlayingTitle = args.Title;
+            }
+        }
+
+        private static void OnAnyTimelinePropertyChanged(MediaSession sender, 
+            GlobalSystemMediaTransportControlsSessionTimelineProperties args)
+        {   
+            if (sender != null || args != null)
+            {
+                FormConsole.Log($"{sender.Id} timeline is now {args.Position}/{args.EndTime}");
+                ActiveTime = $"{args.Position}|{args.EndTime}";
             }
         }
     }
