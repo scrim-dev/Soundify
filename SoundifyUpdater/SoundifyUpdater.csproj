@@ -41,7 +41,7 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>CloudIconAlt.ico</ApplicationIcon>
+    <ApplicationIcon>CloudIcon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Pastel, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">

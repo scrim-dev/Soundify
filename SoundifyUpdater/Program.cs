@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Threading;
 using Pastel;
+using SoundifyUpdater.Utils;
 
 namespace SoundifyUpdater
 {
@@ -9,14 +10,9 @@ namespace SoundifyUpdater
         public static string WorkingOn { get; set; } = null;
         static void Main()
         {
-            Thread thread = new Thread(new ThreadStart(SetConsTitle));
+            Thread thread = new(new ThreadStart(SetConsTitle));
             thread.Start();
-            Utils.Console.Log("Missing Files\n");
-            Utils.Console.Error("Missing Files\n");
-            Utils.Console.Warning("Missing Files\n");
-            Utils.Console.Success("Missing Files\n");
-            Utils.Console.Info("Missing Files\n");
-            
+            Updater.Update();
         }
 
         private static void SetConsTitle()
@@ -25,9 +21,9 @@ namespace SoundifyUpdater
             {
                 if(string.IsNullOrEmpty(WorkingOn) || WorkingOn == "")
                 {
-                    Console.Title = $"Soundify Updater";
+                    System.Console.Title = $"Soundify Updater";
                 }
-                else { Console.Title = $"Soundify Updater | {WorkingOn}"; }
+                else { System.Console.Title = $"Soundify Updater | {WorkingOn}"; }
                 Thread.Sleep(300);
             }
         }
