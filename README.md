@@ -4,7 +4,7 @@ One click away from your favorite track!
 [![Download zip](https://custom-icon-badges.demolab.com/badge/-Download-purple?style=for-the-badge&logo=download&logoColor=white "Download")](url)
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/scrim-dev/Soundify/master/Soundify/Resources/DropshadowSoundifyLogo.png?token=GHSAT0AAAAAACP4UR3YVRJOZW2J66RXCQ26ZP33GSQ" alt="Soundify Logo" width="200">
+  <img src="https://raw.githubusercontent.com/scrim-dev/Soundify/master/Soundify/Resources/DropshadowSoundifyLogo.png?token=GHSAT0AAAAAACP4UR3YVRJOZW2J66RXCQ26ZP33GSQ" alt="Soundify Logo" width="500">
 </p>
 
 ## What is Soundify?
