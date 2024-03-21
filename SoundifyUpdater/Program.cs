@@ -1,10 +1,6 @@
-﻿using SoundifyUpdater.Utils;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System;
 using System.Threading;
-using System.Threading.Tasks;
+using Pastel;
 
 namespace SoundifyUpdater
 {
@@ -15,7 +11,12 @@ namespace SoundifyUpdater
         {
             Thread thread = new Thread(new ThreadStart(SetConsTitle));
             thread.Start();
-            Updater.Update();
+            Utils.Console.Log("Missing Files\n");
+            Utils.Console.Error("Missing Files\n");
+            Utils.Console.Warning("Missing Files\n");
+            Utils.Console.Success("Missing Files\n");
+            Utils.Console.Info("Missing Files\n");
+            
         }
 
         private static void SetConsTitle()
