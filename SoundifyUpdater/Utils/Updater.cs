@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,7 +11,11 @@ namespace SoundifyUpdater.Utils
     {
         public static void Update()
         {
+            Program.WorkingOn = "Checking for Soundify...";
+            if (File.Exists("Soundify.exe"))
+            {
 
+            }
         }
     }
 }

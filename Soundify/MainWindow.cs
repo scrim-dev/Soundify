@@ -67,7 +67,6 @@ namespace Soundify
 
             DRPC.Init();
             MediaController.Init();
-            Configs.Load();
             FormConsole.RTB = RTBConsole;
 
             SoundCloudWView.Source = new("https://soundcloud.com/discover");
@@ -77,6 +76,9 @@ namespace Soundify
             VersionLabel.Text = Info.AppVersion;
 
             UpdateChecker.Check();
+            Configs.Setup();
+            Configs.Load();
+
             FormConsole.Log("Application loaded!");
         }
 
@@ -85,6 +87,10 @@ namespace Soundify
         {
             DRPC.Update();
 
+            if (Toggles.OscTog) { }
+            if (Toggles.OscSongShowTog) { }
+            if (Toggles.OscAnimTog) { }
+            if (Toggles.ShowSongRPC) { }
             /*FormConsole.Log("Normal log test");
             FormConsole.Warn("Normal warning test");
             FormConsole.Error("Normal error test");*/
@@ -96,6 +102,8 @@ namespace Soundify
             DRPC.End();
             MainFormTimer.Dispose();
             AppUpdateCheck.Dispose();
+            SaveLogs.Save();
+            MediaController.mediaManager.Dispose();
         }
 
         private void JonasCredit_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -197,32 +205,32 @@ namespace Soundify
         //Addons stuff
         private void EnableOSCBtn_Click(object sender, EventArgs e)
         {
-
+            Toggles.OscTog = true;
         }
 
         private void OscAnimBtnOn_Click(object sender, EventArgs e)
         {
-
+            Toggles.OscAnimTog = true;
         }
 
         private void DisableOscBtn_Click(object sender, EventArgs e)
         {
-
+            Toggles.OscTog = false;
         }
 
         private void OscAnimBtnOff_Click(object sender, EventArgs e)
         {
-
+            Toggles.OscAnimTog = false;
         }
 
         private void PrintSongOnlyBtn_Click(object sender, EventArgs e)
         {
-
+            Toggles.OscSongShowTog = true;
         }
 
         private void DefaultPrintBtn_Click(object sender, EventArgs e)
         {
-
+            Toggles.OscSongShowTog = false;
         }
 
         private void EnableDRPCBtn_Click(object sender, EventArgs e)
@@ -237,12 +245,12 @@ namespace Soundify
 
         private void ShowSongBtn_Click(object sender, EventArgs e)
         {
-
+            Toggles.ShowSongRPC = true;
         }
 
         private void HideSongBtn_Click(object sender, EventArgs e)
         {
-
+            Toggles.ShowSongRPC = false;
         }
 
         private void ResetRPCBtn_Click(object sender, EventArgs e)
@@ -253,7 +261,7 @@ namespace Soundify
         //Settings stuff
         private void SaveConfigBtn_Click(object sender, EventArgs e)
         {
-
+            Configs.Save();
         }
 
         private void DeleteConfigBtn_Click(object sender, EventArgs e)

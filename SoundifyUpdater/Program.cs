@@ -27,7 +27,7 @@ namespace SoundifyUpdater
                     Console.Title = $"Soundify Updater";
                 }
                 else { Console.Title = $"Soundify Updater | {WorkingOn}"; }
-                Thread.Sleep(1000);
+                Thread.Sleep(300);
             }
         }
     }
