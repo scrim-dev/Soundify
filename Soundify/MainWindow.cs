@@ -1,12 +1,7 @@
-﻿using System.Windows.Forms;
-using WindowsMediaController;
-
-namespace Soundify
+﻿namespace Soundify
 {
-    //Fartify
     public partial class MainWindow : Form
     {
-        public static string UpdaterName { get; } = "SoundifyUpdater";
         //Dark window title by Jonas Kohl - https://jonaskohl.de/ | https://github.com/jonaskohl
         [DllImport("dwmapi.dll")]
         private static extern int DwmSetWindowAttribute(IntPtr hwnd, int attr, ref int attrValue, int attrSize);
@@ -81,13 +76,14 @@ namespace Soundify
             Configs.Load();
 
             FormConsole.Log("Application loaded!");
-            //Testing OSC
-            //OSCManager.SendChatbox("Soundify application launched!\n(https://scrim.cc/software/soundify)");
-            Themer.Rainbow(true);
+
+            //For now
+            Text = Info.Name + " [BETA] [TESTING PHASE]";
+            Animthrd.Start();
         }
 
         //Main timer for everything
-        private static string[] AnimBar =
+        private static readonly string[] AnimBar =
         [
             "",
             "<>",
@@ -106,10 +102,12 @@ namespace Soundify
             ""
         ];
         private static readonly Thread Animthrd = new(new ThreadStart(OscAnimation));
-
+#pragma warning disable IDE0044 // Add readonly modifier
+        private static bool Animbool = false;
+#pragma warning restore IDE0044 // Add readonly modifier
         private static void OscAnimation()
         {
-            while (true)
+            while (Animbool)
             {
                 foreach (var s in AnimBar)
                 {
@@ -128,18 +126,18 @@ namespace Soundify
                 OSCManager.SendMusic("Test", "Test Artist");
             }
 
-            if (Toggles.OscSongShowTog) 
+            if (Toggles.OscSongShowTog)
             {
                 OSCManager.SendChatbox("Test");
             }
 
             if (Toggles.OscAnimTog) 
             {
-                Animthrd.Start();
+                Animbool = true;
             }
             else
             {
-                Animthrd.Abort();
+                Animbool = false;
             }
 
             //if (Toggles.ShowSongRPC) { }
@@ -157,8 +155,8 @@ namespace Soundify
             MainFormTimer.Dispose();
             AppUpdateCheck.Dispose();
             SaveLogs.Save();
-            MediaController.mediaManager.Dispose();
-            Themer.Rainbow(false);
+            Animthrd.Abort();
+            try { MediaController.mediaManager.Dispose(); } catch { }
         }
 
         private void JonasCredit_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -198,7 +196,7 @@ namespace Soundify
 
         private void WebsitePicBoxBtn_Click(object sender, EventArgs e)
         {
-            Process.Start("https://scrim.cc/software/soundify");
+            Process.Start(Info.MainSiteUrl);
         }
 
         private void YTPicBoxBtn_Click(object sender, EventArgs e)
@@ -342,7 +340,7 @@ namespace Soundify
             {
                 Alerts.SuccessTone();
                 Thread.Sleep(1000);
-                try { Process.Start($"{UpdaterName}.exe"); } 
+                try { UpdateChecker.RunUpdater(); } 
                 catch (Exception ex) { MsgBox.Error($"Failed to open updater\n\n{ex}"); }
                 Application.Exit();
             }, delegate
@@ -389,6 +387,11 @@ namespace Soundify
         private void DarkerDBtn_Click(object sender, EventArgs e)
         {
             Themer.DarkerDark();
+        }
+
+        private void SpecialThemeBtn_Click(object sender, EventArgs e)
+        {
+            Themer.OneOfAKind();
         }
     }
 }

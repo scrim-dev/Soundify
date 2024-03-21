@@ -1,6 +1,4 @@
-﻿using System.Media;
-
-namespace Soundify.Utils
+﻿namespace Soundify.Utils
 {
     internal class Alerts
     {

@@ -1,16 +1,39 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Soundify.Utils
+﻿namespace Soundify.Utils
 {
     internal class UpdateChecker
     {
+        private static WebClient Client { get; set; }
         public static void Check()
         {
+            if(Info.AppVersion != GetVersionFromHost())
+            {
+                MsgBox.Question("Soundify has a new update or the current version your on is outdated! Would you like to update now?", delegate
+                {
 
+                }, delegate
+                {
+
+                });
+            }
+        }
+
+        public static void RunUpdater()
+        {
+            try { Process.Start(Info.UpdaterName); } catch (Exception e) { MsgBox.Error($"Updater failed to run\n{e}"); }
+        }
+
+        private static string GetVersionFromHost()
+        {
+            Client.Headers.Add("User-Agent", Info.AppUserAgent);
+            try
+            {
+                string s = Client.DownloadString(Info.VersionFile);
+                return s;
+            } 
+            catch
+            {
+                return null;
+            }
         }
     }
 }

@@ -62,6 +62,7 @@
             this.EnableOSCBtn = new ReaLTaiizor.Controls.ForeverButton();
             this.SettingsTabPage = new System.Windows.Forms.TabPage();
             this.ThemesBorderPanel = new ReaLTaiizor.Controls.LostBorderPanel();
+            this.DarkerDBtn = new ReaLTaiizor.Controls.ForeverButton();
             this.PurpleV2ThemeBtn = new ReaLTaiizor.Controls.ForeverButton();
             this.DefThemeBtn = new ReaLTaiizor.Controls.ForeverButton();
             this.AppSetsPanel = new ReaLTaiizor.Controls.LostBorderPanel();
@@ -94,7 +95,7 @@
             this.DevelopTitleLabel = new System.Windows.Forms.Label();
             this.LogoPicBox = new System.Windows.Forms.PictureBox();
             this.AppUpdateCheck = new System.Windows.Forms.Timer(this.components);
-            this.DarkerDBtn = new ReaLTaiizor.Controls.ForeverButton();
+            this.SpecialThemeBtn = new ReaLTaiizor.Controls.ForeverButton();
             this.FormTabPages.SuspendLayout();
             this.SpotifyTabPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SpotifyWView)).BeginInit();
@@ -609,6 +610,7 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.ThemesBorderPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.ThemesBorderPanel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(116)))), ((int)(((byte)(209)))));
+            this.ThemesBorderPanel.Controls.Add(this.SpecialThemeBtn);
             this.ThemesBorderPanel.Controls.Add(this.DarkerDBtn);
             this.ThemesBorderPanel.Controls.Add(this.PurpleV2ThemeBtn);
             this.ThemesBorderPanel.Controls.Add(this.DefThemeBtn);
@@ -621,6 +623,21 @@
             this.ThemesBorderPanel.Size = new System.Drawing.Size(566, 310);
             this.ThemesBorderPanel.TabIndex = 5;
             this.ThemesBorderPanel.Text = "Themes (W.I.P)";
+            // 
+            // DarkerDBtn
+            // 
+            this.DarkerDBtn.BackColor = System.Drawing.Color.Transparent;
+            this.DarkerDBtn.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(116)))), ((int)(((byte)(209)))));
+            this.DarkerDBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.DarkerDBtn.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.DarkerDBtn.Location = new System.Drawing.Point(3, 106);
+            this.DarkerDBtn.Name = "DarkerDBtn";
+            this.DarkerDBtn.Rounded = false;
+            this.DarkerDBtn.Size = new System.Drawing.Size(145, 33);
+            this.DarkerDBtn.TabIndex = 5;
+            this.DarkerDBtn.Text = "Darker Dark";
+            this.DarkerDBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.DarkerDBtn.Click += new System.EventHandler(this.DarkerDBtn_Click);
             // 
             // PurpleV2ThemeBtn
             // 
@@ -1045,20 +1062,20 @@
             this.AppUpdateCheck.Interval = 19900;
             this.AppUpdateCheck.Tick += new System.EventHandler(this.AppUpdateCheck_Tick);
             // 
-            // DarkerDBtn
+            // SpecialThemeBtn
             // 
-            this.DarkerDBtn.BackColor = System.Drawing.Color.Transparent;
-            this.DarkerDBtn.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(116)))), ((int)(((byte)(209)))));
-            this.DarkerDBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.DarkerDBtn.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.DarkerDBtn.Location = new System.Drawing.Point(3, 106);
-            this.DarkerDBtn.Name = "DarkerDBtn";
-            this.DarkerDBtn.Rounded = false;
-            this.DarkerDBtn.Size = new System.Drawing.Size(145, 33);
-            this.DarkerDBtn.TabIndex = 5;
-            this.DarkerDBtn.Text = "Darker Dark";
-            this.DarkerDBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.DarkerDBtn.Click += new System.EventHandler(this.DarkerDBtn_Click);
+            this.SpecialThemeBtn.BackColor = System.Drawing.Color.Transparent;
+            this.SpecialThemeBtn.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(116)))), ((int)(((byte)(209)))));
+            this.SpecialThemeBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.SpecialThemeBtn.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.SpecialThemeBtn.Location = new System.Drawing.Point(3, 145);
+            this.SpecialThemeBtn.Name = "SpecialThemeBtn";
+            this.SpecialThemeBtn.Rounded = false;
+            this.SpecialThemeBtn.Size = new System.Drawing.Size(145, 33);
+            this.SpecialThemeBtn.TabIndex = 6;
+            this.SpecialThemeBtn.Text = "Special";
+            this.SpecialThemeBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.SpecialThemeBtn.Click += new System.EventHandler(this.SpecialThemeBtn_Click);
             // 
             // MainWindow
             // 
@@ -1177,6 +1194,7 @@
         private ReaLTaiizor.Controls.ForeverButton DefThemeBtn;
         private ReaLTaiizor.Controls.ForeverButton PurpleV2ThemeBtn;
         private ReaLTaiizor.Controls.ForeverButton DarkerDBtn;
+        private ReaLTaiizor.Controls.ForeverButton SpecialThemeBtn;
     }
 }
 

@@ -13,23 +13,23 @@ namespace SoundifyUpdater.Utils
         public static readonly string[] colors = ["#9974d1", "#f13542", "#f39853", "#22f06d", "#297bf0"];
         public static void Log(string str)
         { 
-            System.Console.Write($"[{GetTime().Pastel(colors[0])}] [{app.Pastel(colors[0])}] [{symbols[0].Pastel(colors[0])}] {str}");
+            System.Console.Write($"[{GetTime().Pastel(colors[0])}] [{app.Pastel(colors[0])}] [{symbols[0].Pastel(colors[0])}] {str}" + Environment.NewLine);
         }
         public static void Error(string str)
         {  
-            System.Console.Write($"[{GetTime().Pastel(colors[1])}] [{app.Pastel(colors[1])}] [{symbols[1].Pastel(colors[1])}] {str}");
+            System.Console.Write($"[{GetTime().Pastel(colors[1])}] [{app.Pastel(colors[1])}] [{symbols[1].Pastel(colors[1])}] {str}" + Environment.NewLine);
         }
         public static void Warning(string str)
         {  
-            System.Console.Write($"[{GetTime().Pastel(colors[2])}] [{app.Pastel(colors[2])}] [{symbols[2].Pastel(colors[2])}] {str}");
+            System.Console.Write($"[{GetTime().Pastel(colors[2])}] [{app.Pastel(colors[2])}] [{symbols[2].Pastel(colors[2])}] {str}" + Environment.NewLine);
         }
         public static void Success(string str)
         { 
-            System.Console.Write($"[{GetTime().Pastel(colors[3])}] [{app.Pastel(colors[3])}] [{symbols[3].Pastel(colors[3])}] {str}");
+            System.Console.Write($"[{GetTime().Pastel(colors[3])}] [{app.Pastel(colors[3])}] [{symbols[3].Pastel(colors[3])}] {str}" + Environment.NewLine);
         }
         public static void Info(string str)
         { 
-            System.Console.Write($"[{GetTime().Pastel(colors[4])}] [{app.Pastel(colors[4])}] [{symbols[4].Pastel(colors[4])}] {str}");
+            System.Console.Write($"[{GetTime().Pastel(colors[4])}] [{app.Pastel(colors[4])}] [{symbols[4].Pastel(colors[4])}] {str}" + Environment.NewLine);
         }
     }
 }

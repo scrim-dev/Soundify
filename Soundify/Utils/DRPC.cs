@@ -1,8 +1,4 @@
-﻿
-using System.Security.Policy;
-using Windows.Media.Protection.PlayReady;
-
-namespace Soundify.Utils
+﻿namespace Soundify.Utils
 {
     internal class DRPC
     {
@@ -41,7 +37,7 @@ namespace Soundify.Utils
             DiscordRPC.Button SoundifyWebsiteBtn = new()
             {
                 Label = "Download Soundify",
-                Url = "https://scrim.cc/software/soundify"
+                Url = Info.MainSiteUrl
             };
 
             DClient.SetPresence(new RichPresence()

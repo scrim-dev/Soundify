@@ -13,7 +13,7 @@ namespace Soundify.App
             try
             {
                 File.WriteAllText(AppDirs.LogsFolder + 
-                    $"\\Logs-{DateTime.Now.ToString("d_HH_ss_mm").Replace("/", "_")}", 
+                    $"\\Logs-{DateTime.Now.ToString("d_HH_ss_mm").Replace("/", "_")}.txt", 
                     FormConsole.RTB.Text);
             }
             catch { }

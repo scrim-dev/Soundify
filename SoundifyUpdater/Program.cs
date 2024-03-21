@@ -10,8 +10,10 @@ namespace SoundifyUpdater
         public static string WorkingOn { get; set; } = null;
         static void Main()
         {
+            Utils.Console.Log("Launched updater");
             Thread thread = new(new ThreadStart(SetConsTitle));
             thread.Start();
+            Utils.Console.Warning("Starting updater..");
             Updater.Update();
         }
 
@@ -24,7 +26,7 @@ namespace SoundifyUpdater
                     System.Console.Title = $"Soundify Updater";
                 }
                 else { System.Console.Title = $"Soundify Updater | {WorkingOn}"; }
-                Thread.Sleep(300);
+                Thread.Sleep(100);
             }
         }
     }

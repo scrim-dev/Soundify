@@ -14,45 +14,8 @@ namespace Soundify.App
         public static ReaLTaiizor.Controls.TabPage TP { get; set; } = null;
         public static bool Rbow { get; set; } = false;
 
-        private static readonly Thread thrd = new(() => 
-        {
-            while (true)
-            {
-                RainbowColor();
-                Thread.Sleep(1);
-            }
-        });
-
-        public static void Rainbow(bool state)
-        {
-            if(state)
-            {
-                try { thrd.Start();  } catch { }
-            }
-            else
-            {
-                try { thrd.Abort(); } catch { } //dispose
-            }
-        }
-
-        private static void RainbowColor()
-        {
-            Cl = Clr();
-            if(Rbow)
-            {
-                TP.ActiveLineTabColor = Cl;
-                TP.ActiveTabColor = Cl;
-                TP.Refresh();
-            }
-            else
-            {
-                DefColor();
-            }           
-        }
-
         public static void DefColor()
         {
-            Rainbow(false);
             TP.ActiveLineTabColor = Color.DarkSlateBlue;
             TP.ActiveTabColor = Color.SlateBlue;
 
@@ -64,7 +27,6 @@ namespace Soundify.App
 
         public static void Purple2()
         {
-            Rainbow(false);
             TP.ActiveLineTabColor = Color.FromArgb(99, 0, 161);
             TP.ActiveTabColor = Color.FromArgb(131, 0, 212);
 
@@ -76,7 +38,6 @@ namespace Soundify.App
 
         public static void DarkerDark()
         {
-            Rainbow(false);
             TP.ActiveLineTabColor = Color.FromArgb(50, 0, 125);
             TP.ActiveTabColor = Color.FromArgb(85, 43, 171);
 
@@ -86,37 +47,15 @@ namespace Soundify.App
             TP.Refresh();
         }
 
-        public static Color Clr()
+        public static void OneOfAKind()
         {
-            int r = 255, g = 0, b = 0;
+            TP.ActiveLineTabColor = Color.FromArgb(255, 0, 43);
+            TP.ActiveTabColor = Color.FromArgb(255, 0, 64);
 
-            if (r == 255 && g < 255 && b == 0)
-            {
-                g += 1;
-            }
-            else if (r > 0 && g == 255 && b == 0)
-            {
-                r -= 1;
-            }
-            else if (r == 0 && g == 255 && b < 255)
-            {
-                b += 1;
-            }
-            else if (r == 0 && g > 0 && b == 255)
-            {
-                g -= 1;
-            }
-            else if (r < 255 && g == 0 && b == 255)
-            {
-                r += 1;
-            }
-            else if (r == 255 && g == 0 && b > 0)
-            {
-                b -= 1;
-            }
+            TP.ControlBackColor = Color.FromArgb(143, 0, 37);
+            TP.PageColor = Color.FromArgb(82, 0, 21);
 
-            Color color = Color.FromArgb(r, g, b);
-            return color;
+            TP.Refresh();
         }
     }
 }
