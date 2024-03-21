@@ -1,5 +1,9 @@
 # Soundify
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/scrim-dev/Soundify/master/Soundify/Resources/DropshadowSoundifyLogo.png" alt="Soundify Logo">
+</p>
+
 ![Alt Text](https://github.com/scrim-dev/Soundify/blob/master/Soundify/Resources/DropshadowSoundifyLogo.png)
 
 Soundify is a one of a kind versatile music app designed to enhance the listening experience by seamlessly integrating streaming platforms such as SoundCloud and Spotify. With Soundify, users can access a vast library of music from both platforms, providing a diverse range of genres and artists to explore, also making it easier to listen to your playlists on either platforms.
