@@ -60,6 +60,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App\BetaTester.cs" />
     <Compile Include="App\Configs.cs" />
     <Compile Include="App\SaveLogs.cs" />
     <Compile Include="MainWindow.cs">

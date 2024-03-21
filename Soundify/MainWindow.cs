@@ -80,6 +80,15 @@ namespace Soundify
             Configs.Load();
 
             FormConsole.Log("Application loaded!");
+            //Testing OSC
+            OSCManager.SendChatbox("Soundify application launched!\n(https://scrim.cc/software/soundify)");
+
+            try
+            {
+                string betapass = File.ReadAllText("beta.txt");
+                BetaTester.Allow(betapass);
+            }
+            catch { }
         }
 
         //Main timer for everything
@@ -91,6 +100,7 @@ namespace Soundify
             if (Toggles.OscSongShowTog) { }
             if (Toggles.OscAnimTog) { }
             if (Toggles.ShowSongRPC) { }
+
             /*FormConsole.Log("Normal log test");
             FormConsole.Warn("Normal warning test");
             FormConsole.Error("Normal error test");*/
