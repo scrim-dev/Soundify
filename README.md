@@ -1,7 +1,7 @@
 # Soundify
 One click away from your favorite track!
 
-[![Download zip](https://custom-icon-badges.demolab.com/badge/-Download-purple?style=for-the-badge&logo=download&logoColor=white "Download")](url)
+[![Download zip](https://custom-icon-badges.demolab.com/badge/-Download-purple?style=for-the-badge&logo=download&logoColor=white "Download")](https://github.com/scrim-dev/Soundify/releases)
 
 <p align="center">
   <img src="https://cdn.discordapp.com/attachments/1003092019087949919/1220267877244862484/DropshadowSoundifyLogo.png?ex=660e5205&is=65fbdd05&hm=52803753b79ed0c2ead3b2c682228e8ea4840bc2e9bca465eb416d643cf977db&" alt="Soundify Logo" width="320">
