@@ -71,7 +71,6 @@
 
             VersionLabel.Text = Info.AppVersion;
 
-            UpdateChecker.Check();
             Configs.Setup();
             Configs.Load();
 
@@ -80,6 +79,7 @@
             //For now
             Text = Info.Name + " [BETA] [TESTING PHASE]";
             Animthrd.Start();
+            UpdateChecker.Check();
         }
 
         //Main timer for everything

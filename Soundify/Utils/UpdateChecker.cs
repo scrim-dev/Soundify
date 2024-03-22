@@ -5,7 +5,10 @@
         private static WebClient Client { get; set; }
         public static void Check()
         {
-            if(Info.AppVersion != GetVersionFromHost())
+            Client = new WebClient();
+            Client.Headers.Add("User-Agent", Info.AppUserAgent);
+
+            if (Info.AppVersion != GetVersionFromHost())
             {
                 MsgBox.Question("Soundify has a new update or the current version your on is outdated! Would you like to update now?", delegate
                 {
@@ -28,7 +31,6 @@
 
         private static string GetVersionFromHost()
         {
-            Client.Headers.Add("User-Agent", Info.AppUserAgent);
             try
             {
                 string s = Client.DownloadString(Info.VersionFile);
