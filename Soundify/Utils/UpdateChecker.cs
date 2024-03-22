@@ -30,6 +30,7 @@
 
         public static void Check() 
         {
+            Client = new WebClient();
             Client.Headers.Add("User-Agent", Info.AppUserAgent);
 
             if (Info.AppVersion != GetVersionFromHost())
