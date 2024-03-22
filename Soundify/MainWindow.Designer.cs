@@ -1102,6 +1102,8 @@
             // 
             // SiteFixBtn
             // 
+            this.SiteFixBtn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.SiteFixBtn.BackColor = System.Drawing.Color.Transparent;
             this.SiteFixBtn.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(116)))), ((int)(((byte)(209)))));
             this.SiteFixBtn.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -1113,9 +1115,12 @@
             this.SiteFixBtn.TabIndex = 6;
             this.SiteFixBtn.Text = "Site Fix";
             this.SiteFixBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.SiteFixBtn.Click += new System.EventHandler(this.SiteFixBtn_Click);
             // 
             // LoadCustomSiteBtn
             // 
+            this.LoadCustomSiteBtn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.LoadCustomSiteBtn.BackColor = System.Drawing.Color.Transparent;
             this.LoadCustomSiteBtn.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(116)))), ((int)(((byte)(209)))));
             this.LoadCustomSiteBtn.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -1127,9 +1132,12 @@
             this.LoadCustomSiteBtn.TabIndex = 5;
             this.LoadCustomSiteBtn.Text = "Load Custom Streaming Platform";
             this.LoadCustomSiteBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.LoadCustomSiteBtn.Click += new System.EventHandler(this.LoadCustomSiteBtn_Click);
             // 
             // ZoomOutSitesBtn
             // 
+            this.ZoomOutSitesBtn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.ZoomOutSitesBtn.BackColor = System.Drawing.Color.Transparent;
             this.ZoomOutSitesBtn.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(116)))), ((int)(((byte)(209)))));
             this.ZoomOutSitesBtn.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -1141,9 +1149,12 @@
             this.ZoomOutSitesBtn.TabIndex = 4;
             this.ZoomOutSitesBtn.Text = "Zoom Sites Out";
             this.ZoomOutSitesBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.ZoomOutSitesBtn.Click += new System.EventHandler(this.ZoomOutSitesBtn_Click);
             // 
             // ZoomSitesBtn
             // 
+            this.ZoomSitesBtn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.ZoomSitesBtn.BackColor = System.Drawing.Color.Transparent;
             this.ZoomSitesBtn.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(116)))), ((int)(((byte)(209)))));
             this.ZoomSitesBtn.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -1155,9 +1166,12 @@
             this.ZoomSitesBtn.TabIndex = 3;
             this.ZoomSitesBtn.Text = "Zoom Sites In";
             this.ZoomSitesBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.ZoomSitesBtn.Click += new System.EventHandler(this.ZoomSitesBtn_Click);
             // 
             // CustomPlatTextBox
             // 
+            this.CustomPlatTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.CustomPlatTextBox.BackColor = System.Drawing.Color.Transparent;
             this.CustomPlatTextBox.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(47)))), ((int)(((byte)(49)))));
             this.CustomPlatTextBox.BorderColor = System.Drawing.Color.MediumPurple;

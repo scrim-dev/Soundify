@@ -410,5 +410,33 @@
         {
             Themer.OneOfAKind();
         }
+
+        private static string Newuri { get; set; } = null;
+        private void LoadCustomSiteBtn_Click(object sender, EventArgs e)
+        {
+            Newuri = CustomPlatTextBox.Text;
+            if (!string.IsNullOrEmpty(Newuri))
+            {
+                //To do
+            }
+        }
+
+        private void SiteFixBtn_Click(object sender, EventArgs e)
+        {
+            SpotifyWView.ZoomFactor = 1;
+            SoundCloudWView.ZoomFactor = 1;
+        }
+
+        private void ZoomSitesBtn_Click(object sender, EventArgs e)
+        {
+            SpotifyWView.ZoomFactor = 1.5;
+            SoundCloudWView.ZoomFactor = 1.5;
+        }
+
+        private void ZoomOutSitesBtn_Click(object sender, EventArgs e)
+        {
+            SpotifyWView.ZoomFactor = 0.5;
+            SoundCloudWView.ZoomFactor = 0.5;
+        }
     }
 }
