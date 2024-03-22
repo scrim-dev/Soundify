@@ -57,8 +57,6 @@
 
             MainFormTimer.Enabled = true;
             MainFormTimer.Interval = 1200;
-            AppUpdateCheck.Enabled = true;
-            AppUpdateCheck.Interval = 19900;
 
             DRPC.Init();
             MediaController.Init();
@@ -79,7 +77,9 @@
             //For now
             Text = Info.Name + " [BETA] [TESTING PHASE]";
             Animthrd.Start();
+
             UpdateChecker.Check();
+            UpdateChecker.UpdateThread(true);
         }
 
         //Main timer for everything
@@ -155,9 +155,11 @@
             Configs.Save();
             DRPC.End();
             MainFormTimer.Dispose();
-            AppUpdateCheck.Dispose();
+
             SaveLogs.Save();
             Animthrd.Abort();
+            UpdateChecker.UpdateThread(false);
+
             try { MediaController.mediaManager.Dispose(); } catch { }
         }
 
@@ -250,11 +252,6 @@
                 _ = sesh.TryStopAsync();
             }
             catch (Exception ex) { FormConsole.Error($"Failed to stop the music ({ex})"); }
-        }
-
-        private void AppUpdateCheck_Tick(object sender, EventArgs e)
-        {
-            UpdateChecker.Check();
         }
 
         //Addons stuff

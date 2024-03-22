@@ -16,6 +16,7 @@ namespace Soundify.Utils
             mediaManager.OnAnySessionOpened += OnAnySessionOpened;
             mediaManager.OnAnySessionClosed += OnAnySessionClosed;
             mediaManager.OnFocusedSessionChanged += OnFocusedSessionChanged;
+            mediaManager.OnAnyPlaybackStateChanged += OnAnyPlaybackStateChanged;
             mediaManager.OnAnyMediaPropertyChanged += OnAnyMediaPropertyChanged;
             mediaManager.OnAnyTimelinePropertyChanged += OnAnyTimelinePropertyChanged;
 
@@ -75,5 +76,15 @@ namespace Soundify.Utils
                 ActiveTime = $"{args.Position}|{args.EndTime}";
             }
         }
+
+        private static void OnAnyPlaybackStateChanged(MediaSession sender, 
+            GlobalSystemMediaTransportControlsSessionPlaybackInfo args)
+        {
+            if (sender != null || args != null)
+            {
+                FormConsole.Log(args.PlaybackStatus.ToString());
+            }
+        }
+
     }
 }
