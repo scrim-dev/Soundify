@@ -23,6 +23,29 @@ namespace Soundify.Utils
             mediaManager.Start();
         }
 
+        public static void MediaUpdateThread(bool state)
+        {
+            if (state)
+            {
+                Mthread.Start();
+            }
+            else
+            {
+                Mthread.Abort();
+            }
+        }
+
+        private static readonly Thread Mthread = new(new ThreadStart(MUpdate));
+
+        private static void MUpdate()
+        {
+            while(true)
+            {
+                mediaManager?.ForceUpdate();
+                Thread.Sleep(1100);
+            }
+        }
+
         public static void OnAnySessionOpened(MediaSession session)
         {
             if (session != null) 
@@ -82,7 +105,7 @@ namespace Soundify.Utils
         {
             if (sender != null || args != null)
             {
-                FormConsole.Log(args.PlaybackStatus.ToString());
+                FormConsole.Log(args.PlaybackStatus.ToString() + " | " + args.PlaybackRate);
             }
         }
 

@@ -61,6 +61,12 @@
             this.DisableOscBtn = new ReaLTaiizor.Controls.ForeverButton();
             this.EnableOSCBtn = new ReaLTaiizor.Controls.ForeverButton();
             this.SettingsTabPage = new System.Windows.Forms.TabPage();
+            this.ExtrasSetsPanel = new ReaLTaiizor.Controls.LostBorderPanel();
+            this.CustomPlatTextBox = new ReaLTaiizor.Controls.ForeverTextBox();
+            this.SiteFixBtn = new ReaLTaiizor.Controls.ForeverButton();
+            this.LoadCustomSiteBtn = new ReaLTaiizor.Controls.ForeverButton();
+            this.ZoomOutSitesBtn = new ReaLTaiizor.Controls.ForeverButton();
+            this.ZoomSitesBtn = new ReaLTaiizor.Controls.ForeverButton();
             this.ThemesBorderPanel = new ReaLTaiizor.Controls.LostBorderPanel();
             this.SpecialThemeBtn = new ReaLTaiizor.Controls.ForeverButton();
             this.DarkerDBtn = new ReaLTaiizor.Controls.ForeverButton();
@@ -95,12 +101,6 @@
             this.TkPicBox = new System.Windows.Forms.PictureBox();
             this.DevelopTitleLabel = new System.Windows.Forms.Label();
             this.LogoPicBox = new System.Windows.Forms.PictureBox();
-            this.ExtrasSetsPanel = new ReaLTaiizor.Controls.LostBorderPanel();
-            this.SiteFixBtn = new ReaLTaiizor.Controls.ForeverButton();
-            this.LoadCustomSiteBtn = new ReaLTaiizor.Controls.ForeverButton();
-            this.ZoomOutSitesBtn = new ReaLTaiizor.Controls.ForeverButton();
-            this.ZoomSitesBtn = new ReaLTaiizor.Controls.ForeverButton();
-            this.CustomPlatTextBox = new ReaLTaiizor.Controls.ForeverTextBox();
             this.FormTabPages.SuspendLayout();
             this.SpotifyTabPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SpotifyWView)).BeginInit();
@@ -114,6 +114,7 @@
             this.DiscordRPCPanel.SuspendLayout();
             this.VRCOscPanel.SuspendLayout();
             this.SettingsTabPage.SuspendLayout();
+            this.ExtrasSetsPanel.SuspendLayout();
             this.ThemesBorderPanel.SuspendLayout();
             this.AppSetsPanel.SuspendLayout();
             this.AppConfigsPanel.SuspendLayout();
@@ -128,7 +129,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.ScrimPicBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TkPicBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LogoPicBox)).BeginInit();
-            this.ExtrasSetsPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // MainFormTimer
@@ -611,6 +611,114 @@
             this.SettingsTabPage.TabIndex = 4;
             this.SettingsTabPage.Text = "Settings";
             // 
+            // ExtrasSetsPanel
+            // 
+            this.ExtrasSetsPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ExtrasSetsPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.ExtrasSetsPanel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(116)))), ((int)(((byte)(209)))));
+            this.ExtrasSetsPanel.Controls.Add(this.CustomPlatTextBox);
+            this.ExtrasSetsPanel.Controls.Add(this.SiteFixBtn);
+            this.ExtrasSetsPanel.Controls.Add(this.LoadCustomSiteBtn);
+            this.ExtrasSetsPanel.Controls.Add(this.ZoomOutSitesBtn);
+            this.ExtrasSetsPanel.Controls.Add(this.ZoomSitesBtn);
+            this.ExtrasSetsPanel.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.ExtrasSetsPanel.ForeColor = System.Drawing.Color.White;
+            this.ExtrasSetsPanel.Location = new System.Drawing.Point(575, 3);
+            this.ExtrasSetsPanel.Name = "ExtrasSetsPanel";
+            this.ExtrasSetsPanel.Padding = new System.Windows.Forms.Padding(5);
+            this.ExtrasSetsPanel.ShowText = true;
+            this.ExtrasSetsPanel.Size = new System.Drawing.Size(263, 642);
+            this.ExtrasSetsPanel.TabIndex = 6;
+            this.ExtrasSetsPanel.Text = "Extra";
+            // 
+            // CustomPlatTextBox
+            // 
+            this.CustomPlatTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.CustomPlatTextBox.BackColor = System.Drawing.Color.Transparent;
+            this.CustomPlatTextBox.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(47)))), ((int)(((byte)(49)))));
+            this.CustomPlatTextBox.BorderColor = System.Drawing.Color.MediumPurple;
+            this.CustomPlatTextBox.FocusOnHover = false;
+            this.CustomPlatTextBox.ForeColor = System.Drawing.Color.White;
+            this.CustomPlatTextBox.Location = new System.Drawing.Point(3, 103);
+            this.CustomPlatTextBox.MaxLength = 32767;
+            this.CustomPlatTextBox.Multiline = false;
+            this.CustomPlatTextBox.Name = "CustomPlatTextBox";
+            this.CustomPlatTextBox.ReadOnly = false;
+            this.CustomPlatTextBox.Size = new System.Drawing.Size(255, 29);
+            this.CustomPlatTextBox.TabIndex = 7;
+            this.CustomPlatTextBox.Text = "https://anyurl.youwant.com";
+            this.CustomPlatTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.CustomPlatTextBox.UseSystemPasswordChar = false;
+            // 
+            // SiteFixBtn
+            // 
+            this.SiteFixBtn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.SiteFixBtn.BackColor = System.Drawing.Color.Transparent;
+            this.SiteFixBtn.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(116)))), ((int)(((byte)(209)))));
+            this.SiteFixBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.SiteFixBtn.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.SiteFixBtn.Location = new System.Drawing.Point(3, 66);
+            this.SiteFixBtn.Name = "SiteFixBtn";
+            this.SiteFixBtn.Rounded = false;
+            this.SiteFixBtn.Size = new System.Drawing.Size(257, 33);
+            this.SiteFixBtn.TabIndex = 6;
+            this.SiteFixBtn.Text = "Site Fix";
+            this.SiteFixBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.SiteFixBtn.Click += new System.EventHandler(this.SiteFixBtn_Click);
+            // 
+            // LoadCustomSiteBtn
+            // 
+            this.LoadCustomSiteBtn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.LoadCustomSiteBtn.BackColor = System.Drawing.Color.Transparent;
+            this.LoadCustomSiteBtn.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(116)))), ((int)(((byte)(209)))));
+            this.LoadCustomSiteBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.LoadCustomSiteBtn.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.LoadCustomSiteBtn.Location = new System.Drawing.Point(3, 138);
+            this.LoadCustomSiteBtn.Name = "LoadCustomSiteBtn";
+            this.LoadCustomSiteBtn.Rounded = false;
+            this.LoadCustomSiteBtn.Size = new System.Drawing.Size(257, 48);
+            this.LoadCustomSiteBtn.TabIndex = 5;
+            this.LoadCustomSiteBtn.Text = "Load Custom Streaming Platform";
+            this.LoadCustomSiteBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.LoadCustomSiteBtn.Click += new System.EventHandler(this.LoadCustomSiteBtn_Click);
+            // 
+            // ZoomOutSitesBtn
+            // 
+            this.ZoomOutSitesBtn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ZoomOutSitesBtn.BackColor = System.Drawing.Color.Transparent;
+            this.ZoomOutSitesBtn.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(116)))), ((int)(((byte)(209)))));
+            this.ZoomOutSitesBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ZoomOutSitesBtn.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.ZoomOutSitesBtn.Location = new System.Drawing.Point(136, 27);
+            this.ZoomOutSitesBtn.Name = "ZoomOutSitesBtn";
+            this.ZoomOutSitesBtn.Rounded = false;
+            this.ZoomOutSitesBtn.Size = new System.Drawing.Size(124, 33);
+            this.ZoomOutSitesBtn.TabIndex = 4;
+            this.ZoomOutSitesBtn.Text = "Zoom Sites Out";
+            this.ZoomOutSitesBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.ZoomOutSitesBtn.Click += new System.EventHandler(this.ZoomOutSitesBtn_Click);
+            // 
+            // ZoomSitesBtn
+            // 
+            this.ZoomSitesBtn.BackColor = System.Drawing.Color.Transparent;
+            this.ZoomSitesBtn.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(116)))), ((int)(((byte)(209)))));
+            this.ZoomSitesBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ZoomSitesBtn.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.ZoomSitesBtn.Location = new System.Drawing.Point(3, 27);
+            this.ZoomSitesBtn.Name = "ZoomSitesBtn";
+            this.ZoomSitesBtn.Rounded = false;
+            this.ZoomSitesBtn.Size = new System.Drawing.Size(127, 33);
+            this.ZoomSitesBtn.TabIndex = 3;
+            this.ZoomSitesBtn.Text = "Zoom Sites In";
+            this.ZoomSitesBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.ZoomSitesBtn.Click += new System.EventHandler(this.ZoomSitesBtn_Click);
+            // 
             // ThemesBorderPanel
             // 
             this.ThemesBorderPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -1078,116 +1186,6 @@
             this.LogoPicBox.TabIndex = 0;
             this.LogoPicBox.TabStop = false;
             // 
-            // ExtrasSetsPanel
-            // 
-            this.ExtrasSetsPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.ExtrasSetsPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.ExtrasSetsPanel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(116)))), ((int)(((byte)(209)))));
-            this.ExtrasSetsPanel.Controls.Add(this.CustomPlatTextBox);
-            this.ExtrasSetsPanel.Controls.Add(this.SiteFixBtn);
-            this.ExtrasSetsPanel.Controls.Add(this.LoadCustomSiteBtn);
-            this.ExtrasSetsPanel.Controls.Add(this.ZoomOutSitesBtn);
-            this.ExtrasSetsPanel.Controls.Add(this.ZoomSitesBtn);
-            this.ExtrasSetsPanel.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.ExtrasSetsPanel.ForeColor = System.Drawing.Color.White;
-            this.ExtrasSetsPanel.Location = new System.Drawing.Point(575, 3);
-            this.ExtrasSetsPanel.Name = "ExtrasSetsPanel";
-            this.ExtrasSetsPanel.Padding = new System.Windows.Forms.Padding(5);
-            this.ExtrasSetsPanel.ShowText = true;
-            this.ExtrasSetsPanel.Size = new System.Drawing.Size(263, 642);
-            this.ExtrasSetsPanel.TabIndex = 6;
-            this.ExtrasSetsPanel.Text = "Extra";
-            // 
-            // SiteFixBtn
-            // 
-            this.SiteFixBtn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.SiteFixBtn.BackColor = System.Drawing.Color.Transparent;
-            this.SiteFixBtn.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(116)))), ((int)(((byte)(209)))));
-            this.SiteFixBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.SiteFixBtn.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.SiteFixBtn.Location = new System.Drawing.Point(3, 66);
-            this.SiteFixBtn.Name = "SiteFixBtn";
-            this.SiteFixBtn.Rounded = false;
-            this.SiteFixBtn.Size = new System.Drawing.Size(257, 33);
-            this.SiteFixBtn.TabIndex = 6;
-            this.SiteFixBtn.Text = "Site Fix";
-            this.SiteFixBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.SiteFixBtn.Click += new System.EventHandler(this.SiteFixBtn_Click);
-            // 
-            // LoadCustomSiteBtn
-            // 
-            this.LoadCustomSiteBtn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.LoadCustomSiteBtn.BackColor = System.Drawing.Color.Transparent;
-            this.LoadCustomSiteBtn.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(116)))), ((int)(((byte)(209)))));
-            this.LoadCustomSiteBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.LoadCustomSiteBtn.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.LoadCustomSiteBtn.Location = new System.Drawing.Point(3, 138);
-            this.LoadCustomSiteBtn.Name = "LoadCustomSiteBtn";
-            this.LoadCustomSiteBtn.Rounded = false;
-            this.LoadCustomSiteBtn.Size = new System.Drawing.Size(257, 48);
-            this.LoadCustomSiteBtn.TabIndex = 5;
-            this.LoadCustomSiteBtn.Text = "Load Custom Streaming Platform";
-            this.LoadCustomSiteBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.LoadCustomSiteBtn.Click += new System.EventHandler(this.LoadCustomSiteBtn_Click);
-            // 
-            // ZoomOutSitesBtn
-            // 
-            this.ZoomOutSitesBtn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.ZoomOutSitesBtn.BackColor = System.Drawing.Color.Transparent;
-            this.ZoomOutSitesBtn.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(116)))), ((int)(((byte)(209)))));
-            this.ZoomOutSitesBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ZoomOutSitesBtn.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.ZoomOutSitesBtn.Location = new System.Drawing.Point(136, 27);
-            this.ZoomOutSitesBtn.Name = "ZoomOutSitesBtn";
-            this.ZoomOutSitesBtn.Rounded = false;
-            this.ZoomOutSitesBtn.Size = new System.Drawing.Size(124, 33);
-            this.ZoomOutSitesBtn.TabIndex = 4;
-            this.ZoomOutSitesBtn.Text = "Zoom Sites Out";
-            this.ZoomOutSitesBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.ZoomOutSitesBtn.Click += new System.EventHandler(this.ZoomOutSitesBtn_Click);
-            // 
-            // ZoomSitesBtn
-            // 
-            this.ZoomSitesBtn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.ZoomSitesBtn.BackColor = System.Drawing.Color.Transparent;
-            this.ZoomSitesBtn.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(116)))), ((int)(((byte)(209)))));
-            this.ZoomSitesBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ZoomSitesBtn.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.ZoomSitesBtn.Location = new System.Drawing.Point(3, 27);
-            this.ZoomSitesBtn.Name = "ZoomSitesBtn";
-            this.ZoomSitesBtn.Rounded = false;
-            this.ZoomSitesBtn.Size = new System.Drawing.Size(127, 33);
-            this.ZoomSitesBtn.TabIndex = 3;
-            this.ZoomSitesBtn.Text = "Zoom Sites In";
-            this.ZoomSitesBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.ZoomSitesBtn.Click += new System.EventHandler(this.ZoomSitesBtn_Click);
-            // 
-            // CustomPlatTextBox
-            // 
-            this.CustomPlatTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.CustomPlatTextBox.BackColor = System.Drawing.Color.Transparent;
-            this.CustomPlatTextBox.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(47)))), ((int)(((byte)(49)))));
-            this.CustomPlatTextBox.BorderColor = System.Drawing.Color.MediumPurple;
-            this.CustomPlatTextBox.FocusOnHover = false;
-            this.CustomPlatTextBox.ForeColor = System.Drawing.Color.White;
-            this.CustomPlatTextBox.Location = new System.Drawing.Point(3, 103);
-            this.CustomPlatTextBox.MaxLength = 32767;
-            this.CustomPlatTextBox.Multiline = false;
-            this.CustomPlatTextBox.Name = "CustomPlatTextBox";
-            this.CustomPlatTextBox.ReadOnly = false;
-            this.CustomPlatTextBox.Size = new System.Drawing.Size(255, 29);
-            this.CustomPlatTextBox.TabIndex = 7;
-            this.CustomPlatTextBox.Text = "https://anyurl.youwant.com";
-            this.CustomPlatTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.CustomPlatTextBox.UseSystemPasswordChar = false;
-            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -1219,6 +1217,7 @@
             this.VRCOscPanel.ResumeLayout(false);
             this.VRCOscPanel.PerformLayout();
             this.SettingsTabPage.ResumeLayout(false);
+            this.ExtrasSetsPanel.ResumeLayout(false);
             this.ThemesBorderPanel.ResumeLayout(false);
             this.AppSetsPanel.ResumeLayout(false);
             this.AppConfigsPanel.ResumeLayout(false);
@@ -1235,7 +1234,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.ScrimPicBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TkPicBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.LogoPicBox)).EndInit();
-            this.ExtrasSetsPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

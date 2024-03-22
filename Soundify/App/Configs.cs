@@ -37,10 +37,11 @@ namespace Soundify.App
         {
             string defaultjson =
             @"{
-                'OSCName': 'Soundify',
-                'OSCInterval': 1100,
-                'AllowCustomUrls': false,
-                'DRPCState': true
+              ""OscName"": ""Soundify"",
+              ""OSCInt"": 1500,
+              ""DRPC"": true,
+              ""CustomURLs"": false,
+              ""ReadMe"" : ""This isn't used right now I have to setup later""
             }";
 
             if (!File.Exists(AppDirs.ConfigFolder + "\\Main.json"))

@@ -1,4 +1,6 @@
-﻿namespace Soundify
+﻿using Windows.UI.Xaml.Controls;
+
+namespace Soundify
 {
     public partial class MainWindow : Form
     {
@@ -63,9 +65,11 @@
             FormConsole.RTB = RTBConsole;
             Themer.TP = FormTabPages;
 
+            InjectJS();
             SoundCloudWView.Source = new("https://soundcloud.com/discover");
             SpotifyWView.Source = new("https://open.spotify.com/");
             VisualizerWebView.Source = new($"file://{Directory.GetCurrentDirectory()}\\SoundifyVisuals\\index.html");
+            InjectJS();
 
             VersionLabel.Text = Info.AppVersion;
 
@@ -75,11 +79,24 @@
             FormConsole.Log("Application loaded!");
 
             //For now
-            Text = Info.Name + " [BETA] [TESTING PHASE]";
+            Text = Info.Name + " [BETA] [PRE-RELEASE]";
             Animthrd.Start();
 
             UpdateChecker.Check();
             UpdateChecker.UpdateThread(true);
+
+            MsgBox.Warn("This is a pre-release / beta test version of Soundify. " +
+                "You might run into bugs or errors, if you do please join the discord and report the bug in the bug reports channel " +
+                "or contact Scrim on discord: Scrimmane\nAnyway Enjoy!");
+
+            MediaController.MediaUpdateThread(true);
+        }
+
+        private async void InjectJS()
+        {
+            string JSScriptFile = "prevent.js";
+            try { await SoundCloudWView.CoreWebView2.AddScriptToExecuteOnDocumentCreatedAsync(JSScriptFile); } catch { }
+            try { await SpotifyWView.CoreWebView2.AddScriptToExecuteOnDocumentCreatedAsync(JSScriptFile); } catch { }
         }
 
         //Main timer for everything
@@ -142,7 +159,7 @@
                 Animbool = false;
             }
 
-            //if (Toggles.ShowSongRPC) { }
+            if (Toggles.ShowSongRPC) { }
 
             if (Toggles.OscSendTime)
             {
@@ -159,6 +176,7 @@
             SaveLogs.Save();
             Animthrd.Abort();
             UpdateChecker.UpdateThread(false);
+            MediaController.MediaUpdateThread(false);
 
             try { MediaController.mediaManager.Dispose(); } catch { }
         }
