@@ -97,6 +97,7 @@
     <Compile Include="Utils\AppDirs.cs" />
     <Compile Include="Utils\DRPC.cs" />
     <Compile Include="Utils\FormConsole.cs" />
+    <Compile Include="Utils\Whitelist.cs" />
     <Compile Include="Utils\MediaController.cs" />
     <Compile Include="Utils\MsgBox.cs" />
     <Compile Include="Utils\OSCManager.cs" />
@@ -217,9 +218,6 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Resources\Terkoshi.png" />
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Resources\ScrimGear.png" />
   </ItemGroup>
   <ItemGroup>
@@ -248,6 +246,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\DropshadowSoundifyLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\buttonsfx.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\ScrimSlogo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

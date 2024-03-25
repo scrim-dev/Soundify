@@ -36,7 +36,15 @@
             this.SpotifyWView = new Microsoft.Web.WebView2.WinForms.WebView2();
             this.SoundCldTabPage = new System.Windows.Forms.TabPage();
             this.SoundCloudWView = new Microsoft.Web.WebView2.WinForms.WebView2();
+            this.CustomMediaTabPage = new System.Windows.Forms.TabPage();
             this.MediaControlsTabPage = new System.Windows.Forms.TabPage();
+            this.ConsoleBorderPanel = new ReaLTaiizor.Controls.LostBorderPanel();
+            this.ClearConsoleBtn = new ReaLTaiizor.Controls.ForeverButton();
+            this.ExtraControlsPanel = new ReaLTaiizor.Controls.LostBorderPanel();
+            this.NoShuffleBtn = new ReaLTaiizor.Controls.ForeverButton();
+            this.ShuffleBtn = new ReaLTaiizor.Controls.ForeverButton();
+            this.StopLoopBtn = new ReaLTaiizor.Controls.ForeverButton();
+            this.LoopBtn = new ReaLTaiizor.Controls.ForeverButton();
             this.ConsolePanel = new ReaLTaiizor.Controls.LostBorderPanel();
             this.RTBConsole = new System.Windows.Forms.RichTextBox();
             this.MediaControlsPanel = new ReaLTaiizor.Controls.LostBorderPanel();
@@ -47,6 +55,8 @@
             this.PreviousBtn = new ReaLTaiizor.Controls.ForeverButton();
             this.AddonsTabPage = new System.Windows.Forms.TabPage();
             this.DiscordRPCPanel = new ReaLTaiizor.Controls.LostBorderPanel();
+            this.DisableListenAlongBtn = new ReaLTaiizor.Controls.ForeverButton();
+            this.EnableListenAlongBtn = new ReaLTaiizor.Controls.ForeverButton();
             this.ResetRPCBtn = new ReaLTaiizor.Controls.ForeverButton();
             this.HideSongBtn = new ReaLTaiizor.Controls.ForeverButton();
             this.ShowSongBtn = new ReaLTaiizor.Controls.ForeverButton();
@@ -82,10 +92,6 @@
             this.SaveConfigBtn = new ReaLTaiizor.Controls.ForeverButton();
             this.CreditsTabPage = new System.Windows.Forms.TabPage();
             this.WebsiteLinksPanel = new ReaLTaiizor.Controls.LostBorderPanel();
-            this.DiscordPicBox = new System.Windows.Forms.PictureBox();
-            this.GhPicBoxBtn = new System.Windows.Forms.PictureBox();
-            this.YTPicBoxBtn = new System.Windows.Forms.PictureBox();
-            this.WebsitePicBoxBtn = new System.Windows.Forms.PictureBox();
             this.OtherCredsPanel = new ReaLTaiizor.Controls.LostBorderPanel();
             this.ChanyaCredit = new System.Windows.Forms.LinkLabel();
             this.TaiizorCredit = new System.Windows.Forms.LinkLabel();
@@ -95,18 +101,25 @@
             this.MainCredsPanel = new ReaLTaiizor.Controls.LostBorderPanel();
             this.VersionIdent = new System.Windows.Forms.Label();
             this.VersionLabel = new System.Windows.Forms.Label();
-            this.TkLabel = new System.Windows.Forms.Label();
             this.ScrimLabel = new System.Windows.Forms.Label();
-            this.ScrimPicBox = new System.Windows.Forms.PictureBox();
-            this.TkPicBox = new System.Windows.Forms.PictureBox();
             this.DevelopTitleLabel = new System.Windows.Forms.Label();
+            this.DiscordPicBox = new System.Windows.Forms.PictureBox();
+            this.GhPicBoxBtn = new System.Windows.Forms.PictureBox();
+            this.YTPicBoxBtn = new System.Windows.Forms.PictureBox();
+            this.WebsitePicBoxBtn = new System.Windows.Forms.PictureBox();
+            this.ScrimPicBox = new System.Windows.Forms.PictureBox();
             this.LogoPicBox = new System.Windows.Forms.PictureBox();
+            this.CMediaInfoLabel = new System.Windows.Forms.Label();
+            this.CustomWebView = new Microsoft.Web.WebView2.WinForms.WebView2();
             this.FormTabPages.SuspendLayout();
             this.SpotifyTabPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SpotifyWView)).BeginInit();
             this.SoundCldTabPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SoundCloudWView)).BeginInit();
+            this.CustomMediaTabPage.SuspendLayout();
             this.MediaControlsTabPage.SuspendLayout();
+            this.ConsoleBorderPanel.SuspendLayout();
+            this.ExtraControlsPanel.SuspendLayout();
             this.ConsolePanel.SuspendLayout();
             this.MediaControlsPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.VisualizerWebView)).BeginInit();
@@ -120,15 +133,15 @@
             this.AppConfigsPanel.SuspendLayout();
             this.CreditsTabPage.SuspendLayout();
             this.WebsiteLinksPanel.SuspendLayout();
+            this.OtherCredsPanel.SuspendLayout();
+            this.MainCredsPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DiscordPicBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GhPicBoxBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.YTPicBoxBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.WebsitePicBoxBtn)).BeginInit();
-            this.OtherCredsPanel.SuspendLayout();
-            this.MainCredsPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ScrimPicBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TkPicBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LogoPicBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CustomWebView)).BeginInit();
             this.SuspendLayout();
             // 
             // MainFormTimer
@@ -148,6 +161,7 @@
             this.FormTabPages.ControlBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.FormTabPages.Controls.Add(this.SpotifyTabPage);
             this.FormTabPages.Controls.Add(this.SoundCldTabPage);
+            this.FormTabPages.Controls.Add(this.CustomMediaTabPage);
             this.FormTabPages.Controls.Add(this.MediaControlsTabPage);
             this.FormTabPages.Controls.Add(this.AddonsTabPage);
             this.FormTabPages.Controls.Add(this.SettingsTabPage);
@@ -224,9 +238,22 @@
             this.SoundCloudWView.TabIndex = 0;
             this.SoundCloudWView.ZoomFactor = 1D;
             // 
+            // CustomMediaTabPage
+            // 
+            this.CustomMediaTabPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
+            this.CustomMediaTabPage.Controls.Add(this.CustomWebView);
+            this.CustomMediaTabPage.Controls.Add(this.CMediaInfoLabel);
+            this.CustomMediaTabPage.Location = new System.Drawing.Point(139, 4);
+            this.CustomMediaTabPage.Name = "CustomMediaTabPage";
+            this.CustomMediaTabPage.Size = new System.Drawing.Size(841, 653);
+            this.CustomMediaTabPage.TabIndex = 6;
+            this.CustomMediaTabPage.Text = "Custom Media";
+            // 
             // MediaControlsTabPage
             // 
             this.MediaControlsTabPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
+            this.MediaControlsTabPage.Controls.Add(this.ConsoleBorderPanel);
+            this.MediaControlsTabPage.Controls.Add(this.ExtraControlsPanel);
             this.MediaControlsTabPage.Controls.Add(this.ConsolePanel);
             this.MediaControlsTabPage.Controls.Add(this.MediaControlsPanel);
             this.MediaControlsTabPage.Location = new System.Drawing.Point(139, 4);
@@ -236,11 +263,131 @@
             this.MediaControlsTabPage.TabIndex = 2;
             this.MediaControlsTabPage.Text = "Media Controls";
             // 
-            // ConsolePanel
+            // ConsoleBorderPanel
             // 
-            this.ConsolePanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.ConsoleBorderPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.ConsoleBorderPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.ConsoleBorderPanel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(116)))), ((int)(((byte)(209)))));
+            this.ConsoleBorderPanel.Controls.Add(this.ClearConsoleBtn);
+            this.ConsoleBorderPanel.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.ConsoleBorderPanel.ForeColor = System.Drawing.Color.White;
+            this.ConsoleBorderPanel.Location = new System.Drawing.Point(564, 491);
+            this.ConsoleBorderPanel.Name = "ConsoleBorderPanel";
+            this.ConsoleBorderPanel.Padding = new System.Windows.Forms.Padding(5);
+            this.ConsoleBorderPanel.ShowText = true;
+            this.ConsoleBorderPanel.Size = new System.Drawing.Size(271, 154);
+            this.ConsoleBorderPanel.TabIndex = 9;
+            this.ConsoleBorderPanel.Text = "Console";
+            // 
+            // ClearConsoleBtn
+            // 
+            this.ClearConsoleBtn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ClearConsoleBtn.BackColor = System.Drawing.Color.Transparent;
+            this.ClearConsoleBtn.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(116)))), ((int)(((byte)(209)))));
+            this.ClearConsoleBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ClearConsoleBtn.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.ClearConsoleBtn.Location = new System.Drawing.Point(3, 27);
+            this.ClearConsoleBtn.Name = "ClearConsoleBtn";
+            this.ClearConsoleBtn.Rounded = false;
+            this.ClearConsoleBtn.Size = new System.Drawing.Size(265, 42);
+            this.ClearConsoleBtn.TabIndex = 9;
+            this.ClearConsoleBtn.Text = "Clear Console";
+            this.ClearConsoleBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.ClearConsoleBtn.Click += new System.EventHandler(this.ClearConsoleBtn_Click);
+            // 
+            // ExtraControlsPanel
+            // 
+            this.ExtraControlsPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ExtraControlsPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.ExtraControlsPanel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(116)))), ((int)(((byte)(209)))));
+            this.ExtraControlsPanel.Controls.Add(this.NoShuffleBtn);
+            this.ExtraControlsPanel.Controls.Add(this.ShuffleBtn);
+            this.ExtraControlsPanel.Controls.Add(this.StopLoopBtn);
+            this.ExtraControlsPanel.Controls.Add(this.LoopBtn);
+            this.ExtraControlsPanel.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.ExtraControlsPanel.ForeColor = System.Drawing.Color.White;
+            this.ExtraControlsPanel.Location = new System.Drawing.Point(564, 319);
+            this.ExtraControlsPanel.Name = "ExtraControlsPanel";
+            this.ExtraControlsPanel.Padding = new System.Windows.Forms.Padding(5);
+            this.ExtraControlsPanel.ShowText = true;
+            this.ExtraControlsPanel.Size = new System.Drawing.Size(271, 166);
+            this.ExtraControlsPanel.TabIndex = 7;
+            this.ExtraControlsPanel.Text = "Extra Controls";
+            // 
+            // NoShuffleBtn
+            // 
+            this.NoShuffleBtn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.NoShuffleBtn.BackColor = System.Drawing.Color.Transparent;
+            this.NoShuffleBtn.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(116)))), ((int)(((byte)(209)))));
+            this.NoShuffleBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.NoShuffleBtn.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.NoShuffleBtn.Location = new System.Drawing.Point(3, 117);
+            this.NoShuffleBtn.Name = "NoShuffleBtn";
+            this.NoShuffleBtn.Rounded = false;
+            this.NoShuffleBtn.Size = new System.Drawing.Size(265, 40);
+            this.NoShuffleBtn.TabIndex = 8;
+            this.NoShuffleBtn.Text = "No Shuffle";
+            this.NoShuffleBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.NoShuffleBtn.Click += new System.EventHandler(this.NoShuffleBtn_Click);
+            // 
+            // ShuffleBtn
+            // 
+            this.ShuffleBtn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ShuffleBtn.BackColor = System.Drawing.Color.Transparent;
+            this.ShuffleBtn.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(116)))), ((int)(((byte)(209)))));
+            this.ShuffleBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ShuffleBtn.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.ShuffleBtn.Location = new System.Drawing.Point(3, 71);
+            this.ShuffleBtn.Name = "ShuffleBtn";
+            this.ShuffleBtn.Rounded = false;
+            this.ShuffleBtn.Size = new System.Drawing.Size(265, 40);
+            this.ShuffleBtn.TabIndex = 7;
+            this.ShuffleBtn.Text = "Shuffle";
+            this.ShuffleBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.ShuffleBtn.Click += new System.EventHandler(this.ShuffleBtn_Click);
+            // 
+            // StopLoopBtn
+            // 
+            this.StopLoopBtn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.StopLoopBtn.BackColor = System.Drawing.Color.Transparent;
+            this.StopLoopBtn.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(116)))), ((int)(((byte)(209)))));
+            this.StopLoopBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.StopLoopBtn.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.StopLoopBtn.Location = new System.Drawing.Point(140, 25);
+            this.StopLoopBtn.Name = "StopLoopBtn";
+            this.StopLoopBtn.Rounded = false;
+            this.StopLoopBtn.Size = new System.Drawing.Size(128, 40);
+            this.StopLoopBtn.TabIndex = 6;
+            this.StopLoopBtn.Text = "Stop Looping";
+            this.StopLoopBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.StopLoopBtn.Click += new System.EventHandler(this.StopLoopBtn_Click);
+            // 
+            // LoopBtn
+            // 
+            this.LoopBtn.BackColor = System.Drawing.Color.Transparent;
+            this.LoopBtn.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(116)))), ((int)(((byte)(209)))));
+            this.LoopBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.LoopBtn.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.LoopBtn.Location = new System.Drawing.Point(3, 25);
+            this.LoopBtn.Name = "LoopBtn";
+            this.LoopBtn.Rounded = false;
+            this.LoopBtn.Size = new System.Drawing.Size(131, 40);
+            this.LoopBtn.TabIndex = 5;
+            this.LoopBtn.Text = "Loop Song";
+            this.LoopBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.LoopBtn.Click += new System.EventHandler(this.LoopBtn_Click);
+            // 
+            // ConsolePanel
+            // 
+            this.ConsolePanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.ConsolePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.ConsolePanel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(116)))), ((int)(((byte)(209)))));
             this.ConsolePanel.Controls.Add(this.RTBConsole);
@@ -250,7 +397,7 @@
             this.ConsolePanel.Name = "ConsolePanel";
             this.ConsolePanel.Padding = new System.Windows.Forms.Padding(5);
             this.ConsolePanel.ShowText = true;
-            this.ConsolePanel.Size = new System.Drawing.Size(826, 326);
+            this.ConsolePanel.Size = new System.Drawing.Size(552, 326);
             this.ConsolePanel.TabIndex = 6;
             this.ConsolePanel.Text = "Console";
             // 
@@ -268,7 +415,7 @@
             this.RTBConsole.Name = "RTBConsole";
             this.RTBConsole.ReadOnly = true;
             this.RTBConsole.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.ForcedVertical;
-            this.RTBConsole.Size = new System.Drawing.Size(819, 298);
+            this.RTBConsole.Size = new System.Drawing.Size(545, 298);
             this.RTBConsole.TabIndex = 0;
             this.RTBConsole.Text = "";
             // 
@@ -387,6 +534,8 @@
             // 
             this.DiscordRPCPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.DiscordRPCPanel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(116)))), ((int)(((byte)(209)))));
+            this.DiscordRPCPanel.Controls.Add(this.DisableListenAlongBtn);
+            this.DiscordRPCPanel.Controls.Add(this.EnableListenAlongBtn);
             this.DiscordRPCPanel.Controls.Add(this.ResetRPCBtn);
             this.DiscordRPCPanel.Controls.Add(this.HideSongBtn);
             this.DiscordRPCPanel.Controls.Add(this.ShowSongBtn);
@@ -401,6 +550,36 @@
             this.DiscordRPCPanel.Size = new System.Drawing.Size(280, 310);
             this.DiscordRPCPanel.TabIndex = 3;
             this.DiscordRPCPanel.Text = "Discord RPC";
+            // 
+            // DisableListenAlongBtn
+            // 
+            this.DisableListenAlongBtn.BackColor = System.Drawing.Color.Transparent;
+            this.DisableListenAlongBtn.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(116)))), ((int)(((byte)(209)))));
+            this.DisableListenAlongBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.DisableListenAlongBtn.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.DisableListenAlongBtn.Location = new System.Drawing.Point(6, 221);
+            this.DisableListenAlongBtn.Name = "DisableListenAlongBtn";
+            this.DisableListenAlongBtn.Rounded = false;
+            this.DisableListenAlongBtn.Size = new System.Drawing.Size(271, 33);
+            this.DisableListenAlongBtn.TabIndex = 13;
+            this.DisableListenAlongBtn.Text = "Prevent Listen Along";
+            this.DisableListenAlongBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.DisableListenAlongBtn.Click += new System.EventHandler(this.DisableListenAlongBtn_Click);
+            // 
+            // EnableListenAlongBtn
+            // 
+            this.EnableListenAlongBtn.BackColor = System.Drawing.Color.Transparent;
+            this.EnableListenAlongBtn.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(116)))), ((int)(((byte)(209)))));
+            this.EnableListenAlongBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.EnableListenAlongBtn.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.EnableListenAlongBtn.Location = new System.Drawing.Point(6, 182);
+            this.EnableListenAlongBtn.Name = "EnableListenAlongBtn";
+            this.EnableListenAlongBtn.Rounded = false;
+            this.EnableListenAlongBtn.Size = new System.Drawing.Size(271, 33);
+            this.EnableListenAlongBtn.TabIndex = 12;
+            this.EnableListenAlongBtn.Text = "Allow Listen Along";
+            this.EnableListenAlongBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.EnableListenAlongBtn.Click += new System.EventHandler(this.EnableListenAlongBtn_Click);
             // 
             // ResetRPCBtn
             // 
@@ -652,6 +831,7 @@
             this.CustomPlatTextBox.Text = "https://anyurl.youwant.com";
             this.CustomPlatTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.CustomPlatTextBox.UseSystemPasswordChar = false;
+            this.CustomPlatTextBox.TextChanged += new System.EventHandler(this.CustomPlatTextBox_TextChanged);
             // 
             // SiteFixBtn
             // 
@@ -876,7 +1056,7 @@
             this.AppConfigsPanel.ShowText = true;
             this.AppConfigsPanel.Size = new System.Drawing.Size(280, 310);
             this.AppConfigsPanel.TabIndex = 3;
-            this.AppConfigsPanel.Text = "Config";
+            this.AppConfigsPanel.Text = "Config (W.I.P)";
             // 
             // OpenConfigBtn
             // 
@@ -953,54 +1133,6 @@
             this.WebsiteLinksPanel.Size = new System.Drawing.Size(566, 67);
             this.WebsiteLinksPanel.TabIndex = 5;
             this.WebsiteLinksPanel.Text = "Links";
-            // 
-            // DiscordPicBox
-            // 
-            this.DiscordPicBox.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.DiscordPicBox.Image = global::Soundify.Properties.Resources.discord;
-            this.DiscordPicBox.Location = new System.Drawing.Point(127, 25);
-            this.DiscordPicBox.Name = "DiscordPicBox";
-            this.DiscordPicBox.Size = new System.Drawing.Size(35, 35);
-            this.DiscordPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.DiscordPicBox.TabIndex = 11;
-            this.DiscordPicBox.TabStop = false;
-            this.DiscordPicBox.Click += new System.EventHandler(this.DiscordPicBox_Click);
-            // 
-            // GhPicBoxBtn
-            // 
-            this.GhPicBoxBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.GhPicBoxBtn.Image = global::Soundify.Properties.Resources.github;
-            this.GhPicBoxBtn.Location = new System.Drawing.Point(86, 25);
-            this.GhPicBoxBtn.Name = "GhPicBoxBtn";
-            this.GhPicBoxBtn.Size = new System.Drawing.Size(35, 35);
-            this.GhPicBoxBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.GhPicBoxBtn.TabIndex = 10;
-            this.GhPicBoxBtn.TabStop = false;
-            this.GhPicBoxBtn.Click += new System.EventHandler(this.GhPicBoxBtn_Click);
-            // 
-            // YTPicBoxBtn
-            // 
-            this.YTPicBoxBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.YTPicBoxBtn.Image = global::Soundify.Properties.Resources.youtube;
-            this.YTPicBoxBtn.Location = new System.Drawing.Point(45, 25);
-            this.YTPicBoxBtn.Name = "YTPicBoxBtn";
-            this.YTPicBoxBtn.Size = new System.Drawing.Size(35, 35);
-            this.YTPicBoxBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.YTPicBoxBtn.TabIndex = 9;
-            this.YTPicBoxBtn.TabStop = false;
-            this.YTPicBoxBtn.Click += new System.EventHandler(this.YTPicBoxBtn_Click);
-            // 
-            // WebsitePicBoxBtn
-            // 
-            this.WebsitePicBoxBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.WebsitePicBoxBtn.Image = global::Soundify.Properties.Resources.globe_solid;
-            this.WebsitePicBoxBtn.Location = new System.Drawing.Point(4, 25);
-            this.WebsitePicBoxBtn.Name = "WebsitePicBoxBtn";
-            this.WebsitePicBoxBtn.Size = new System.Drawing.Size(35, 35);
-            this.WebsitePicBoxBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.WebsitePicBoxBtn.TabIndex = 8;
-            this.WebsitePicBoxBtn.TabStop = false;
-            this.WebsitePicBoxBtn.Click += new System.EventHandler(this.WebsitePicBoxBtn_Click);
             // 
             // OtherCredsPanel
             // 
@@ -1087,10 +1219,8 @@
             this.MainCredsPanel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(116)))), ((int)(((byte)(209)))));
             this.MainCredsPanel.Controls.Add(this.VersionIdent);
             this.MainCredsPanel.Controls.Add(this.VersionLabel);
-            this.MainCredsPanel.Controls.Add(this.TkLabel);
             this.MainCredsPanel.Controls.Add(this.ScrimLabel);
             this.MainCredsPanel.Controls.Add(this.ScrimPicBox);
-            this.MainCredsPanel.Controls.Add(this.TkPicBox);
             this.MainCredsPanel.Controls.Add(this.DevelopTitleLabel);
             this.MainCredsPanel.Controls.Add(this.LogoPicBox);
             this.MainCredsPanel.Font = new System.Drawing.Font("Segoe UI", 12F);
@@ -1125,59 +1255,88 @@
             this.VersionLabel.Text = "null";
             this.VersionLabel.Click += new System.EventHandler(this.VersionLabel_Click);
             // 
-            // TkLabel
-            // 
-            this.TkLabel.AutoSize = true;
-            this.TkLabel.Location = new System.Drawing.Point(3, 284);
-            this.TkLabel.Name = "TkLabel";
-            this.TkLabel.Size = new System.Drawing.Size(67, 21);
-            this.TkLabel.TabIndex = 5;
-            this.TkLabel.Text = "Terkoshi";
-            // 
             // ScrimLabel
             // 
             this.ScrimLabel.AutoSize = true;
-            this.ScrimLabel.Location = new System.Drawing.Point(86, 284);
+            this.ScrimLabel.ForeColor = System.Drawing.Color.White;
+            this.ScrimLabel.Location = new System.Drawing.Point(3, 284);
             this.ScrimLabel.Name = "ScrimLabel";
-            this.ScrimLabel.Size = new System.Drawing.Size(89, 21);
+            this.ScrimLabel.Size = new System.Drawing.Size(143, 21);
             this.ScrimLabel.TabIndex = 4;
-            this.ScrimLabel.Text = "Scrimmane";
-            // 
-            // ScrimPicBox
-            // 
-            this.ScrimPicBox.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ScrimPicBox.Image = global::Soundify.Properties.Resources.ScrimGearGrad2;
-            this.ScrimPicBox.Location = new System.Drawing.Point(90, 188);
-            this.ScrimPicBox.Name = "ScrimPicBox";
-            this.ScrimPicBox.Size = new System.Drawing.Size(80, 93);
-            this.ScrimPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.ScrimPicBox.TabIndex = 3;
-            this.ScrimPicBox.TabStop = false;
-            this.ScrimPicBox.Click += new System.EventHandler(this.ScrimPicBox_Click);
-            // 
-            // TkPicBox
-            // 
-            this.TkPicBox.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.TkPicBox.Image = global::Soundify.Properties.Resources.Terkoshi;
-            this.TkPicBox.Location = new System.Drawing.Point(4, 188);
-            this.TkPicBox.Name = "TkPicBox";
-            this.TkPicBox.Size = new System.Drawing.Size(80, 93);
-            this.TkPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.TkPicBox.TabIndex = 2;
-            this.TkPicBox.TabStop = false;
-            this.TkPicBox.Click += new System.EventHandler(this.TkPicBox_Click);
+            this.ScrimLabel.Text = "Scrimmane (Scrim)";
             // 
             // DevelopTitleLabel
             // 
             this.DevelopTitleLabel.AutoSize = true;
             this.DevelopTitleLabel.Location = new System.Drawing.Point(3, 164);
             this.DevelopTitleLabel.Name = "DevelopTitleLabel";
-            this.DevelopTitleLabel.Size = new System.Drawing.Size(163, 21);
+            this.DevelopTitleLabel.Size = new System.Drawing.Size(108, 21);
             this.DevelopTitleLabel.TabIndex = 1;
-            this.DevelopTitleLabel.Text = "Developed with <3 By";
+            this.DevelopTitleLabel.Text = "Developed By:";
+            // 
+            // DiscordPicBox
+            // 
+            this.DiscordPicBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.DiscordPicBox.Image = global::Soundify.Properties.Resources.discord;
+            this.DiscordPicBox.Location = new System.Drawing.Point(127, 25);
+            this.DiscordPicBox.Name = "DiscordPicBox";
+            this.DiscordPicBox.Size = new System.Drawing.Size(35, 35);
+            this.DiscordPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.DiscordPicBox.TabIndex = 11;
+            this.DiscordPicBox.TabStop = false;
+            this.DiscordPicBox.Click += new System.EventHandler(this.DiscordPicBox_Click);
+            // 
+            // GhPicBoxBtn
+            // 
+            this.GhPicBoxBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.GhPicBoxBtn.Image = global::Soundify.Properties.Resources.github;
+            this.GhPicBoxBtn.Location = new System.Drawing.Point(86, 25);
+            this.GhPicBoxBtn.Name = "GhPicBoxBtn";
+            this.GhPicBoxBtn.Size = new System.Drawing.Size(35, 35);
+            this.GhPicBoxBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.GhPicBoxBtn.TabIndex = 10;
+            this.GhPicBoxBtn.TabStop = false;
+            this.GhPicBoxBtn.Click += new System.EventHandler(this.GhPicBoxBtn_Click);
+            // 
+            // YTPicBoxBtn
+            // 
+            this.YTPicBoxBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.YTPicBoxBtn.Image = global::Soundify.Properties.Resources.youtube;
+            this.YTPicBoxBtn.Location = new System.Drawing.Point(45, 25);
+            this.YTPicBoxBtn.Name = "YTPicBoxBtn";
+            this.YTPicBoxBtn.Size = new System.Drawing.Size(35, 35);
+            this.YTPicBoxBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.YTPicBoxBtn.TabIndex = 9;
+            this.YTPicBoxBtn.TabStop = false;
+            this.YTPicBoxBtn.Click += new System.EventHandler(this.YTPicBoxBtn_Click);
+            // 
+            // WebsitePicBoxBtn
+            // 
+            this.WebsitePicBoxBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.WebsitePicBoxBtn.Image = global::Soundify.Properties.Resources.globe_solid;
+            this.WebsitePicBoxBtn.Location = new System.Drawing.Point(4, 25);
+            this.WebsitePicBoxBtn.Name = "WebsitePicBoxBtn";
+            this.WebsitePicBoxBtn.Size = new System.Drawing.Size(35, 35);
+            this.WebsitePicBoxBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.WebsitePicBoxBtn.TabIndex = 8;
+            this.WebsitePicBoxBtn.TabStop = false;
+            this.WebsitePicBoxBtn.Click += new System.EventHandler(this.WebsitePicBoxBtn_Click);
+            // 
+            // ScrimPicBox
+            // 
+            this.ScrimPicBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ScrimPicBox.Image = global::Soundify.Properties.Resources.ScrimGear;
+            this.ScrimPicBox.Location = new System.Drawing.Point(7, 188);
+            this.ScrimPicBox.Name = "ScrimPicBox";
+            this.ScrimPicBox.Size = new System.Drawing.Size(104, 93);
+            this.ScrimPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ScrimPicBox.TabIndex = 3;
+            this.ScrimPicBox.TabStop = false;
+            this.ScrimPicBox.Click += new System.EventHandler(this.ScrimPicBox_Click);
             // 
             // LogoPicBox
             // 
+            this.LogoPicBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.LogoPicBox.Image = global::Soundify.Properties.Resources.DropshadowSoundifyLogo;
             this.LogoPicBox.Location = new System.Drawing.Point(4, 25);
             this.LogoPicBox.Name = "LogoPicBox";
@@ -1185,6 +1344,30 @@
             this.LogoPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.LogoPicBox.TabIndex = 0;
             this.LogoPicBox.TabStop = false;
+            this.LogoPicBox.Click += new System.EventHandler(this.LogoPicBox_Click);
+            // 
+            // CMediaInfoLabel
+            // 
+            this.CMediaInfoLabel.AutoSize = true;
+            this.CMediaInfoLabel.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CMediaInfoLabel.Location = new System.Drawing.Point(3, 5);
+            this.CMediaInfoLabel.Name = "CMediaInfoLabel";
+            this.CMediaInfoLabel.Size = new System.Drawing.Size(782, 64);
+            this.CMediaInfoLabel.TabIndex = 2;
+            this.CMediaInfoLabel.Text = "To load a custom streaming platform go to the settings tab\r\nKeep in mind the stre" +
+    "aming platform must be a whitelisted one to load!";
+            // 
+            // CustomWebView
+            // 
+            this.CustomWebView.AllowExternalDrop = true;
+            this.CustomWebView.BackColor = System.Drawing.Color.Black;
+            this.CustomWebView.CreationProperties = null;
+            this.CustomWebView.DefaultBackgroundColor = System.Drawing.Color.White;
+            this.CustomWebView.Location = new System.Drawing.Point(3, 550);
+            this.CustomWebView.Name = "CustomWebView";
+            this.CustomWebView.Size = new System.Drawing.Size(100, 100);
+            this.CustomWebView.TabIndex = 3;
+            this.CustomWebView.ZoomFactor = 1D;
             // 
             // MainWindow
             // 
@@ -1208,7 +1391,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.SpotifyWView)).EndInit();
             this.SoundCldTabPage.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.SoundCloudWView)).EndInit();
+            this.CustomMediaTabPage.ResumeLayout(false);
+            this.CustomMediaTabPage.PerformLayout();
             this.MediaControlsTabPage.ResumeLayout(false);
+            this.ConsoleBorderPanel.ResumeLayout(false);
+            this.ExtraControlsPanel.ResumeLayout(false);
             this.ConsolePanel.ResumeLayout(false);
             this.MediaControlsPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.VisualizerWebView)).EndInit();
@@ -1223,17 +1410,17 @@
             this.AppConfigsPanel.ResumeLayout(false);
             this.CreditsTabPage.ResumeLayout(false);
             this.WebsiteLinksPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.DiscordPicBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.GhPicBoxBtn)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.YTPicBoxBtn)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.WebsitePicBoxBtn)).EndInit();
             this.OtherCredsPanel.ResumeLayout(false);
             this.OtherCredsPanel.PerformLayout();
             this.MainCredsPanel.ResumeLayout(false);
             this.MainCredsPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DiscordPicBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GhPicBoxBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.YTPicBoxBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.WebsitePicBoxBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ScrimPicBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TkPicBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.LogoPicBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CustomWebView)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1254,9 +1441,7 @@
         private PictureBox LogoPicBox;
         private Label DevelopTitleLabel;
         private PictureBox ScrimPicBox;
-        private PictureBox TkPicBox;
         private Label ScrimLabel;
-        private Label TkLabel;
         private Label VersionLabel;
         private Label VersionIdent;
         private LinkLabel JonasCredit;
@@ -1310,6 +1495,18 @@
         private ReaLTaiizor.Controls.ForeverButton ZoomOutSitesBtn;
         private ReaLTaiizor.Controls.ForeverButton ZoomSitesBtn;
         private ReaLTaiizor.Controls.ForeverTextBox CustomPlatTextBox;
+        private TabPage CustomMediaTabPage;
+        private ReaLTaiizor.Controls.ForeverButton DisableListenAlongBtn;
+        private ReaLTaiizor.Controls.ForeverButton EnableListenAlongBtn;
+        private ReaLTaiizor.Controls.LostBorderPanel ExtraControlsPanel;
+        private ReaLTaiizor.Controls.ForeverButton StopLoopBtn;
+        private ReaLTaiizor.Controls.ForeverButton LoopBtn;
+        private ReaLTaiizor.Controls.ForeverButton NoShuffleBtn;
+        private ReaLTaiizor.Controls.ForeverButton ShuffleBtn;
+        private ReaLTaiizor.Controls.LostBorderPanel ConsoleBorderPanel;
+        private ReaLTaiizor.Controls.ForeverButton ClearConsoleBtn;
+        private Microsoft.Web.WebView2.WinForms.WebView2 CustomWebView;
+        private Label CMediaInfoLabel;
     }
 }
 

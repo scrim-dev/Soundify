@@ -15,5 +15,12 @@
             SoundPlayer snd = new(str);
             try { snd.Play(); } catch { }
         }
+
+        public static void NormalTone()
+        {
+            Stream str = Resources.buttonsfx;
+            SoundPlayer snd = new(str);
+            try { snd.Play(); } catch { }
+        }
     }
 }

@@ -5,6 +5,7 @@ using System.Drawing;
 
 namespace SoundifyUpdater.Utils
 {
+    //Console Log API by Terkoshi
     internal class Console
     {
         static string GetTime() => DateTime.Now.ToString("hh:mm:ss");

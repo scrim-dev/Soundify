@@ -3,6 +3,11 @@
     internal class DRPC
     {
         private static DiscordRpcClient DClient { get; set; }
+        public static string WebViewSourceLink { get; set; } = string.Empty;
+        public static bool ListenAlong {  get; set; } = false;
+
+        private static DiscordRPC.Button SdfyBtn = null;
+        private static DiscordRPC.Button ListnBtn = null;
 
         public static void Init()
         {
@@ -11,34 +16,43 @@
                 Logger = new ConsoleLogger() { Level = LogLevel.Warning }
             };
 
-            /*DClient.OnReady += (sender, e) =>
+            DClient.OnReady += (sender, e) =>
             {
-                Console.WriteLine("Received Ready from user {0}", e.User.Username);
+                FormConsole.CustomLog("DRPC", $"Received Ready from user {e.User.Username}");
             };
 
             DClient.OnPresenceUpdate += (sender, e) =>
             {
-                Console.WriteLine("Received Update! {0}", e.Presence);
-            }; */
+                FormConsole.CustomLog("DRPC", $"Received Update! {e.Presence}");
+            };
 
             DClient.Initialize();
 
-            SetPresence("In menu", "Not blasting music right now.");
+            SetPresence("In menu", "Not blasting music right now.", "home");
         }
 
         public static void Update() { DClient.Invoke(); }
 
         public static void End() { DClient.Dispose(); }
 
-        public static void ResetPres() { SetPresence("In menu", "Not blasting music right now."); }
+        public static void ResetPres() { SetPresence("In menu", "Not blasting music right now.", "searching"); }
 
-        public static void SetPresence(string Details, string State)
+        public static void SetPresence(string Details, string State, string img)
         {
-            DiscordRPC.Button SoundifyWebsiteBtn = new()
+            SdfyBtn = new()
             {
                 Label = "Download Soundify",
                 Url = Info.MainSiteUrl
             };
+
+            if (ListenAlong)
+            {
+                ListnBtn = new()
+                {
+                    Label = "Listen Along",
+                    Url = WebViewSourceLink
+                };
+            }
 
             DClient.SetPresence(new RichPresence()
             {
@@ -48,11 +62,16 @@
                 {
                     LargeImageKey = "soundifys_logo",
                     LargeImageText = Info.Name,
-                    SmallImageKey = "searching",
+                    SmallImageKey = img,
                     SmallImageText = "v" + Info.AppVersion
                 },
 
-                Buttons = [SoundifyWebsiteBtn]
+                Timestamps = new Timestamps()
+                {
+                    Start = DateTime.Now,
+                },
+
+                Buttons = [SdfyBtn, ListnBtn]
             });
         }
     }

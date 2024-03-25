@@ -52,6 +52,24 @@ namespace Soundify.Utils
             Alerts.ErrorTone();
         }
 
+        public static void CustomLog(string obj, string log)
+        {
+            RTB.SelectionStart = RTB.TextLength;
+            RTB.SelectionLength = 0;
+
+            RTB.SelectionColor = Color.Magenta;
+            RTB.AppendText($"[{Time()}] [{Info.Name}] [{obj}] {log}" + Environment.NewLine);
+            RTB.SelectionColor = RTB.ForeColor;
+
+            RTB.ScrollToCaret();
+        }
+
+        public static void Clear()
+        {
+            RTB.Text = string.Empty;
+            CustomLog("CLEAR", "Console Cleared!");
+        }
+
         private static string Time()
         {
             if (Set24hr)

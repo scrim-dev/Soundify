@@ -1,6 +1,4 @@
-﻿using Windows.UI.Xaml.Controls;
-
-namespace Soundify
+﻿namespace Soundify
 {
     public partial class MainWindow : Form
     {
@@ -35,7 +33,7 @@ namespace Soundify
 
         public MainWindow() { InitializeComponent(); }
 
-        private void MainWindow_Load(object sender, EventArgs e) { Setup(); }
+        private void MainWindow_Load(object sender, EventArgs e) { Setup(); } //Setup all properties
 
         //Default 1000, 700 (300)
         //600, 300
@@ -90,6 +88,7 @@ namespace Soundify
                 "or contact Scrim on discord: Scrimmane\nAnyway Enjoy!");
 
             MediaController.MediaUpdateThread(true);
+            CustomWebView.Size = new Size(0, 0);
         }
 
         private async void InjectJS()
@@ -140,14 +139,12 @@ namespace Soundify
 
             if (Toggles.OscTog) 
             {
-                OSCManager.SendMusic(MediaController.CurrentPlayingTitle, MediaController.CurrentPlayingArtist + 
-                    $"\n{MediaController.ActiveTime}");
+                OSCManager.SendMusic(MediaController.CurrentPlayingTitle, MediaController.CurrentPlayingArtist);
             }
 
             if (Toggles.OscSongShowTog)
             {
-                OSCManager.SendChatbox($"{MediaController.CurrentPlayingTitle} by {MediaController.CurrentPlayingArtist}\n" +
-                    $"{MediaController.ActiveTime}");
+                OSCManager.SendChatbox($"{MediaController.CurrentPlayingTitle} by {MediaController.CurrentPlayingArtist}\n");
             }
 
             if (Toggles.OscAnimTog) 
@@ -211,11 +208,6 @@ namespace Soundify
             Process.Start("https://github.com/scrim-dev");
         }
 
-        private void TkPicBox_Click(object sender, EventArgs e)
-        {
-            Process.Start("https://github.com/terkoshi");
-        }
-
         private void WebsitePicBoxBtn_Click(object sender, EventArgs e)
         {
             Process.Start(Info.MainSiteUrl);
@@ -228,7 +220,6 @@ namespace Soundify
 
         private void GhPicBoxBtn_Click(object sender, EventArgs e)
         {
-            Process.Start("https://github.com/terkoshi");
             Process.Start("https://github.com/scrim-dev");
         }
 
@@ -362,6 +353,8 @@ namespace Soundify
             }
 
             try { Directory.CreateDirectory(AppDirs.ConfigFolder); } catch { }
+
+            Configs.Load();
         }
 
         private void OpenConfigBtn_Click(object sender, EventArgs e)
@@ -429,13 +422,30 @@ namespace Soundify
             Themer.OneOfAKind();
         }
 
+        //838, 647
         private static string Newuri { get; set; } = null;
         private void LoadCustomSiteBtn_Click(object sender, EventArgs e)
         {
+            //Need to fix this!
             Newuri = CustomPlatTextBox.Text;
             if (!string.IsNullOrEmpty(Newuri))
             {
-                //To do
+                if (Whitelist.WhitelistedMedia.Any(uri => Newuri.Contains(uri)))
+                {
+                    CustomWebView.Size = new Size(838, 647);
+                    CustomWebView.Dock = DockStyle.Fill;
+                    try { CustomWebView.Source = new Uri(Newuri); }
+                    catch
+                    {
+                        MsgBox.Error("Failed to load URL (Make sure to add https://)\n" +
+                        "If you keep getting this error contact Scrim or go to the Support channel on discord");
+                    }
+                    CustomWebView.ZoomFactor = 0.9;
+                }
+                else
+                {
+                    MsgBox.Error("Failed to load URL! The URL is not whitelisted or typed incorrectly!");
+                }
             }
         }
 
@@ -447,14 +457,94 @@ namespace Soundify
 
         private void ZoomSitesBtn_Click(object sender, EventArgs e)
         {
-            SpotifyWView.ZoomFactor = 1.5;
-            SoundCloudWView.ZoomFactor = 1.5;
+            SpotifyWView.ZoomFactor = 1.2;
+            SoundCloudWView.ZoomFactor = 1.2;
         }
 
         private void ZoomOutSitesBtn_Click(object sender, EventArgs e)
         {
-            SpotifyWView.ZoomFactor = 0.5;
-            SoundCloudWView.ZoomFactor = 0.5;
+            SpotifyWView.ZoomFactor = 0.85;
+            SoundCloudWView.ZoomFactor = 0.85;
+        }
+
+        private void EnableListenAlongBtn_Click(object sender, EventArgs e)
+        {
+            DRPC.ListenAlong = true;
+        }
+
+        private void DisableListenAlongBtn_Click(object sender, EventArgs e)
+        {
+            DRPC.ListenAlong = false;
+        }
+
+        private void LoopBtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var sesh = MediaController.mediaManager.WindowsSessionManager.GetCurrentSession();
+                _ = sesh.TryChangeAutoRepeatModeAsync(requestedAutoRepeatMode: Windows.Media.MediaPlaybackAutoRepeatMode.Track);
+                FormConsole.CustomLog("LOOPSONG", "Looping current track!");
+                Alerts.NormalTone();
+            }
+            catch { }
+        }
+
+        private void StopLoopBtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var sesh = MediaController.mediaManager.WindowsSessionManager.GetCurrentSession();
+                _ = sesh.TryChangeAutoRepeatModeAsync(requestedAutoRepeatMode: Windows.Media.MediaPlaybackAutoRepeatMode.None);
+                FormConsole.CustomLog("LOOPSONG", "Stopped / Removed looping.");
+                Alerts.NormalTone(); //Might change to diff sound fx
+            }
+            catch { }
+        }
+
+        private void ShuffleBtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var sesh = MediaController.mediaManager.WindowsSessionManager.GetCurrentSession();
+                _ = sesh.TryChangeShuffleActiveAsync(true);
+                FormConsole.CustomLog("SHUFFLE", "Shuffle: true");
+                Alerts.NormalTone();
+            }
+            catch { }
+        }
+
+        private void NoShuffleBtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var sesh = MediaController.mediaManager.WindowsSessionManager.GetCurrentSession();
+                _ = sesh.TryChangeShuffleActiveAsync(false);
+                FormConsole.CustomLog("SHUFFLE", "Shuffle: false");
+                Alerts.NormalTone(); //Might change to diff sound fx
+            }
+            catch { }
+        }
+
+        private void ClearConsoleBtn_Click(object sender, EventArgs e)
+        {
+            FormConsole.Clear();
+        }
+
+        private void LogoPicBox_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://discord.com/invite/ZkkjHYmRGE");
+        }
+
+        private void CustomPlatTextBox_TextChanged(object sender, EventArgs e)
+        {
+            if(CustomPlatTextBox.Text.Contains("https://") || CustomPlatTextBox.Text.Contains("http"))
+            {
+                CustomPlatTextBox.BorderColor = Color.LimeGreen;
+            }
+            else
+            {
+                CustomPlatTextBox.BorderColor = Color.Red;
+            }
         }
     }
 }

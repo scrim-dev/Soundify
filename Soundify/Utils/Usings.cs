@@ -20,3 +20,4 @@ global using Soundify.App;
 global using System.IO;
 global using System.Media;
 global using System.Net;
+global using Windows.UI.Xaml.Controls;

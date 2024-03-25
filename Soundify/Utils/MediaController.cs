@@ -8,7 +8,6 @@ namespace Soundify.Utils
         public static MediaManager mediaManager;
         public static string CurrentPlayingArtist { get; set; } = null;
         public static string CurrentPlayingTitle { get; set; } = null;
-        public static string ActiveTime { get; set; } = null;
         public static void Init()
         {
             mediaManager = new MediaManager();
@@ -65,16 +64,16 @@ namespace Soundify.Utils
 
         public static void OnFocusedSessionChanged(MediaSession session)
         {
-            string seshinfo = CurrentPlayingArtist + "-" + CurrentPlayingTitle;
+            string seshinfo = CurrentPlayingArtist + " - " + CurrentPlayingTitle;
             if (session != null)
             {
                 if (Toggles.ShowSongRPC)
                 {
-                    DRPC.SetPresence("Listening to Music!", seshinfo);
+                    DRPC.SetPresence("Listening to Music!", seshinfo, "musicnote");
                 }
                 else
                 {
-                    DRPC.SetPresence("Listening to Music!", "[Hidden]");
+                    DRPC.SetPresence("Listening to Music!", "[Hidden]", "musicnote");
                 }
             }
         }
@@ -96,7 +95,7 @@ namespace Soundify.Utils
             if (sender != null || args != null)
             {
                 FormConsole.Log($"{sender.Id} timeline is now {args.Position}/{args.EndTime}");
-                ActiveTime = $"{args.Position}|{args.EndTime}";
+                //ActiveTime = $"{args.Position}|{args.EndTime}";
             }
         }
 

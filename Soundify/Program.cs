@@ -3,9 +3,9 @@
     internal class Info
     {
         public static string Name { get; } = "Soundify";
-        public const string AppVersion = "1.0";
+        public const string AppVersion = "1.1";
         public const string GUID = "5dc5efe6-53e6-4f36-b917-c4ab552f9624";
-        public const string Author = "Scrim (Scrimmane) & Terkoshi (TK)";
+        public const string Author = "Scrim (Scrimmane)";
         public const string Description = "A multi-streaming tool";
         public static string MainSiteUrl { get; } = "https://software.scrim.cc";
         public static string SoundifyApp { get; } = $"{MainSiteUrl}/soundify/files/Soundify.exe";

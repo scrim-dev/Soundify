@@ -12,7 +12,7 @@
             {
                 if (Info.AppVersion != GetVersionFromHost())
                 {
-                    MsgBox.Question("Soundify has a new update or the current version your on is outdated! Would you like to update now?", delegate
+                    MsgBox.Question("Soundify has a new update or the current version you're on is outdated! Would you like to update now?", delegate
                     {
                         RunUpdater();
                     }, delegate
@@ -24,7 +24,7 @@
                 {
                     MsgBox.Error("Uhh this should not have happened. Whoops, contact Scrim");
                 }
-                Thread.Sleep(5000);
+                Thread.Sleep(30000000); //Every 500 minutes / 8 hours
             }
         }
 

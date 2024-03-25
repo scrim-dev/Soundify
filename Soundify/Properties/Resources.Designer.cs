@@ -61,6 +61,15 @@ namespace Soundify.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream buttonsfx {
+            get {
+                return ResourceManager.GetStream("buttonsfx", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap discord {
@@ -192,6 +201,16 @@ namespace Soundify.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ScrimSlogo {
+            get {
+                object obj = ResourceManager.GetObject("ScrimSlogo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap SideGripIcon {
             get {
                 object obj = ResourceManager.GetObject("SideGripIcon", resourceCulture);
@@ -245,16 +264,6 @@ namespace Soundify.Properties {
         internal static System.IO.UnmanagedMemoryStream Success {
             get {
                 return ResourceManager.GetStream("Success", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Terkoshi {
-            get {
-                object obj = ResourceManager.GetObject("Terkoshi", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
